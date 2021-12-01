@@ -1,0 +1,401 @@
+<!-- Card -->
+<div class="card mb-3 mb-lg-5">
+  <!-- Header -->
+  <div class="card-header">
+    <div class="row justify-content-between align-items-center flex-grow-1">
+      <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center">
+          <h5 class="card-header-title">My Submissions</h5>
+
+          <!-- Datatable Info -->
+          <div id="datatableCounterInfo" style="display: none;">
+            <div class="d-flex align-items-center">
+              <span class="font-size-sm mr-3">
+                <span id="datatableCounter">0</span>
+                Selected
+              </span>
+              <!-- @@@DELETE BUTTON -->
+              <a class="btn btn-sm btn-outline-danger" href="javascript:;" hidden>
+                <i class="tio-delete-outlined"></i> Delete
+              </a>
+            </div>
+          </div>
+          <!-- End Datatable Info -->
+        </div>
+      </div>
+
+      <div class="col-12">
+        <!-- Filter -->
+        <div class="row align-items-sm-center">
+          <div class="col-auto">
+            <div class="d-flex align-items-center mr-2">
+              <span class="text-secondary mr-2">Status:</span>
+
+              <!-- Select -->
+              <select class="js-select2-custom js-datatable-filter custom-select-sm" size="1" style="opacity: 0;"
+                      data-target-column-index="2"
+                      data-hs-select2-options='{
+                        "minimumResultsForSearch": "Infinity",
+                        "customClass": "custom-select custom-select-sm custom-select-borderless",
+                        "dropdownAutoWidth": true,
+                        "width": true
+                      }'>
+                <option value="">All</option>
+                <option value="success">Success</option>
+                <option value="fail">Fail</option>
+              </select>
+              <!-- End Select -->
+            </div>
+          </div>
+
+          <div class="col-auto" hidden>
+            <div class="d-flex align-items-center mr-2">
+              <span class="text-secondary mr-2">Signed up:</span>
+
+              <select class="js-select2-custom js-datatable-filter custom-select-sm" size="1" style="opacity: 0;"
+                      data-target-column-index="5"
+                      data-hs-select2-options='{
+                        "minimumResultsForSearch": "Infinity",
+                        "customClass": "custom-select custom-select-sm custom-select-borderless",
+                        "dropdownAutoWidth": true,
+                        "width": true
+                      }'>
+                <option value="">All</option>
+                <option value="1 year ago">1 year ago</option>
+                <option value="6 months ago">6 months ago</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <form>
+              <!-- Search -->
+              <div class="input-group input-group-merge input-group-flush">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="tio-search"></i>
+                  </div>
+                </div>
+                <input id="datatableSearch" type="search" class="form-control" placeholder="Search submissions" aria-label="Search submissions">
+              </div>
+              <!-- End Search -->
+            </form>
+          </div>
+        </div>
+        <!-- End Filter -->
+      </div>
+    </div>
+  </div>
+  <!-- End Header -->
+
+  <!-- Table -->
+  <div class="table-responsive datatable-custom">
+    <table id="datatable" class="table table-borderless table-thead-bordered table-nowrap table-align-middle card-table"
+           data-hs-datatables-options='{
+             "columnDefs": [{
+                "targets": [0, 1, 4],
+                "orderable": false
+              }],
+             "order": [],
+             "info": {
+               "totalQty": "#datatableWithPaginationInfoTotalQty"
+             },
+             "search": "#datatableSearch",
+             "entries": "#datatableEntries",
+             "pageLength": 8,
+             "isResponsive": false,
+             "isShowPaging": false,
+             "pagination": "datatablePagination"
+           }'>
+      <thead class="thead-light">
+        <tr id="datatableHeadParent">
+          <th scope="col" class="table-column-pr-0">
+            <div class="custom-control custom-checkbox">
+              <input id="datatableCheckAll" type="checkbox" class="custom-control-input">
+              <label class="custom-control-label" for="datatableCheckAll"></label>
+            </div>
+          </th>
+          <th class="table-column-pl-0" id="datatableHeadParent-formId">Form</th>
+          <!-- <th class="table-column-pl-0">Form name</th> -->
+          <th class="table-column-pl-0">Status</th>
+          <th class="table-column-pl-0">Date</th>
+          <th class="table-column-pl-0">Id</th>
+          <!-- <th>Submissions</th> -->
+          <!-- <th>NOT USED 1</th> -->
+          <!-- <th>NOT USED 2</th> -->
+        </tr>
+      </thead>
+
+
+
+      <tbody id="submissions-insert">
+
+      </tbody>
+
+
+    </table>
+  </div>
+
+  <div id="submissions-loading-spinner">
+    <div class="d-flex justify-content-center py-3">
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+  <!-- End Table -->
+
+  <!-- Footer -->
+  <div class="card-footer">
+    <!-- Pagination -->
+    <div class="row justify-content-center justify-content-sm-between align-items-sm-center">
+      <div class="col-sm mb-2 mb-sm-0">
+        <div class="d-flex justify-content-center justify-content-sm-start align-items-center">
+          <span class="mr-2">Showing:</span>
+
+          <!-- Select -->
+          <select id="datatableEntries" class="js-select2-custom"
+                  data-hs-select2-options='{
+                    "minimumResultsForSearch": "Infinity",
+                    "customClass": "custom-select custom-select-sm custom-select-borderless",
+                    "dropdownAutoWidth": true,
+                    "width": true
+                  }'>
+            <!-- <option value="4">4</option> -->
+            <!-- <option value="6">6</option> -->
+            <option value="8" selected>8</option>
+            <!-- <option value="12">12</option> -->
+          </select>
+          <!-- End Select -->
+
+          <span class="text-secondary mr-2">of</span>
+
+          <!-- Pagination Quantity -->
+          <span id="datatableWithPaginationInfoTotalQty"></span>
+        </div>
+      </div>
+
+      <div class="col-sm-auto">
+        <div class="d-flex justify-content-center justify-content-sm-end">
+          <!-- Pagination -->
+          <nav id="datatablePagination" aria-label="Activity pagination"></nav>
+        </div>
+      </div>
+    </div>
+    <!-- End Pagination -->
+  </div>
+  <!-- End Footer -->
+</div>
+<!-- End Card -->
+<script type="text/javascript">
+  var globalSubmissionArray = [];
+
+  function loadSubmissionsDataTable() {
+    Manager.auth().ready(function () {
+
+      var user = firebase.auth().currentUser;
+
+      if (!user) {return }
+
+      var pageUrl = '{{ page.url }}';
+      var isOnFormPage = pageUrl.includes('forms/edit');
+      var isOnSubmissionsPage = pageUrl.includes('dashboard/submissions');
+      var tableTemplate = '' +
+        '<tr>' +
+        '  <td class="table-column-pr-0">' +
+        '    <div class="custom-control custom-checkbox">' +
+        '      <input type="checkbox" class="custom-control-input" id="{submissionId}">' +
+        '      <label class="custom-control-label" for="{submissionId}"></label>' +
+        '    </div>' +
+        '  </td>'
+
+
+
+      if (isOnSubmissionsPage) {
+        tableTemplate += '' +
+          '  <td class="table-column-pl-0">' +
+          '    <a class="media align-items-center" href="{{ site.url }}/dashboard/forms/edit?formId={formId}">' +
+          // '      <span class="h5 text-hover-primary mb-0">{formName}</span>' +
+          '      <span class="text-monospace text-hover-primary mb-0">{formId}</span>' +
+          '    </a>' +
+          '  </td>'
+      } else {
+        document.getElementById('datatableHeadParent-formId').remove()
+      }
+
+      tableTemplate += '' +
+        '  <td class="table-column-pl-0">' +
+        '    <span class="legend-indicator bg-{statusClass}"></span>{statusText}' +
+        '  </td>' +
+        '  <td class="table-column-pl-0">{submissionDate}</td>' +
+        '  <td class="table-column-pl-0">' +
+        '    <a class="media align-items-center" href="{{ site.url }}/dashboard/submissions/view?submissionId={submissionId}">' +
+        '      <span class="text-monospace text-hover-primary mb-0">{submissionId}</span>' +
+        '    </a>' +
+        '  </td>' +
+        '{conditionalSubmissionData}' +
+        // '  <td>{submissionsTotal}</td>' +
+        // '  <td>n/a</td>' +
+        // '  <td>n/a</td>' +
+        '</tr>'
+
+      var loadingSpinnerEl = document.getElementById('submissions-loading-spinner');
+      var datatableHeadParent = document.getElementById('datatableHeadParent');
+
+      var query = firebase.firestore().collection('submissions/saved/all');
+
+      if (isOnFormPage) {
+        var formId = Manager.properties.page.queryString.get('formId') || '';
+        console.log('---formId', formId);
+        query = query.where('meta.formId', '==', formId)
+      }
+      // if (isOnSubmissionsPage) {
+        // query = query.where('user.auth.uid', '==', user.uid)
+      // }
+
+      query
+      .where('user.auth.uid', '==', user.uid)
+      .orderBy('meta.dateUNIX', 'desc')
+      .get()
+      .then(function (snap) {
+        var html = '';
+        var possibleFieldNames = [];
+        var possibleFieldNamesCSV = ['date'];
+        globalSubmissionArray = [];
+        var snapIndex = -1;
+
+        snap.forEach((doc, i) => {
+          var data = doc.data();
+          var dateSplit = data.meta.date.split('.')[0].split('T')
+          var conditionalSubmissionData = '';
+          var submissionData = data.data;
+          var arrayValues = []
+          snapIndex++;
+
+
+          if (isOnFormPage) {
+            Object.keys(submissionData)
+            .forEach((item, i) => {
+              var exists = datatableHeadParent.querySelector('*[data-submission-heading-id="' + item + '"]')
+              var value = submissionData[item];
+              if (!exists) {
+                datatableHeadParent.insertAdjacentHTML('beforeend', '<th class="table-column-pl-0" data-submission-heading-id="' + item + '">' + item + '</th>')
+                possibleFieldNames = possibleFieldNames.concat(item);
+                possibleFieldNamesCSV = possibleFieldNamesCSV.concat(item);
+              }
+            });
+
+            // globalSubmissionArray = globalSubmissionArray.concat(possibleFieldNames);
+            // console.log('-00000000snapIndex', snapIndex);
+            if (snapIndex === 0) {
+              globalSubmissionArray.push(possibleFieldNamesCSV);
+            }
+
+            // Specific
+            arrayValues = arrayValues.concat(data.meta.date);
+
+            // console.log('---possibleFieldNames', possibleFieldNames);
+            possibleFieldNames
+            .forEach((item, i) => {
+              var val = submissionData[item] || '';
+              conditionalSubmissionData += ''
+              + '  <td class="table-column-pl-0 short-table-data">' + val + '</td>'
+
+              arrayValues = arrayValues.concat(val);
+            });
+
+            // globalSubmissionArray = globalSubmissionArray.concat(arrayValues);
+            globalSubmissionArray.push(arrayValues);
+          }
+
+          html += tableTemplate
+            .replace(/{formId}/igm, data.meta.formId || user.email)
+            .replace(/{submissionId}/igm, data.meta.submissionId)
+            .replace(/{formName}/igm, data.name || 'Unnamed')
+            .replace(/{statusText}/igm, true ? 'Success' : 'Error')
+            .replace(/{statusClass}/igm, true ? 'success' : 'danger')
+            .replace(/{submissionDate}/igm, dateSplit[0] + ' @ ' + dateSplit[1])
+            .replace(/{conditionalSubmissionData}/igm, conditionalSubmissionData)
+            // .replace(/{submissionsPeriod}/igm, data.submissions.period || 0)
+            // .replace(/{submissionsTotal}/igm, data.submissions.total || 0)
+
+          console.log('----data', doc.data());
+        });
+
+        var csvContent = 'data:text/csv;charset=utf-8,'
+            + globalSubmissionArray.map(function (e) {
+              return e.join(',');
+            }).join('\n');
+        var encodedUri = encodeURI(csvContent);
+
+        Manager.dom().select('.save-submissions-csv').each(function (el, i) {
+            el.setAttribute('download', 'submissions-' + new Date().toISOString() + '.csv')
+            el.setAttribute('href', encodedUri)
+            el.setAttribute('target', '_blank')
+        })
+
+        // console.log('---globalSubmissionArray',globalSubmissionArray);
+
+        document.getElementById('submissions-insert').innerHTML = html;
+
+        loadingSpinnerEl.remove();
+
+        initializeDataTables({
+          noDataMessage: '<p class="mb-0"><a href="{{ site.url }}/dashboard/forms/new"><i class="tio-layers-outlined mr-1"></i>Create a new form</a> and submit it! </p>',
+        })
+
+
+      })
+      // .then(function (snap) {
+      //   var html = '';
+      //   var possibleFieldNames = [];
+      //   snap.forEach((doc, i) => {
+      //     var data = doc.data();
+      //     var dateSplit = data.meta.date.split('.')[0].split('T')
+      //     var conditionalSubmissionData = '';
+      //
+      //     var submissionData = data.data;
+      //     Object.keys(submissionData)
+      //     .forEach((item, i) => {
+      //       var exists = datatableHeadParent.querySelector('*[data-submission-heading-id="' + item + '"]')
+      //       var value = submissionData[item];
+      //       if (!exists) {
+      //         datatableHeadParent.insertAdjacentHTML('beforeend', '<th class="table-column-pl-0" data-submission-heading-id="' + item + '">' + item + '</th>')
+      //       }
+      //       conditionalSubmissionData += '' +
+      //       '  <td class="table-column-pl-0">' + value + '</td>'
+      //     });
+      //
+      //
+      //
+      //
+      //     html += tableTemplate
+      //       .replace(/{formId}/igm, data.meta.formId || user.email)
+      //       .replace(/{submissionId}/igm, data.meta.submissionId)
+      //       .replace(/{formName}/igm, data.name || 'Unnamed')
+      //       .replace(/{statusText}/igm, true ? 'Success' : 'Error')
+      //       .replace(/{statusClass}/igm, true ? 'success' : 'danger')
+      //       .replace(/{submissionDate}/igm, dateSplit[0] + ' @ ' + dateSplit[1])
+      //       .replace(/{conditionalSubmissionData}/igm, conditionalSubmissionData)
+      //       // .replace(/{submissionsPeriod}/igm, data.submissions.period || 0)
+      //       // .replace(/{submissionsTotal}/igm, data.submissions.total || 0)
+      //
+      //     console.log('----data', doc.data());
+      //   });
+      //
+      //   document.getElementById('submissions-insert').innerHTML = html;
+      //
+      //   loadingSpinnerEl.remove();
+      //
+      //   initializeDataTables({
+      //     noDataMessage: '<p class="mb-0"><a href="{{ site.url }}/dashboard/forms/new"><i class="tio-layers-outlined mr-1"></i>Create a new form</a> and submit it! </p>',
+      //   })
+      //
+      //
+      // })
+      .catch(function (e) {
+        console.error('Error loading form data', e);
+      })
+    })
+  }
+</script>

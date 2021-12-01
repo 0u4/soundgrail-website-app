@@ -1,0 +1,1155 @@
+---
+### ALL PAGES ###
+layout: master/global/default
+
+head:
+  pre-bundle-css: '
+
+  '
+  post-bundle-css: '
+  '
+
+foot:
+  pre-bundle-script: '
+
+  '
+
+### REGULAR PAGES ###
+settings:
+  include-app-header: false
+  include-app-footer: false
+  include-app-head: false
+  include-app-foot: false
+  include-css-bundle: false
+  include-script-bundle: false
+
+head:
+  content: '
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/app/vendor/icon-set/style.css">
+    <link rel="stylesheet" href="/assets/app/vendor/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="/assets/app/vendor/chart.js/dist/Chart.min.css">
+    <link rel="stylesheet" href="/assets/app/vendor/daterangepicker/daterangepicker.css">
+
+
+    <!-- CSS Front Template -->
+    <link rel="stylesheet" href="/assets/css/theme/app.css">
+    <style media="screen">
+      .short-table-data {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 200px;
+      }
+      .navbar-brand-logo {
+        width: 100%;
+        /* min-width: unset;
+        max-width: unset; */
+        min-width: unset;
+        max-width: 10rem;
+      }
+      #invisible_layer{
+        position: absolute;
+        background-color:trasparent;
+        /* width: 500px;
+        height:300px; */
+      }
+    </style>
+  '
+body:
+  class: 'has-navbar-vertical-aside navbar-vertical-aside-show-lg footer-offset'
+---
+
+    <script src="/assets/app/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside-mini-cache.js"></script>
+
+
+  <!-- Search Form -->
+  <div id="searchDropdown" class="hs-unfold-content dropdown-unfold search-fullwidth d-md-none">
+    <form class="input-group input-group-merge input-group-borderless">
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+          <i class="tio-search"></i>
+        </div>
+      </div>
+
+      <input class="form-control rounded-0" type="search" placeholder="Search in front" aria-label="Search in front">
+
+      <div class="input-group-append">
+        <div class="input-group-text">
+          <div class="hs-unfold">
+            <a class="js-hs-unfold-invoker" href="javascript:;"
+               data-hs-unfold-options='{
+                 "target": "#searchDropdown",
+                 "type": "css-animation",
+                 "animationIn": "fadeIn",
+                 "hasOverlay": "rgba(46, 52, 81, 0.1)",
+                 "closeBreakpoint": "md"
+               }'>
+              <i class="tio-clear tio-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- End Search Form -->
+
+  <!-- ========== HEADER ========== -->
+
+    <header id="header" class="navbar navbar-expand-lg navbar-fixed navbar-height navbar-flush navbar-container navbar-bordered">
+      <div class="navbar-nav-wrap">
+        <div class="navbar-brand-wrapper">
+          <!-- Logo -->
+          <a class="navbar-brand" href="{{ site.url }}" aria-label="{{ site.brand.name }}">
+            <img class="navbar-brand-logo" src="https://cdn.itwcreativeworks.com/assets/soundgrail/images/logo/soundgrail-combomark-black-x.svg" alt="{{ site.brand.name }} Logo">
+            <img class="navbar-brand-logo-mini" src="https://cdn.itwcreativeworks.com/assets/soundgrail/images/logo/soundgrail-brandmark-black-x.svg" alt="{{ site.brand.name }} Logo">
+          </a>
+          <!-- End Logo -->
+        </div>
+
+        <div class="navbar-nav-wrap-content-left">
+          <!-- Navbar Vertical Toggle -->
+          <button type="button" class="js-navbar-vertical-aside-toggle-invoker close mr-3">
+            <i class="tio-first-page navbar-vertical-aside-toggle-short-align" data-toggle="tooltip" data-placement="right" title="Collapse"></i>
+            <i class="tio-last-page navbar-vertical-aside-toggle-full-align" data-template='<div class="tooltip d-none d-sm-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' data-toggle="tooltip" data-placement="right" title="Expand"></i>
+          </button>
+          <!-- End Navbar Vertical Toggle -->
+
+          <!-- Search Form -->
+          <!-- <div class="d-none d-md-block"> -->
+          <div class="" hidden>
+            <form class="position-relative">
+              <!-- Input Group -->
+              <div class="input-group input-group-merge input-group-borderless input-group-hover-light navbar-input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="tio-search"></i>
+                  </div>
+                </div>
+                <input type="search" class="js-form-search form-control" placeholder="Search in front" aria-label="Search in front"
+                       data-hs-form-search-options='{
+                         "clearIcon": "#clearSearchResultsIcon",
+                         "dropMenuElement": "#searchDropdownMenu",
+                         "dropMenuOffset": 20,
+                         "toggleIconOnFocus": true,
+                         "activeClass": "focus"
+                       }'>
+                <a class="input-group-append" href="javascript:;">
+                  <span class="input-group-text">
+                    <i id="clearSearchResultsIcon" class="tio-clear" style="display: none;"></i>
+                  </span>
+                </a>
+              </div>
+              <!-- End Input Group -->
+
+              <!-- Card Search Content -->
+              <div id="searchDropdownMenu" class="hs-form-search-menu-content card dropdown-menu dropdown-card overflow-hidden">
+                <!-- Body -->
+                <div class="card-body-height py-3">
+                  <small class="dropdown-header mb-n2">Recent searches</small>
+
+                  <div class="dropdown-item bg-transparent text-wrap my-2">
+                    <span class="h4 mr-1">
+                      <a class="btn btn-xs btn-soft-dark btn-pill" href="./index.html">
+                        Gulp <i class="tio-search ml-1"></i>
+                      </a>
+                    </span>
+                    <span class="h4">
+                      <a class="btn btn-xs btn-soft-dark btn-pill" href="./index.html">
+                        Notification panel <i class="tio-search ml-1"></i>
+                      </a>
+                    </span>
+                  </div>
+
+                  <div class="dropdown-divider my-3"></div>
+
+                  <small class="dropdown-header mb-n2">Tutorials</small>
+
+                  <a class="dropdown-item my-2" href="./index.html">
+                    <div class="media align-items-center">
+                      <span class="icon icon-xs icon-soft-dark icon-circle mr-2">
+                        <i class="tio-tune"></i>
+                      </span>
+
+                      <div class="media-body text-truncate">
+                        <span>How to set up Gulp?</span>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a class="dropdown-item my-2" href="./index.html">
+                    <div class="media align-items-center">
+                      <span class="icon icon-xs icon-soft-dark icon-circle mr-2">
+                        <i class="tio-paint-bucket"></i>
+                      </span>
+
+                      <div class="media-body text-truncate">
+                        <span>How to change theme color?</span>
+                      </div>
+                    </div>
+                  </a>
+
+                  <div class="dropdown-divider my-3"></div>
+
+                  <small class="dropdown-header mb-n2">Members</small>
+
+                  <a class="dropdown-item my-2" href="./index.html">
+                    <div class="media align-items-center">
+                      <img class="avatar avatar-xs avatar-circle mr-2" src="/assets/img/160x160/img10.jpg" alt="Image Description">
+                      <div class="media-body text-truncate">
+                        <span>Amanda Harvey <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a class="dropdown-item my-2" href="./index.html">
+                    <div class="media align-items-center">
+                      <img class="avatar avatar-xs avatar-circle mr-2" src="/assets/img/160x160/img3.jpg" alt="Image Description">
+                      <div class="media-body text-truncate">
+                        <span>David Harrison</span>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a class="dropdown-item my-2" href="./index.html">
+                    <div class="media align-items-center">
+                      <div class="avatar avatar-xs avatar-soft-info avatar-circle mr-2">
+                        <span class="avatar-initials">A</span>
+                      </div>
+                      <div class="media-body text-truncate">
+                        <span>Anne Richard</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- End Body -->
+
+                <!-- Footer -->
+                <a class="card-footer text-center" href="./index.html">
+                  See all results
+                  <i class="tio-chevron-right"></i>
+                </a>
+                <!-- End Footer -->
+              </div>
+              <!-- End Card Search Content -->
+            </form>
+          </div>
+          <!-- End Search Form -->
+        </div>
+
+        <!-- Secondary Content -->
+        <div class="navbar-nav-wrap-content-right">
+          <!-- Navbar -->
+          <ul class="navbar-nav align-items-center flex-row">
+
+
+
+            <!-- ========== NAVBAR CONTENTS ========== -->
+            <li class="nav-item">
+              <!-- Account -->
+              <div class="hs-unfold">
+                <!-- <a class="js-hs-unfold-invoker navbar-dropdown-account-wrapper" href="javascript:;"
+                   data-hs-unfold-options='{
+                     "target": "#accountNavbarDropdown",
+                     "type": "css-animation"
+                   }'>
+                  <div class="avatar avatar-sm avatar-circle">
+                    <img class="avatar-img" src="/assets/img/160x160/img6.jpg" alt="Image Description">
+                    <span class="avatar-status avatar-sm-status avatar-status-success"></span>
+                  </div>
+                </a> -->
+                <a class="js-hs-unfold-invoker btn btn-icon btn-ghost-secondary rounded-circle" href="javascript:;"
+                   data-hs-unfold-options='{
+                     "target": "#accountNavbarDropdown",
+                     "type": "css-animation"
+                   }'>
+                   <i class="tio-user"></i>
+                </a>
+
+                <div id="accountNavbarDropdown" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right navbar-dropdown-menu navbar-dropdown-account" style="width: 16rem;">
+
+                  <div class="auth-signedin-true-element" hidden>
+                    <div class="dropdown-item-text">
+                      <div class="media align-items-center">
+                        <div class="avatar avatar-sm avatar-circle mr-2">
+                          <!-- <img class="avatar-img" src="/assets/img/160x160/img6.jpg" alt="Image Description"> -->
+                          <i class="tio-user"></i>
+                        </div>
+                        <div class="media-body">
+                          <span class="card-title h5">Welcome,</span>
+                          <span class="card-text auth-email-element">loading...</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="dropdown-divider"></div>
+
+                    <a class="dropdown-item" href="{{ site.url }}/account">
+                      <span class="text-truncate pr-2" title="Profile &amp; account">Profile &amp; account</span>
+                    </a>
+
+                    <div class="dropdown-divider"></div>
+
+                    <!-- <a class="dropdown-item" href="#">
+                      <div class="media align-items-center">
+                        <div class="avatar avatar-sm avatar-dark avatar-circle mr-2">
+                          <span class="avatar-initials">HS</span>
+                        </div>
+                        <div class="media-body">
+                          <span class="card-title h5">Htmlstream <span class="badge badge-primary badge-pill text-uppercase ml-1">PRO</span></span>
+                          <span class="card-text">hs.example.com</span>
+                        </div>
+                      </div>
+                    </a>
+
+                    <div class="dropdown-divider"></div> -->
+
+                    <!-- <a class="dropdown-item" href="#">
+                      <span class="text-truncate pr-2" title="Manage team">Manage team</span>
+                    </a>
+
+                    <div class="dropdown-divider"></div> -->
+
+                    <a class="dropdown-item auth-signout-all-btn" href="#">
+                      <span class="text-truncate pr-2" title="Sign out">Sign out</span>
+                    </a>
+                  </div>
+
+                  <div class="auth-signedin-false-element" hidden>
+                    <a class="dropdown-item" href="{{ site.url }}/signup">
+                      <span class="text-truncate pr-2" title="Sign up &amp; account">Sign up</span>
+                    </a>
+                    <a class="dropdown-item" href="{{ site.url }}/signin">
+                      <span class="text-truncate pr-2" title="Sign in &amp; account">Sign in</span>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+              <!-- End Account -->
+            </li>
+            <!-- ========== END NAVBAR CONTENTS ========== -->
+          </ul>
+          <!-- End Navbar -->
+        </div>
+        <!-- End Secondary Content -->
+      </div>
+    </header>
+
+
+
+
+
+  <!-- ========== END HEADER ========== -->
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <!-- Navbar Vertical -->
+
+    <aside class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-lg navbar-bordered  ">
+      <div class="navbar-vertical-container">
+        <div class="navbar-vertical-footer-offset">
+          <div class="navbar-brand-wrapper justify-content-between">
+            <!-- Logo -->
+
+
+              <a class="navbar-brand" href="{{ site.url }}" aria-label="{{ site.brand.name }}">
+                <img class="navbar-brand-logo" src="https://cdn.itwcreativeworks.com/assets/soundgrail/images/logo/soundgrail-combomark-black-x.svg" alt="{{ site.brand.name }} Logo">
+                <img class="navbar-brand-logo-mini" src="https://cdn.itwcreativeworks.com/assets/soundgrail/images/logo/soundgrail-brandmark-black-x.svg" alt="{{ site.brand.name }} Logo">
+              </a>
+
+            <!-- End Logo -->
+
+            <!-- Navbar Vertical Toggle -->
+            <button type="button" class="js-navbar-vertical-aside-toggle-invoker navbar-vertical-aside-toggle btn btn-icon btn-xs btn-ghost-dark">
+              <i class="tio-clear tio-lg"></i>
+            </button>
+            <!-- End Navbar Vertical Toggle -->
+          </div>
+
+          <!-- Content -->
+          <div class="navbar-vertical-content">
+            <ul class="navbar-nav navbar-nav-lg nav-tabs">
+
+              <!-- <li class="nav-item">
+                <small class="nav-subtitle" title="Layouts">Layouts</small>
+                <small class="tio-more-horizontal nav-subtitle-replacer"></small>
+              </li> -->
+
+              <!-- <li class="nav-item ">
+                <a class="js-nav-tooltip-link nav-link {% if page.url == '/' %} active {% endif %}" href="{{ site.url }}/" title="Home" data-placement="left">
+                  <i class="tio-home-vs-1-outlined nav-icon"></i>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Home</span>
+                </a>
+              </li> -->
+
+              <!-- Dashboards -->
+              <!-- <li class="navbar-vertical-aside-has-menu show">
+                <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle active" href="javascript:;" title="Dashboards">
+                  <i class="tio-home-vs-1-outlined nav-icon"></i>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Dashboards</span>
+                </a>
+
+                <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="./index.html" title="Default">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-truncate">Default</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="./dashboard-alternative.html" title="Alternative">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-truncate">Alternative</span>
+                    </a>
+                  </li>
+                </ul>
+              </li> -->
+              <!-- End Dashboards -->
+
+              <!-- <li class="nav-item">
+                <small class="nav-subtitle" title="Explore">Explore</small>
+              </li> -->
+
+              <li class="navbar-vertical-aside-has-menu {% if page.module-data.type == 'tool' %} show {% endif %}">
+                <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle {% if page.module-data.type == 'tool' %} active {% endif %}" href="javascript:;" title="Tools">
+                  <i class="tio-layers-outlined nav-icon"></i>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Tools</span>
+                </a>
+
+                <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
+                  <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/reverse-chord-finder/' %} active {% endif %}" href="{{ site.url }}/reverse-chord-finder" title="Reverse Chord Finder">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-truncate">Chord & Interval Finder</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/chord-progression-generator/' %} active {% endif %}" href="{{ site.url }}/chord-progression-generator" title="Chord Progression Generator">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-truncate">Chord Progression Generator</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/metronome/' %} active {% endif %}" href="{{ site.url }}/metronome" title="Metronome">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-truncate">Metronome</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/guitar-tuner/' %} active {% endif %}" href="{{ site.url }}/guitar-tuner" title="Guitar Tuner">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-truncate">Guitar Tuner</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/arpeggio-generator/' %} active {% endif %}" href="{{ site.url }}/arpeggio-generator" title="Arpeggio Generator">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-truncate">Arpeggio Generator</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/melody-generator/' %} active {% endif %}" href="{{ site.url }}/melody-generator" title="Melody Generator">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-truncate">Melody Generator</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/virtual-piano/' %} active {% endif %}" href="{{ site.url }}/virtual-piano" title="Virtual Piano">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-truncate">Virtual Piano</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/audio-music-visualizer/' %} active {% endif %}" href="{{ site.url }}/audio-music-visualizer" title="Audio Visualizer">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-truncate">Audio Visualizer</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/delay-calculator/' %} active {% endif %}" href="{{ site.url }}/delay-calculator" title="Delay Time Calculator">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-truncate">Delay Time Calculator</span>
+                    </a>
+                  </li>
+
+                </ul>
+              </li>
+
+              <li class="navbar-vertical-aside-has-menu {% if page.module-data.type == 'reference' %} show {% endif %}">
+                <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle {% if page.module-data.type == 'reference' %} active {% endif %}" href="javascript:;" title="Reference">
+                  <i class="tio-book nav-icon"></i>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Reference</span>
+                </a>
+
+                <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
+                  <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/interactive-chord-chart/' %} active {% endif %}" href="{{ site.url }}/interactive-chord-chart" title="Chord Chart">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-truncate">Chord Chart</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/circle-of-fifths/' %} active {% endif %}" href="{{ site.url }}/circle-of-fifths" title="Circle of Fifths">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-truncate">Circle of Fifths</span>
+                    </a>
+                  </li>
+
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <div class="nav-divider"></div>
+              </li>
+
+              <li class="nav-item">
+                <small class="nav-subtitle" title="Premium">Premium</small>
+                <!-- <small class="tio-more-horizontal nav-subtitle-replacer"></small> -->
+              </li>
+
+              <li class="nav-item ">
+                <a class="js-nav-tooltip-link nav-link {% if page.url == '/pricing/' %} active {% endif %}" href="{{ site.url }}/pricing" title="SoundGrail Premium" data-placement="left">
+                  <i class="tio-star nav-icon"></i>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Premium</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <div class="nav-divider"></div>
+              </li>
+
+              <li class="nav-item">
+                <small class="nav-subtitle" title="Explore">Explore</small>
+                <!-- <small class="tio-more-horizontal nav-subtitle-replacer"></small> -->
+              </li>
+
+              <li class="nav-item ">
+                <a class="js-nav-tooltip-link nav-link" href="https://music.soundgrail.com" title="Music Blog" data-placement="left">
+                  <i class="tio-feed nav-icon"></i>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Music Blog</span>
+                </a>
+              </li>
+
+              <li class="nav-item ">
+                <a class="js-nav-tooltip-link nav-link" href="https://soundgrail.com" title="Main Site" data-placement="left">
+                  <i class="tio-music nav-icon"></i>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Main Site</span>
+                </a>
+              </li>
+
+              <!-- <li class="nav-item">
+                <small class="tio-more-horizontal nav-subtitle-replacer"></small>
+              </li> -->
+
+              <!-- Front Builder -->
+              <!-- <li class="nav-item nav-footer-item ">
+                <a class="d-none d-md-flex js-hs-unfold-invoker nav-link nav-link-toggle" href="javascript:;"
+                   data-hs-unfold-options='{
+                     "target": "#styleSwitcherDropdown",
+                     "type": "css-animation",
+                     "animationIn": "fadeInRight",
+                     "animationOut": "fadeOutRight",
+                     "hasOverlay": true,
+                     "smartPositionOff": true
+                   }'>
+                  <i class="tio-tune nav-icon"></i>
+                </a>
+                <a class="d-flex d-md-none nav-link nav-link-toggle" href="javascript:;">
+                  <i class="tio-tune nav-icon"></i>
+                </a>
+              </li> -->
+              <li class="nav-item nav-footer-item">
+                <a class="nav-link nav-link-toggle" href="{{ site.url }}/account">
+                  <i class="tio-tune nav-icon"></i>
+                </a>
+              </li>
+              <!-- End Front Builder -->
+
+              <!-- Help -->
+              <!-- <li class="nav-item nav-footer-item">
+                <a class="nav-link nav-link-toggle" href="{{ site.url }}/contact">
+                  <i class="tio-support nav-icon"></i>
+                </a>
+              </li> -->
+              <!-- End Help -->
+
+            </ul>
+            <div id="soundgrail-ad-sidebar" hidden></div>
+          </div>
+          <!-- End Content -->
+
+          <!-- Footer -->
+          <div class="navbar-vertical-footer">
+            <ul class="navbar-vertical-footer-list">
+              <!-- <li class="navbar-vertical-footer-list-item">
+                <div class="hs-unfold">
+                  <a class="js-hs-unfold-invoker btn btn-icon btn-ghost-secondary rounded-circle" href="javascript:;"
+                     data-hs-unfold-options='{
+                      "target": "#styleSwitcherDropdown",
+                      "type": "css-animation",
+                      "animationIn": "fadeInRight",
+                      "animationOut": "fadeOutRight",
+                      "hasOverlay": true,
+                      "smartPositionOff": true
+                     }'>
+                    <i class="tio-tune"></i>
+                  </a>
+                </div>
+              </li> -->
+
+              <li class="navbar-vertical-footer-list-item">
+                <a class="btn btn-icon btn-ghost-secondary rounded-circle" href="{{ site.url }}/account">
+                  <i class="tio-tune"></i>
+                </a>
+              </li>
+
+              <li class="navbar-vertical-footer-list-item">
+                <a class="btn btn-icon btn-ghost-secondary rounded-circle" href="{{ site.url }}/pricing">
+                  <i class="tio-star"></i>
+                </a>
+              </li>
+
+              <li class="navbar-vertical-footer-list-item">
+                <a class="btn btn-icon btn-ghost-secondary rounded-circle" href="https://soundgrail.com">
+                  <i class="tio-music"></i>
+                </a>
+              </li>
+              <!-- <li class="navbar-vertical-footer-list-item">
+                <a class="btn btn-icon btn-ghost-secondary rounded-circle" href="{{ site.url }}/discord">
+                  <i class="tio-comment-outlined"></i>
+                </a>
+              </li>
+
+              <li class="navbar-vertical-footer-list-item">
+                <a class="btn btn-icon btn-ghost-secondary rounded-circle" href="{{ site.url }}/docs">
+                  <i class="tio-book-opened"></i>
+                </a>
+              </li> -->
+
+            </ul>
+          </div>
+          <!-- End Footer -->
+        </div>
+      </div>
+    </aside>
+
+
+
+  <!-- End Navbar Vertical -->
+
+  <main id="content" role="main" class="main pointer-event">
+
+    <!-- Content -->
+    <div class="content container-fluid">
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="row align-items-center">
+          <div class="col-auto mb-2 mb-sm-0">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-no-gutter">
+                {% assign page-items = page.url | split: "/" %}
+                {% assign working-path = "" %}
+
+                {% for page-item in page-items %}
+                  {% if forloop.length < 3 %}
+                    {% break %}
+                  {% endif %}
+                  {% if forloop.index == 1 %}
+                    {% continue %}
+                  {% endif %}
+
+                  {% capture working-path %}{{working-path }}/{{ page-item }}{% endcapture %}
+
+
+                  {% if forloop.last %}
+                    <li class="breadcrumb-item active">{{ page-item | capitalize }}</li>
+                  {% else %}
+                    <li class="breadcrumb-item"><a class="breadcrumb-link" href="{{ site.url }}{{ working-path }}">{{ page-item | capitalize }}</a></li>
+                  {% endif %}
+                {% endfor %}
+              </ol>
+            </nav>
+            <h1 class="page-header-title" id="main-page-header-title">{{ page.module-data.name }}{{ layout.module-data.name }}</h1>
+          </div>
+
+          <div class="col-auto ml-auto">
+            {{ page.dashboard.title-button | liquify }}
+          </div>
+        </div>
+      </div>
+      <!-- End Page Header -->
+
+      {{ content }}
+    </div>
+
+    <!-- Footer -->
+
+      <div class="footer">
+        <div class="row justify-content-between align-items-center">
+          <div class="col">
+            <p class="font-size-sm mb-0">&copy; {{ site.brand.name }}. <span class="d-none d-sm-inline-block">{{ "now" | date: "%Y" }} ITW Creative Works. All rights reserved.</span></p>
+          </div>
+          <div class="col-auto">
+            <div class="d-flex justify-content-end">
+              <!-- List Dot -->
+              <ul class="list-inline list-separator">
+                <li class="list-inline-item">
+                  <a class="list-separator-link" href="{{ site.url }}/pricing">FAQ</a>
+                </li>
+
+                <li class="list-inline-item">
+                  <a class="list-separator-link" href="{{ site.url }}/terms">Terms of Service</a>
+                </li>
+
+                <!-- <li class="list-inline-item">
+                  <div class="hs-unfold">
+                    <a class="js-hs-unfold-invoker btn btn-icon btn-ghost-secondary rounded-circle" href="javascript:;"
+                       data-hs-unfold-options='{
+                            "target": "#keyboardShortcutsSidebar",
+                            "type": "css-animation",
+                            "animationIn": "fadeInRight",
+                            "animationOut": "fadeOutRight",
+                            "hasOverlay": true,
+                            "smartPositionOff": true
+                           }'>
+                      <i class="tio-command-key"></i>
+                    </a>
+                  </div>
+                </li> -->
+              </ul>
+              <!-- End List Dot -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    <!-- End Footer -->
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+  <!-- ========== SECONDARY CONTENTS ========== -->
+
+  <!-- ========== END SECONDARY CONTENTS ========== -->
+
+  <!-- JS Global Compulsory  -->
+  <script src="/assets/app/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="/assets/app/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+  <script src="/assets/app/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="/assets/app/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+  <script src="/assets/app/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+  <script src="/assets/app/vendor/hs-form-search/dist/hs-form-search.min.js"></script>
+  <script src="/assets/app/vendor/select2/dist/js/select2.full.min.js"></script>
+  <script src="/assets/app/vendor/chart.js/dist/Chart.min.js"></script>
+  <script src="/assets/app/vendor/chart.js.extensions/chartjs-extensions.js"></script>
+  <script src="/assets/app/vendor/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
+  <script src="/assets/app/vendor/daterangepicker/moment.min.js"></script>
+  <script src="/assets/app/vendor/daterangepicker/daterangepicker.js"></script>
+  <script src="/assets/app/vendor/datatables/media/js/jquery.dataTables.min.js"></script>
+  <script src="/assets/app/vendor/datatables.net.extensions/select/select.min.js"></script>
+  <script src="/assets/app/vendor/clipboard/dist/clipboard.min.js"></script>
+
+
+  <!-- JS Front -->
+  <script src="/assets/js/theme/app.min.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+      // =======================================================
+
+
+      // BUILDER TOGGLE INVOKER
+      // =======================================================
+      $('.js-navbar-vertical-aside-toggle-invoker').click(function () {
+        $('.js-navbar-vertical-aside-toggle-invoker i').tooltip('hide');
+      });
+
+
+
+
+      // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+      // =======================================================
+      var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+      // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+      // =======================================================
+      $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+      $(".js-nav-tooltip-link").on("show.bs.tooltip", function(e) {
+        if (!$("body").hasClass("navbar-vertical-aside-mini-mode")) {
+          return false;
+        }
+      });
+
+
+      // INITIALIZATION OF UNFOLD
+      // =======================================================
+      $('.js-hs-unfold-invoker').each(function () {
+        var unfold = new HSUnfold($(this)).init();
+      });
+
+
+      // INITIALIZATION OF FORM SEARCH
+      // =======================================================
+      $('.js-form-search').each(function () {
+        new HSFormSearch($(this)).init()
+      });
+
+
+      // INITIALIZATION OF SELECT2
+      // =======================================================
+      $('.js-select2-custom').each(function () {
+        var select2 = $.HSCore.components.HSSelect2.init($(this));
+      });
+
+
+      // INITIALIZATION OF CHARTJS
+      // =======================================================
+      Chart.plugins.unregister(ChartDataLabels);
+
+      $('.js-chart').each(function () {
+        $.HSCore.components.HSChartJS.init($(this));
+      });
+
+      var updatingChart = $.HSCore.components.HSChartJS.init($('#updatingData'));
+
+      // CALL WHEN TAB IS CLICKED
+      // =======================================================
+      $('[data-toggle="chart-bar"]').click(function(e) {
+        let keyDataset = $(e.currentTarget).attr('data-datasets')
+
+       if (keyDataset === 'lastWeek') {
+         updatingChart.data.labels = ["Apr 22", "Apr 23", "Apr 24", "Apr 25", "Apr 26", "Apr 27", "Apr 28", "Apr 29", "Apr 30", "Apr 31"];
+         updatingChart.data.datasets = [
+           {
+             "data": [120, 250, 300, 200, 300, 290, 350, 100, 125, 320],
+             "backgroundColor": "#377dff",
+             "hoverBackgroundColor": "#377dff",
+             "borderColor": "#377dff"
+           },
+           {
+             "data": [250, 130, 322, 144, 129, 300, 260, 120, 260, 245, 110],
+             "backgroundColor": "#e7eaf3",
+             "borderColor": "#e7eaf3"
+           }
+         ];
+         updatingChart.update();
+       } else {
+         updatingChart.data.labels = ["May 1", "May 2", "May 3", "May 4", "May 5", "May 6", "May 7", "May 8", "May 9", "May 10"];
+         updatingChart.data.datasets = [
+           {
+             "data": [200, 300, 290, 350, 150, 350, 300, 100, 125, 220],
+             "backgroundColor": "#377dff",
+             "hoverBackgroundColor": "#377dff",
+             "borderColor": "#377dff"
+           },
+           {
+             "data": [150, 230, 382, 204, 169, 290, 300, 100, 300, 225, 120],
+             "backgroundColor": "#e7eaf3",
+             "borderColor": "#e7eaf3"
+           }
+         ]
+         updatingChart.update();
+       }
+      })
+
+
+      // INITIALIZATION OF BUBBLE CHARTJS WITH DATALABELS PLUGIN
+      // =======================================================
+      $('.js-chart-datalabels').each(function () {
+        $.HSCore.components.HSChartJS.init($(this), {
+          plugins: [ChartDataLabels],
+          options: {
+            plugins: {
+              datalabels: {
+                anchor: function(context) {
+                  var value = context.dataset.data[context.dataIndex];
+                  return value.r < 20 ? 'end' : 'center';
+                },
+                align: function(context) {
+                  var value = context.dataset.data[context.dataIndex];
+                  return value.r < 20 ? 'end' : 'center';
+                },
+                color: function(context) {
+                  var value = context.dataset.data[context.dataIndex];
+                  return value.r < 20 ? context.dataset.backgroundColor : context.dataset.color;
+                },
+                font: function(context) {
+                  var value = context.dataset.data[context.dataIndex],
+                    fontSize = 25;
+
+                  if (value.r > 50) {
+                    fontSize = 35;
+                  }
+
+                  if (value.r > 70) {
+                    fontSize = 55;
+                  }
+
+                  return {
+                    weight: 'lighter',
+                    size: fontSize
+                  };
+                },
+                offset: 2,
+                padding: 0
+              }
+            }
+          },
+        });
+      });
+
+
+      // INITIALIZATION OF DATERANGEPICKER
+      // =======================================================
+      $('.js-daterangepicker').daterangepicker();
+
+      $('.js-daterangepicker-times').daterangepicker({
+        timePicker: true,
+        startDate: moment().startOf('hour'),
+        endDate: moment().startOf('hour').add(32, 'hour'),
+        locale: {
+          format: 'M/DD hh:mm A'
+        }
+      });
+
+      var start = moment();
+      var end = moment();
+
+      function cb(start, end) {
+        $('#js-daterangepicker-predefined .js-daterangepicker-predefined-preview').html(start.format('MMM D') + ' - ' + end.format('MMM D, YYYY'));
+      }
+
+      $('#js-daterangepicker-predefined').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+      }, cb);
+
+      cb(start, end);
+
+
+      // INITIALIZATION OF DATATABLES
+      // =======================================================
+      // var datatable = $.HSCore.components.HSDatatables.init($('#datatable'), {
+      //   select: {
+      //     style: 'multi',
+      //     selector: 'td:first-child input[type="checkbox"]',
+      //     classMap: {
+      //       checkAll: '#datatableCheckAll',
+      //       counter: '#datatableCounter',
+      //       counterInfo: '#datatableCounterInfo'
+      //     }
+      //   },
+      //   language: {
+      //     zeroRecords: '<div class="text-center p-4">' +
+      //         '<img class="mb-3" src="/assets/svg/illustrations/sorry.svg" alt="Image Description" style="width: 7rem;">' +
+      //         '<p class="mb-0">No data to show</p>' +
+      //         '</div>'
+      //   }
+      // });
+      //
+      // $('.js-datatable-filter').on('change', function() {
+      //   var $this = $(this),
+      //     elVal = $this.val(),
+      //     targetColumnIndex = $this.data('target-column-index');
+      //
+      //   datatable.column(targetColumnIndex).search(elVal).draw();
+      // });
+      //
+      // $('#datatableSearch').on('mouseup', function (e) {
+      //   var $input = $(this),
+      //     oldValue = $input.val();
+      //
+      //   if (oldValue == "") return;
+      //
+      //   setTimeout(function(){
+      //     var newValue = $input.val();
+      //
+      //     if (newValue == ""){
+      //       // Gotcha
+      //       datatable.search('').draw();
+      //     }
+      //   }, 1);
+      // });
+
+
+      // INITIALIZATION OF CLIPBOARD
+      // =======================================================
+      $('.js-clipboard').each(function() {
+        var clipboard = $.HSCore.components.HSClipboard.init(this);
+      });
+    });
+  </script>
+
+  <!-- IE Support -->
+  <!-- <script>
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+  </script> -->
+
+  <script type="text/javascript" src="/assets/js/master.js?cb={{ site.time | date: "%s" }}" async defer></script>
+
+  <script type="text/javascript">
+    var allowLeave = true;
+
+    window.onbeforeunload = function(event) {
+      if (allowLeave) {
+        event.preventDefault();
+      } else {
+        event.returnValue = 'Blocked';
+      }
+    };
+    function displayGlobalResult(input, message, button) {
+      var resultEl = Manager.dom().select('.global-result');
+      var buttonEl = Manager.dom().select(button);
+      resultEl.removeClass('alert-soft-danger').removeClass('alert-soft-success').removeClass('alert-soft-primary')
+      buttonEl.addClass('disabled').setAttribute('disabled', true);
+
+      Manager.log('displayGlobalResult', input, message, button)
+
+      if (input) {
+        resultEl.removeAttribute('hidden')
+      } else {
+        resultEl.setAttribute('hidden', true)
+      }
+
+      if (input instanceof Error) {
+        resultEl.setInnerHTML((input && input.message ? input.message : input) || 'Unknown error');
+        resultEl.addClass('alert-soft-danger');
+        buttonEl.removeClass('disabled').removeAttribute('disabled');
+      } else if (input === 'waiting' || input === 'loading') {
+        resultEl.setInnerHTML('Loading... <div class="spinner-border text-primary" role="status"> </div>')
+        resultEl.addClass('alert-soft-primary');
+      } else if (input === 'success') {
+        resultEl.setInnerHTML('Success!' || message)
+        resultEl.addClass('alert-soft-success');
+        buttonEl.removeClass('disabled').removeAttribute('disabled');
+      }
+    }
+
+    function fetchJSON(url, options) {
+      options = options || {};
+      return new Promise(function(resolve, reject) {
+        fetch(url, {
+          method: options.method || 'get',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(options.body),
+        })
+        .then(function (res) { // This function runs only on success
+          if (res.status >= 200 && res.status < 300) {
+            res.json()
+            .then(function (data) {
+              // console.log('Success', data);
+              return resolve(data);
+            })
+          } else {
+            return res.text()
+            .then(function (data) {
+              throw new Error(data || res.statusText || 'Unknown error.')
+            })
+          }
+        })
+        .catch(function (e) { // This function runs only on error
+          return reject(e);
+        })
+      });
+    }
+
+    function initializeDataTables(options) {
+      options = options || {};
+      options.el = options.el || null
+      options.noDataMessage = options.noDataMessage || null
+
+      var datatable = $.HSCore.components.HSDatatables.init($('#datatable'), {
+        select: {
+          style: 'multi',
+          selector: 'td:first-child input[type="checkbox"]',
+          classMap: {
+            checkAll: '#datatableCheckAll',
+            counter: '#datatableCounter',
+            counterInfo: '#datatableCounterInfo'
+          }
+        },
+        language: {
+          zeroRecords: '<div class="text-center p-4">' +
+              // '<img class="mb-3" src="/assets/svg/illustrations/sorry.svg" alt="Image Description" style="width: 7rem;">' +
+              '<p class="mb-0">No data to show</p>' +
+              (options.noDataMessage ? options.noDataMessage : '') +
+              '</div>'
+        }
+      });
+
+      $('.js-datatable-filter').on('change', function() {
+        var $this = $(this),
+          elVal = $this.val(),
+          targetColumnIndex = $this.data('target-column-index');
+
+        datatable.column(targetColumnIndex).search(elVal).draw();
+      });
+
+      $('#datatableSearch').on('mouseup', function (e) {
+        var $input = $(this),
+          oldValue = $input.val();
+
+        if (oldValue == "") return;
+
+        setTimeout(function(){
+          var newValue = $input.val();
+
+          if (newValue == ""){
+            // Gotcha
+            datatable.search('').draw();
+          }
+        }, 1);
+      });
+    }
+
+  </script>
+
+  {% capture soundgrail-adsense-inarticle %}{% include /master/modules/adunits/adsense-in-article.html index="1" %}{% endcapture %}
+  {% capture soundgrail-adsense-inarticle %}{{ soundgrail-adsense-inarticle | replace: "'", "\'" | replace: '"', '\"' | replace: 'script', 'scr" + "ipt' | strip_newlines }}{% endcapture %}
+
+  {% capture soundgrail-adsense-display %}{% include /master/modules/adunits/adsense-display.html index="1" %}{% endcapture %}
+  {% capture soundgrail-adsense-display %}{{ soundgrail-adsense-display | replace: "'", "\'" | replace: '"', '\"' | replace: 'script', 'scr" + "ipt' | strip_newlines }}{% endcapture %}
+
+  <script type="text/javascript">
+    window.SoundGrailAdsenseInarticle = "{{ soundgrail-adsense-inarticle }}"
+    window.SoundGrailAdsenseDisplay = "{{ soundgrail-adsense-display }}"
+
+    Manager.auth().ready(function () {
+      if (true) {
+        var adModule = document.getElementById('soundgrail-ad-module');
+        var adSidebar = document.getElementById('soundgrail-ad-sidebar');
+        if (adModule) {
+          adModule.removeAttribute('hidden')
+          adModule.innerHTML = window.SoundGrailAdsenseInarticle;
+        }
+        if (adSidebar) {
+          adSidebar.removeAttribute('hidden')
+          adSidebar.innerHTML = window.SoundGrailAdsenseDisplay;
+        }
+      }
+    })
+  </script>

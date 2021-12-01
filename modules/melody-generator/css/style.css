@@ -1,0 +1,288 @@
+/*TOC
+ *MAIN
+ *MENU TABS
+ *MEDIA QUERIES
+*/
+
+/*---MAIN---*/
+* {
+  /*  
+  border: 1px red solid !important; */
+  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+  background-color: efefef;
+  text-align: left;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  font-size: 16px;
+  color: #061439;
+}
+
+button {
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: ;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 200;
+  color: black;
+}
+
+p {
+  margin: 7px 0 0 0;
+  color: black;
+}
+
+.all-content-box {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+
+
+header {
+  margin: 20px 0 10px 0;
+  width: 100%;
+}
+
+.head-block {
+  height: 54px;
+  /*
+  padding-bottom: 15px;
+  max-width: 450px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 1px #888888;
+  */
+  
+}
+
+hgroup {
+  float: left;
+  text-align: left;
+  padding-left: 15px;
+  /*
+  width: 55%;
+  */
+}
+
+.top-link {
+  padding: 5px 10px;
+  float: right;
+  max-width: 40%;
+}
+
+.tool-title {
+  clear: both;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 1px;
+  background-color: #174fa8; /*blue*/
+}
+
+/* h2 font */
+.title-accent {
+  font-weight: 600;
+  color: white;
+  /*
+  color: #467587;
+  */
+  text-align: center;
+}
+
+a {
+  color: #4369D0;
+  /*
+  text-decoration: none;
+  */
+}
+
+.header-aside {
+  margin: 0 auto;
+  max-width: 550px;
+}
+
+/*
+li {
+  text-align: left;
+  list-style-type: none;
+}
+*/
+
+hr {
+  /*
+  display: none;
+  */
+}
+
+section {
+  margin: 1px 0;
+  padding: 0 5px 15px 5px;
+  width: 100%;
+}
+
+.emphasize {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.smaller-link {
+  float: right;
+/*  font-size: 90%;
+  */
+}
+
+
+.tool-info {
+  font-style: italic;
+  font-size: 90%;
+}
+.centerDiv {
+  margin: auto;
+  padding-top: 10px;
+  text-align: center;
+/*
+  width: 420px;
+  margin: 0 25%;
+*/
+}
+
+/*tool*/form {
+  /*
+  margin: auto;
+  width: 50%;
+  */
+}
+
+form label {
+  text-align: right;
+  padding-right: 10px;
+  display: inline-block;
+  /*
+  width: 220px;
+  */
+}
+
+form input[type=button] {
+  display: inline-block;
+  width: 162px;
+  margin: 5px;
+}
+
+/* Fixes the text jumping around. Could use width tweaked for each output/tab */
+.tool-output-text {
+  size: 12px;
+  display: block;
+  width: 500px;
+  margin: 10px auto;
+  text-align: left;
+  /* border: solid blue 1px; */ /* Uncomment to see what I mean */
+}
+
+
+
+
+
+
+.trinket-frame {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+
+
+/*- Menu Tabs 5--------------------------- */
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: none;
+    background-color: inherit;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: #34a02b;    /*green*/
+    /*font*/color: white;
+    float: left;
+    border: 1px solid #ccc;
+    outline: none;
+    cursor: pointer;
+    padding: 9px 12px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #174fa8;    /*blue*/
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #174fa8;    /*blue*/
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 0;
+    border: none;
+}
+
+
+
+
+@media only screen and (max-width: 650px) {
+  body {
+  font-size: 14px;
+  }
+  
+  .head-block {
+  margin: 0 auto;
+  height: auto;
+/*  max-width: 450px; */
+  border: none;
+  box-shadow: none;
+  padding-bottom: 15px;
+  }
+  
+  hgroup {
+    padding: 9px 0 0 0;
+    float: none;
+    text-align: center;
+  }
+  
+/*new*/
+  .tool-info {
+    width: 100%;
+  }
+    
+  .tool-output-text {
+    width: 100%;
+  }
+}
+
+.top-link {
+  text-align: center;
+  padding: 0;
+  float: left;
+  max-width: 100%;
+}
+
+  .mob-full-width {
+    width: 100%;  
+  }
+  
+  /*
+  hr {
+    display: block;
+  }
+  */
+}

@@ -1,0 +1,287 @@
+---
+### ALL PAGES ###
+sitemap:
+  include: false
+meta:
+  index: false
+---
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="neat.min.css?v={{ site.time | date: '%s' }}">
+
+    <style media="screen">
+    input[type=range] {
+        -webkit-appearance: none;
+        width: 100%;
+    }
+
+    input[type=range]:focus {
+        outline: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 2px;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px rgba(68, 0, 0, 0), 0px 0px 0px rgba(94, 0, 0, 0);
+        background: #e0e1e2;
+        border-radius: 0px;
+        border: 0px solid rgba(0, 0, 0, 0);
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+        border: 0px solid rgba(0, 0, 0, 0);
+        height: 20px;
+        width: 20px;
+        border-radius: 50px;
+        background: #e0e1e2;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -9.5px;
+    }
+
+
+
+
+    /* BAR STUFF */
+
+    .cp-bar-active {
+      background: #2083fe;
+    }
+    .cp-bar-active .cp-chord-text {
+      color: #FFFFFF;
+    }
+    .cp-bar-active .cp-chord-degree {
+      color: #DDDDDD;
+    }
+
+    .container {
+      padding: 0 0 0 0;
+    }
+
+    .cp-chord-all {
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+
+    .c-table__cell {
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+
+    </style>
+
+
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="./style/examples.css"> -->
+  	<link rel="stylesheet" type="text/css" href="css/examples.css">
+    <style type="text/css">
+
+      img {
+        width: 80%;
+        max-width: 700px;
+        margin-left: auto;
+          margin-right: auto;
+          display: block;
+      }
+
+      #Keyboard {
+        margin: 3px!important;
+      }
+    </style>
+
+
+  	<script>
+  		// jshint ignore: start
+  	</script>
+
+
+  </head>
+  <body>
+
+    <div class="o-page">
+
+
+
+
+        <!-- <div class="container">
+
+          <div class="row u-justify-center">
+            <div class="col-lg-6 u-text-center">
+            </div>
+          </div>
+        </div> -->
+
+
+        <div class="container">
+
+          <!-- KEYBAORD -->
+
+
+            <div class="row u-justify-center">
+              <div class="col-lg-12 u-text-center">
+
+                  <div id="Content">
+                    <!-- <div id="Title">Sampler</div> -->
+                    <!-- <div id="Explanation"> -->
+                      <!-- <a href="https://tonejs.github.io/docs/Sampler" target="_blank">Tone.Sampler</a> makes it easy to create an instrument from audio samples. Pass in an object which maps the note's pitch or midi value to the url, then you can trigger the attack and release of that note like other instruments. By automatically repitching the samples, it is possible to play pitches which were not explicitly included which can save loading time. -->
+                    <!-- </div> -->
+                    <div id="Keyboard"></div>
+                  </div>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="row">
+
+
+            <div class="col-6 offset-3">
+              <div class="c-card c-card--center is-animated " id="">
+                <div class="c-field">
+                  <label class="c-field__label">BPM</label>
+                  <input id="setting-bpm" class="c-input u-mb-small" type="number" placeholder="128" value="128" required="">
+                  <!-- <button class="c-btn c-btn--info c-btn--outline">1</button>
+                  <button class="c-btn c-btn--info c-btn--outline">2</button>
+                  <button class="c-btn c-btn--info c-btn--outline">3</button>
+                  <button class="c-btn c-btn--info c-btn--outline">4</button>
+                  <button class="c-btn c-btn--info c-btn--outline">5</button>
+                  <button class="c-btn c-btn--info c-btn--outline">6</button>
+                  <button class="c-btn c-btn--info c-btn--outline">7</button>
+                  <button class="c-btn c-btn--info c-btn--outline">8</button>
+                  <button class="c-btn c-btn--info c-btn--outline">9</button>
+                  <button class="c-btn c-btn--info c-btn--outline">0</button> -->
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="row">
+                    <div class="col-md-12">
+                      <!-- <div class="c-card c-card--responsive u-mb-medium"> -->
+                        <div class="u-mb-medium">
+                            <!-- <div class="c-card__header c-card__header--transparent o-line">
+                                <h5 class="c-card__title">Invoicing</h5>
+                                <a class="c-card__meta" href="#">View all invoices</a>
+                            </div> -->
+
+                            <table class="c-table u-border-zero">
+                              <thead class="c-table__head c-table__head--slim">
+                                    <tr class="c-table__row">
+                                      <th class="c-table__cell c-table__cell--head"><strong>Note Value</strong> </th>
+                                      <th class="c-table__cell c-table__cell--head"><strong>Standard</strong> </th>
+                                      <th class="c-table__cell c-table__cell--head"><strong>Dotted</strong> </th>
+                                      <th class="c-table__cell c-table__cell--head"><strong>Triplet</strong> </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ui-table-body">
+                                    <!-- <tr class="c-table__row u-border-top-zero">
+                                        <td class="c-table__cell u-text-mute">00450</td>
+                                        <td class="c-table__cell">Design Works</td>
+                                        <td class="c-table__cell u-text-mute">Carlson Limited</td>
+                                        <td class="c-table__cell">$2,580</td>
+                                    </tr> -->
+
+                                    <!-- <tr class="c-table__row">
+                                        <td class="c-table__cell u-text-mute">1/1</td>
+                                        <td class="c-table__cell">600 ms</td>
+                                        <td class="c-table__cell u-text-mute">400 ms</td>
+                                        <td class="c-table__cell">1000 ms</td>
+                                    </tr> -->
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                </div>
+
+        </div>
+
+
+
+    </div>
+
+    <!-- only these since it's a module -->
+
+    <script src="neat.min.js?v={{ site.time | date: '%s' }}"></script>
+
+        <script type="text/javascript">
+        var global_noteNames = ['whole', '1/2', '1/4', '1/8', '1/16', '1/32', '1/64', '1/128']
+        var global_noteDivision = [1, 2, 4, 8, 16, 32, 64, 128]
+        var set_bpm = 128;
+        calculateBpmTimes();
+
+        $('#setting-bpm').on('input', function() {
+          calculateBpmTimes();
+        });
+
+        function calculateBpmTimes() {
+              // do something
+              set_bpm = parseInt($('#setting-bpm').val(), 10);
+              var temp_valueOfQuarter = (60000 / set_bpm);
+              var temp_valueOfWhole = temp_valueOfQuarter * 4;
+
+              $('#ui-table-body').html('')
+
+              for (var i = 0; i < global_noteNames.length; i++) {
+                // array[i]
+                var temp_currentValue = roundNumber(temp_valueOfWhole / (global_noteDivision[i]));
+                var temp_currentValueDotted = roundNumber(temp_currentValue * 1.5)
+                var temp_currentValueTriplet = roundNumber(temp_currentValue * 0.666666)
+
+                $('#ui-table-body').append(''+
+
+                '<tr class="c-table__row">'+
+                    '<td class="c-table__cell">'+global_noteNames[i]+'</td>'+
+                    '<td class="c-table__cell">'+temp_currentValue+' ms'+'</td>'+
+                    '<td class="c-table__cell">'+temp_currentValueDotted+' ms'+'</td>'+
+                    '<td class="c-table__cell">'+temp_currentValueTriplet+' ms'+'</td>'+
+                '</tr>')
+              }
+
+        }
+
+        function roundNumber(number) {
+          return Math.max( Math.round(number * 10) / 10, 2.8 ).toFixed(2);
+        }
+
+
+        </script>
+
+
+  </body>
+</html>

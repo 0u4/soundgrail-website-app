@@ -1,0 +1,113 @@
+---
+### ALL PAGES ###
+layout: app/app/default
+permalink: /signup/
+
+### REGULAR PAGES ###
+module-data:
+  name: 'Sign up'
+
+meta:
+  title: "Sign Up - SoundGrail"
+  description: "Sign up for free and full advantage of SoundGrail's music theory and music production tools."
+  breadcrumb: Sign Up
+
+settings:
+  manager-configuration: "
+  {
+    auth: {
+      state: 'prohibited'
+    }
+  }
+  "
+---
+<div class="container py-5 py-sm-7">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-lg-8">
+    <!-- <div class="col-12"> -->
+      <!-- Card -->
+      <div class="card card-lg mb-5">
+        <div class="card-body">
+          <!-- Form -->
+          <form class="js-validate" onsubmit="return false;">
+            <div class="text-center">
+              <div class="mb-5">
+                <h1 class="display-4">Create your account</h1>
+                <p>Already have an account? <a href="{{ site.url }}/signin">Sign in here</a></p>
+              </div>
+
+              <a class="btn btn-lg btn-block btn-white mb-4 auth-signin-provider-btn" data-provider="google.com" href="#">
+                <span class="d-flex justify-content-center align-items-center" style="pointer-events: none;">
+                  <img class="avatar avatar-xss mr-2" src="https://cdn.itwcreativeworks.com/assets/general/images/brands/color/google.svg" alt="Google">
+                  Sign up with Google
+                </span>
+              </a>
+
+              <span class="divider text-muted mb-4">or</span>
+            </div>
+
+            <!-- Form Group -->
+            <div class="js-form-message form-group">
+              <label class="input-label" for="authentication-email">Email</label>
+              <input type="email" class="form-control auth-email-input" name="email" id="authentication-email" placeholder="jonsnow@gmail.com" aria-label="Email address" required autocomplete="email" autofocus>
+            </div>
+            <!-- End Form Group -->
+
+            <!-- Form Group -->
+            <div class="js-form-message form-group">
+              <label class="input-label" for="authentication-password">Password</label>
+              <input type="password" class="form-control auth-password-input" name="password" id="authentication-password" placeholder="********" aria-label="********" required autocomplete="new-password">
+            </div>
+            <!-- End Form Group -->
+
+            <!-- Form Group -->
+            <div class="js-form-message form-group">
+              <label class="input-label" for="authentication-password-confirm">Confirm password</label>
+              <input type="password" class="form-control auth-password-confirm-input" name="password-confirm" id="authentication-password-confirm" placeholder="********" aria-label="********" required autocomplete="new-password">
+            </div>
+            <!-- End Form Group -->
+
+            <!-- Checkbox -->
+            <div class="js-form-message mb-3">
+              <div class="custom-control custom-checkbox d-flex align-items-center text-muted">
+                <input type="checkbox" class="custom-control-input auth-newsletter-input" id="authentication-newsletter" name="newsletter">
+                <label class="custom-control-label" for="authentication-newsletter">
+                  <small>
+                    I agree to sign up for account promotions and receive marketing newsletters. Learn more in our <a class="link-underline" href="{{ site.url }}/privacy">Privacy Policy</a>.
+                  </small>
+                </label>
+              </div>
+            </div>
+            <div class="js-form-message mb-3">
+              <div class="custom-control custom-checkbox d-flex align-items-center text-muted">
+                <input type="checkbox" class="custom-control-input auth-terms-input" id="authentication-terms" name="terms" required>
+                <label class="custom-control-label" for="authentication-terms">
+                  <small>
+                    I agree to the <a class="link-underline" href="{{ site.url }}/terms">Terms & Conditions</a>
+                  </small>
+                </label>
+              </div>
+            </div>
+
+            <div class="alert alert-danger auth-error-message-element" hidden>
+            </div>
+
+            <button type="submit" class="btn btn-lg btn-block btn-primary mb-2 auth-signup-email-btn">Create an account</button>
+
+            <a class="btn btn-block btn-link" href="{{ site.url }}/signin">
+              or sign in to an existing account <i class="tio-chevron-right"></i>
+            </a>
+          </form>
+          <!-- End Form -->
+        </div>
+      </div>
+      <!-- End Card -->
+
+      <!-- Footer -->
+      <!-- <div class="text-center">
+        <small class="text-cap mb-4">Trusted by the world's best teams</small>
+      </div> -->
+      <!-- End Footer -->
+    </div>
+  </div>
+</div>

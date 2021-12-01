@@ -1,59 +1,64 @@
 ---
 ### ALL PAGES ###
-layout: app/docs/default
+layout: app/app/default
 permalink: /
 
 ### REGULAR PAGES ###
+module-data:
+  name: 'Welcome to SoundGrail'
 # meta:
   # title: "Slapform Documentation and API - Slapform"
   # description: "Slapform is a form processing service which allows you to handle forms on your apps without any back-end code! Use HTML forms or AJAX to submit to our backend endpoint."
   # breadcrumb: Documentation
 ---
 <div class="hs-docs-content-divider">
-  <h1>Introduction to Slapform Docs</h1>
-  <p class="lead">Slapform is a form processing service which allows you to handle forms on your websites & apps without any back-end code!</p>
+  <h4>All of your music theory and music production needs. In one place.</h4>
+  <p class="lead">We built an app that has everything you need to make and understand music like the pros. Become a professional musician in no time!</p>
 </div>
 
-<!-- Alert -->
-<div class="alert alert-soft-primary" role="alert">
-  <h3>Getting started</h3>
-  <p class="">
-    Here's what you need to get started
-  </p>
-  <ol>
-    <li>A website and access to the HTML code</li>
-    <li>A Slapform account. <a href="{{ site.url }}/dashboard/forms/new">Create one now</a>.</li>
-    <li>A basic understanding of HTML and JavaScript.</li>
-  </ol>
+<div class="row gx-2 gx-lg-3">
+  <div class="col-sm-12 col-lg-6 mb-3 mb-lg-5">
+    <a class="card card-hover-shadow h-100" href="{{ site.url }}/reverse-chord-finder">
+      <div class="card-body">
+        <h2 class="h3">Chord & Interval Finder</h2>
+        <div class="row align-items-center gx-2 mb-1">
+          <span class="text-dark">Enter notes to find the name of any chord or interval!</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-sm-12 col-lg-6 mb-3 mb-lg-5">
+    <a class="card card-hover-shadow h-100" href="{{ site.url }}/chord-progression-generator">
+      <div class="card-body">
+        <h2 class="h3">Chord Progression Generator</h2>
+        <div class="row align-items-center gx-2 mb-1">
+          <span class="text-dark">Generate new chord progression ideas and export the MIDI straight to your DAW!</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-sm-12 col-lg-6 mb-3 mb-lg-5">
+    <a class="card card-hover-shadow h-100" href="{{ site.url }}/chord-progression-generator">
+      <div class="card-body">
+        <h2 class="h3">Metronome</h2>
+        <div class="row align-items-center gx-2 mb-1">
+          <span class="text-dark">Free online metronome for keeping time during your practice.</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-sm-12 col-lg-6 mb-3 mb-lg-5">
+    <a class="card card-hover-shadow h-100" href="{{ site.url }}/arpeggio-generator">
+      <div class="card-body">
+        <h2 class="h3">Arpeggio Generator</h2>
+        <div class="row align-items-center gx-2 mb-1">
+          <span class="text-dark">Generate new chord progression ideas and save them straight to MIDI for your DAW!</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
 </div>
-<!-- End Alert -->
-
-<!-- Alert -->
-<!-- <div class="alert alert-soft-dark media align-items-baseline mb-6" role="alert">
-  <i class="fas fa-info-circle mr-2"></i>
-  <div class="media-body">We highly recommend to check out <a class="font-weight-bold" href="https://themes.getbootstrap.com/guide/" target="_blank">The Guide <i class="fas fa-external-link-alt fa-xs"></i></a> an official Bootstrap Theme guidelines by Bootstrap core team.</div>
-</div> -->
-<!-- End Alert -->
-
-<div class="mb-6"></div>
-
-<!-- Heading -->
-<h2 id="starter-template" class="hs-docs-heading">
-  There are a variety of ways to create a form on Slapform.
-</h2>
-<!-- End Heading -->
-
-<p>
-  You can create:
-  <ul>
-    <li>An HTML form by pointing the <code>action</code> attribute to our endpoint</li>
-    <li>A JavaScript / AJAX form by using our npm module or making a post request to our endpoint</li>
-  </ul>
-</p>
-
-<div class="text-center">
-  <a href="{{ site.url }}/docs/html-form" class="btn btn-primary mx-1" target="_blank">Create an HTML Form</a>
-  <a href="{{ site.url }}/docs/javascript-form" class="btn btn-primary mx-1" target="_blank">Create a JavaScript Form</a>
-</div>
-
-<!-- Card -->

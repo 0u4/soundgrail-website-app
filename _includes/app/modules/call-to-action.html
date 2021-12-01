@@ -1,0 +1,27 @@
+{%- if include.mode == 'download' or include.mode == null -%}
+  {% capture cta-url %}{{ site.url }}/dashboard/forms/new{% endcapture %}
+  {% capture cta-text %}Get Slapform{% endcapture %}
+{%- elsif include.mode == 'signup' -%}
+  {% capture cta-url %}{{ site.url }}/dashboard/forms/new{% endcapture %}
+  {% capture cta-text %}Get Started{% endcapture %}
+{%- endif -%}
+
+<div class="w-lg-85 mx-lg-auto">
+  <div class="card bg-primary text-white overflow-hidden p-4">
+    <div class="row justify-content-md-start align-items-md-center text-center text-md-left">
+      <div class="col-md-6 offset-md-3 mb-3 mb-md-0">
+        <h3 class="text-white mb-1">Ready to have kick-ass forms?</h3>
+        <p class="text-white-70 mb-0">Get started now.</p>
+      </div>
+      <div class="col-md-3 text-md-right">
+        <a class="btn btn-light transition-3d-hover" href="{{ cta-url }}">{{ cta-text }}</a>
+      </div>
+    </div>
+
+    <!-- SVG Component -->
+    <figure class="w-25 d-none d-md-block content-centered-y ml-n4">
+      <img class="img-fluid" src="/assets/svg/illustrations/communication.svg" alt="Image Description">
+    </figure>
+    <!-- End SVG Component -->
+  </div>
+</div>

@@ -1,0 +1,90 @@
+---
+### ALL PAGES ###
+layout: app/app/default
+permalink: /signin/
+
+### REGULAR PAGES ###
+module-data:
+  name: 'Sign up'
+
+meta:
+  title: "Sign In - SoundGrail"
+  description: "Sign in to your SoundGrail account to take full advantage of SoundGrail's music theory and music production tools."
+  breadcrumb: Sign In
+
+settings:
+  manager-configuration: "
+  {
+    auth: {
+      state: 'prohibited'
+    }
+  }
+  "
+---
+<div class="container py-5 py-sm-7">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-lg-8">
+    <!-- <div class="col-12"> -->
+      <!-- Card -->
+      <div class="card card-lg mb-5">
+        <div class="card-body">
+          <!-- Form -->
+          <form class="js-validate" onsubmit="return false;">
+            <div class="text-center">
+              <div class="mb-5">
+                <h1 class="display-4">Sign in to your account</h1>
+                <p>Don't have an account? <a href="{{ site.url }}/signup">Sign up here</a></p>
+              </div>
+
+              <a class="btn btn-lg btn-block btn-white mb-4 auth-signup-provider-btn" data-provider="google.com" href="#">
+                <span class="d-flex justify-content-center align-items-center" style="pointer-events: none;">
+                  <img class="avatar avatar-xss mr-2" src="https://cdn.itwcreativeworks.com/assets/general/images/brands/color/google.svg" alt="Google">
+                  Sign in with Google
+                </span>
+              </a>
+
+              <span class="divider text-muted mb-4">or</span>
+            </div>
+
+            <!-- Form Group -->
+            <div class="js-form-message form-group">
+              <label class="input-label" for="authentication-email">Email</label>
+              <input type="email" class="form-control auth-email-input" name="email" id="authentication-email" placeholder="jonsnow@gmail.com" aria-label="Email address" required autocomplete="email" autofocus>
+            </div>
+            <!-- End Form Group -->
+
+            <!-- Form Group -->
+            <div class="js-form-message form-group">
+              <label class="input-label" for="authentication-password">Password</label>
+              <input type="password" class="form-control auth-password-input" name="password" id="authentication-password" placeholder="********" aria-label="********" required autocomplete="new-password">
+            </div>
+            <!-- End Form Group -->
+
+            <div class="alert alert-danger auth-error-message-element" hidden>
+            </div>
+
+            <button type="submit" class="btn btn-lg btn-block btn-primary mb-2 auth-signin-email-btn">Sign in</button>
+
+            <a class="btn btn-block btn-link" href="{{ site.url }}/signup">
+              or Sign up for a new account <i class="tio-chevron-right"></i>
+            </a>
+          </form>
+          <!-- End Form -->
+        </div>
+      </div>
+      <!-- End Card -->
+
+      <!-- Footer -->
+      <!-- <div class="text-center">
+        <small class="text-cap mb-4">Trusted by the world's best teams</small>
+      </div> -->
+      <!-- End Footer -->
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  document.addEventListener('click', function (event) {
+    console.log('---', event.target);
+  })
+</script>
