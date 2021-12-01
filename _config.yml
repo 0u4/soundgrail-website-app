@@ -131,7 +131,8 @@ settings:
           config: {
             palette: {
               popup: {
-                background: '#FA96BE',
+                _background: '#FA96BE',
+                background: '#377dff',
               },
             }
           }
@@ -141,7 +142,8 @@ settings:
           config: {
             chatId: '619743a56bb0760a494352f5',
             widgetId: '1fkre0gd5',
-            prechatColor: '#FA96BE'
+            _prechatColor: '#FA96BE',
+            prechatColor: '#377dff',
           }
         },
         sentry: {

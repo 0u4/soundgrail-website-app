@@ -668,8 +668,7 @@ body:
                     {% continue %}
                   {% endif %}
 
-                  {% capture working-path %}{{working-path }}/{{ page-item }}{% endcapture %}
-
+                  {% capture working-path %}{{ working-path }}/{{ page-item }}{% endcapture %}
 
                   {% if forloop.last %}
                     <li class="breadcrumb-item active">{{ page-item | capitalize }}</li>
