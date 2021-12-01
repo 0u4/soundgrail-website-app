@@ -1127,15 +1127,15 @@ body:
 
   </script>
 
-  {% capture soundgrail-adsense-inarticle %}{% include /master/modules/adunits/adsense-in-article.html index="1" %}{% endcapture %}
-  {% capture soundgrail-adsense-inarticle %}{{ soundgrail-adsense-inarticle | replace: "'", "\'" | replace: '"', '\"' | replace: 'script', 'scr" + "ipt' | strip_newlines }}{% endcapture %}
+  {% capture soundgrail-adsense-module %}{% include /master/modules/adunits/adsense-display.html slot="2334241570" %}{% endcapture %}
+  {% capture soundgrail-adsense-module %}{{ soundgrail-adsense-module | replace: "'", "\'" | replace: '"', '\"' | replace: 'script', 'scr" + "ipt' | strip_newlines }}{% endcapture %}
 
-  {% capture soundgrail-adsense-display %}{% include /master/modules/adunits/adsense-display.html index="1" %}{% endcapture %}
-  {% capture soundgrail-adsense-display %}{{ soundgrail-adsense-display | replace: "'", "\'" | replace: '"', '\"' | replace: 'script', 'scr" + "ipt' | strip_newlines }}{% endcapture %}
+  {% capture soundgrail-adsense-sidebar %}{% include /master/modules/adunits/adsense-display.html slot="3549337395" %}{% endcapture %}
+  {% capture soundgrail-adsense-sidebar %}{{ soundgrail-adsense-sidebar | replace: "'", "\'" | replace: '"', '\"' | replace: 'script', 'scr" + "ipt' | strip_newlines }}{% endcapture %}
 
   <script type="text/javascript">
-    window.SoundGrailAdsenseInarticle = "{{ soundgrail-adsense-inarticle }}"
-    window.SoundGrailAdsenseDisplay = "{{ soundgrail-adsense-display }}"
+    window.SoundGrailAdsenseInarticle = "{{ soundgrail-adsense-module }}"
+    window.SoundGrailAdsenseDisplay = "{{ soundgrail-adsense-sidebar }}"
 
     Manager.auth().ready(function () {
       if (true) {
