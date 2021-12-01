@@ -584,7 +584,9 @@ body:
               <!-- End Help -->
 
             </ul>
-            <div id="soundgrail-ad-sidebar" hidden></div>
+            <div id="soundgrail-ad-sidebar" hidden>
+              {% include /master/modules/adunits/adsense-display.html slot="3549337395" %}
+            </div>
           </div>
           <!-- End Content -->
 
@@ -1143,11 +1145,11 @@ body:
         var adSidebar = document.getElementById('soundgrail-ad-sidebar');
         if (adModule) {
           adModule.removeAttribute('hidden')
-          adModule.innerHTML = window.SoundGrailAdsenseInarticle;
+          // adModule.innerHTML = window.SoundGrailAdsenseInarticle;
         }
         if (adSidebar) {
           adSidebar.removeAttribute('hidden')
-          adSidebar.innerHTML = window.SoundGrailAdsenseDisplay;
+          // adSidebar.innerHTML = window.SoundGrailAdsenseDisplay;
         }
       }
     })
