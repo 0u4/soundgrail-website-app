@@ -584,7 +584,7 @@ body:
               <!-- End Help -->
 
             </ul>
-            <div id="soundgrail-ad-sidebar">
+            <div id="soundgrail-ad-sidebar" class="adunit">
               {% include /master/modules/adunits/adsense-display.html slot="3549337395" %}
             </div>
           </div>
@@ -1139,18 +1139,48 @@ body:
     window.SoundGrailAdsenseInarticle = "{{ soundgrail-adsense-module }}"
     window.SoundGrailAdsenseDisplay = "{{ soundgrail-adsense-sidebar }}"
 
-    Manager.auth().ready(function () {
-      if (true) {
-        var adModule = document.getElementById('soundgrail-ad-module');
-        var adSidebar = document.getElementById('soundgrail-ad-sidebar');
-        if (adModule) {
-          adModule.removeAttribute('hidden')
-          // adModule.innerHTML = window.SoundGrailAdsenseInarticle;
-        }
-        if (adSidebar) {
-          adSidebar.removeAttribute('hidden')
-          // adSidebar.innerHTML = window.SoundGrailAdsenseDisplay;
-        }
+    function handleCurrentUser() {
+      var currentUser = Manager.storage().get('currentUser')
+      console.log('---currentUser', currentUser);
+
+      if (!currentUser || currentUser.plan.id === 'basic') {
+        console.log('---USER IS BASIC');
+      } else {
+        console.log('---USER IS PREMIUM');
+        Manager.dom().select('.adunit').setAttribute('hidden', true)
       }
+      // if (true) {
+      //   var adModule = document.getElementById('soundgrail-ad-module');
+      //   var adSidebar = document.getElementById('soundgrail-ad-sidebar');
+      //   if (adModule) {
+      //     adModule.removeAttribute('hidden')
+      //     // adModule.innerHTML = window.SoundGrailAdsenseInarticle;
+      //   }
+      //   if (adSidebar) {
+      //     adSidebar.removeAttribute('hidden')
+      //     // adSidebar.innerHTML = window.SoundGrailAdsenseDisplay;
+      //   }
+      // }
+    }
+
+    Manager.ready(function () {
+      handleCurrentUser();
+
+      Manager.auth().ready(function () {
+        Manager.account().import()
+        .then(function (Account) {
+          if (firebase.auth().currentUser) {
+            var account = new Account();
+            account.resolve()
+            .then(function (user) {
+              Manager.storage().set('currentUser', user)
+              handleCurrentUser();
+            })
+          } else {
+            Manager.storage().set('currentUser', null)
+            handleCurrentUser();
+          }
+        })
+      })
     })
   </script>
