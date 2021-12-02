@@ -1,0 +1,103 @@
+---
+### ALL PAGES ###
+# layout: app/app/module-inner/module-inner
+layout: master/global/default
+
+### REGULAR PAGES ###
+settings:
+  include-app-header: false
+  include-app-footer: false
+  include-app-head: false
+  include-app-foot: false
+  include-css-bundle: false
+  include-script-bundle: false
+  manager-configuration: "
+    {
+      libraries: {
+        cookieconsent: {
+          enabled: false,
+        },
+        tawk: {
+          enabled: false,
+        },
+      }
+    }
+  " # javascript object to set the Configuration object for Web Manager
+
+
+head:
+  pre-bundle-css: '
+
+  '
+  post-bundle-css: '
+  '
+  content: '
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/app/vendor/icon-set/style.css">
+    <link rel="stylesheet" href="/assets/app/vendor/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="/assets/app/vendor/chart.js/dist/Chart.min.css">
+    <link rel="stylesheet" href="/assets/app/vendor/daterangepicker/daterangepicker.css">
+
+
+    <!-- CSS Front Template -->
+    <link rel="stylesheet" href="/assets/css/theme/app.css">
+    <style media="screen">
+      .short-table-data {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 200px;
+      }
+      .navbar-brand-logo {
+        width: 100%;
+        /* min-width: unset;
+        max-width: unset; */
+        min-width: unset;
+        max-width: 10rem;
+      }
+      #invisible_layer{
+        position: absolute;
+        background-color:trasparent;
+        /* width: 500px;
+        height:300px; */
+      }
+    </style>
+  '
+
+foot:
+  pre-bundle-script: '
+
+  '
+  content: '
+    <script src="/assets/app/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/app/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="/assets/app/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- <script src="/assets/app/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="/assets/app/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+    <script src="/assets/app/vendor/hs-form-search/dist/hs-form-search.min.js"></script>
+    <script src="/assets/app/vendor/select2/dist/js/select2.full.min.js"></script>
+    <script src="/assets/app/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="/assets/app/vendor/chart.js.extensions/chartjs-extensions.js"></script>
+    <script src="/assets/app/vendor/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
+    <script src="/assets/app/vendor/daterangepicker/moment.min.js"></script>
+    <script src="/assets/app/vendor/daterangepicker/daterangepicker.js"></script>
+    <script src="/assets/app/vendor/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="/assets/app/vendor/datatables.net.extensions/select/select.min.js"></script>
+    <script src="/assets/app/vendor/clipboard/dist/clipboard.min.js"></script> -->
+
+
+    <!-- JS Front -->
+    <script src="/assets/js/theme/app.min.js"></script>
+
+    <script type="text/javascript" src="/assets/js/master.js?cb={{ site.time | date: "%s" }}" async defer></script>
+  '
+
+body:
+  class: 'py-3'
+---
+{% include /app/modules/modules/height-observer.html %}
+
+{{ content }}

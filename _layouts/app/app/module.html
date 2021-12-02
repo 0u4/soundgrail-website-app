@@ -9,27 +9,21 @@ layout: app/app/default
   /* IFRAME DESKTOP */
   @media (min-width: 769px) {
     .iframe-scaled-height-sm {
-      width: 100%;
       height: 300px;
     }
     .iframe-scaled-height-md {
-      width: 100%;
       height: 400px;
     }
     .iframe-scaled-height-lg {
-      width: 100%;
       height: 500px;
     }
     .iframe-scaled-height-xl {
-      width: 100%;
       height: 600px;
     }
     .iframe-scaled-height-xxl {
-      width: 100%;
       height: 700px;
     }
     .iframe-scaled-height-xxxl {
-      width: 100%;
       height: 800px;
     }
   }
@@ -37,27 +31,25 @@ layout: app/app/default
   /* IFRAME PHONE */
   @media (max-width: 768px) {
     .iframe-scaled-height-sm {
-      width: 100%;
       height: 300px;
     }
     .iframe-scaled-height-md {
-      width: 100%;
       height: 400px;
     }
     .iframe-scaled-height-lg {
-      width: 100%;
       height: 500px;
     }
     .iframe-scaled-height-xl {
-      width: 100%;
       height: 600px;
     }
     .iframe-scaled-height-xxl {
-      width: 100%;
       height: 600px;
     }
     .iframe-scaled-height-xxxl {
-      width: 100%;
+      height: 600px;
+    }
+
+    .iframe-scaled-height {
       height: 600px;
     }
   }
@@ -71,8 +63,15 @@ layout: app/app/default
   }
 
   .iframe-scaled-height {
+    width: 100%;
     margin-bottom: -7px;
+    border-radius: 0 0 0.6875rem 0.6875rem;
   }
+
+  #nav-help p:last-child, #nav-discover p:last-child {
+    margin-bottom: 0;
+  }
+
 </style>
 <div class="card mb-5">
   <!-- Header -->
@@ -80,10 +79,10 @@ layout: app/app/default
     <!-- Nav -->
     <ul class="nav nav-segment" id="navTab1" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true"><i class="tio-flash"></i> Start</a>
+        <a class="nav-link active" id="nav-module-tab" data-toggle="pill" href="#nav-module" role="tab" aria-controls="nav-module" aria-selected="true"><i class="tio-flash"></i> Start</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false"><i class="tio-help-outlined"></i> Help</a>
+        <a class="nav-link" id="nav-help-tab" data-toggle="pill" href="#nav-help" role="tab" aria-controls="nav-help" aria-selected="false"><i class="tio-help-outlined"></i> Help</a>
       </li>
     </ul>
     <!-- End Nav -->
@@ -92,11 +91,12 @@ layout: app/app/default
 
   <!-- Tab Content -->
   <div class="tab-content" id="navTabContent1">
-    <div class="tab-pane fade p-0 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
-      <iframe id="module-iframe" class="custom-widget iframe-scaled-height {{ page.module-data.iframe-class }}" src="{{ site.url }}/modules/{{ page.module-data.url }}/?v={{ site.time | date: '%s' }}" style="{{ page.module-data.style }}" frameborder="0"></iframe>
+    <div class="tab-pane fade p-0 show active" id="nav-module" role="tabpanel" aria-labelledby="nav-module-tab">
+      <!-- <iframe id="module-iframe" class="custom-widget iframe-scaled-height {{ page.module-data.iframe-class }}" src="{{ site.url }}/modules/{{ page.module-data.url }}/?v={{ site.time | date: '%s' }}" style="{{ page.module-data.style }}" frameborder="0"></iframe> -->
+      <iframe id="module-iframe" class="custom-widget iframe-scaled-height" src="{{ site.url }}/modules/{{ page.module-data.url }}/?v={{ site.time | date: '%s' }}" style="height: 500px; {{ page.module-data.style }}" frameborder="0"></iframe>
     </div>
 
-    <div class="tab-pane fade p-4" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+    <div class="tab-pane fade p-4" id="nav-help" role="tabpanel" aria-labelledby="nav-help-tab">
       {{ page.module-data.text-help | liquify }}
     </div>
   </div>
@@ -104,9 +104,6 @@ layout: app/app/default
 </div>
 
 <div id="soundgrail-ad-module" class="adunit">
-  {% comment %}
-    {% include /master/modules/adunits/adsense-display.html slot="2334241570" %}
-  {% endcomment %}
   {% include /master/modules/adunits/adsense-in-article.html slot="2309097478" %}
 </div>
 
@@ -117,10 +114,10 @@ layout: app/app/default
     <!-- Nav -->
     <ul class="nav nav-segment" id="navTab2" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true"><i class="tio-info"></i> Learn more</a>
+        <a class="nav-link active" id="nav-discover-tab" data-toggle="pill" href="#nav-discover" role="tab" aria-controls="nav-discover" aria-selected="true"><i class="tio-info"></i> Learn more</a>
       </li>
       <!-- <li class="nav-item">
-        <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false"><i class="tio-help-outlined"></i> Help</a>
+        <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-help" role="tab" aria-controls="nav-help" aria-selected="false"><i class="tio-help-outlined"></i> Help</a>
       </li> -->
     </ul>
     <!-- End Nav -->
@@ -129,7 +126,7 @@ layout: app/app/default
 
   <!-- Tab Content -->
   <div class="tab-content" id="navTabContent1">
-    <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+    <div class="tab-pane fade p-4 show active" id="nav-discover" role="tabpanel" aria-labelledby="nav-discover-tab">
       {{ page.module-data.text-content | liquify }}
     </div>
   </div>
@@ -137,6 +134,55 @@ layout: app/app/default
 </div>
 
 <script type="text/javascript">
+  var moduleFrame = document.getElementById('module-iframe');
+  var heightSetterTimeout = 100;
+  var heightSetterTimeoutMax = 1000;
+
+  window.addEventListener('message', (event) => {
+    try {
+      var data = JSON.parse(event.data || '{}');
+      data.command = data.command || '';
+      data.payload = data.payload || {};
+
+      if (data.command === 'module-height-change') {
+        setIframeHeight(data.payload.height)
+      }
+    } catch (e) {
+
+    }
+  }, false);
+
+  try {
+    if (moduleFrame.contentWindow.document.readyState === 'complete') {
+      callHeightSetter();
+    } else {
+      moduleFrame.contentWindow.document.addEventListener('DOMContentLoaded', function (event) {
+        callHeightSetter();
+      })
+    }
+  } catch (e) {
+    console.error('Error', e);
+  }
+
+  function callHeightSetter() {
+    // console.log('---heightSetterTimeout', heightSetterTimeout);
+    setTimeout(function () {
+      if (moduleFrame.contentWindow && moduleFrame.contentWindow.document && moduleFrame.contentWindow.document.body) {
+        setIframeHeight(moduleFrame.contentWindow.document.body.clientHeight)
+      }
+      callHeightSetter();
+    }, heightSetterTimeout);
+    heightSetterTimeout = heightSetterTimeout < heightSetterTimeoutMax ? heightSetterTimeout + 100 : heightSetterTimeout;
+  }
+
+  function setIframeHeight(height) {
+    height = height || 0;
+    if (height > 0) {
+      // console.log('Setting iframe height', height);
+      moduleFrame.style.height = height + 'px';
+    }
+  }
+
   Manager.ready(function () {
     $('#module-iframe').focus();
   })

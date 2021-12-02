@@ -1,0 +1,28 @@
+<!-- <script type="text/javascript">
+  function sendHeight(height) {
+    try {
+      window.parent.postMessage(JSON.stringify({
+        command: 'module-height-change',
+        payload: {
+          height: height,
+        }
+      }), '*');
+    } catch (e) {
+      console.error('Failed to send message', e);
+    }
+  }
+  try {
+    var resizeObserver = new ResizeObserver(function (entries) {
+      // console.log('Body height changed:', entries[0].target.clientHeight)
+      sendHeight(entries[0].target.clientHeight)
+    })
+
+    // start observing a DOM node
+    resizeObserver.observe(document.body)
+  } catch (e) {
+    console.error('Cannot observe height on this device', e);
+    setInterval(function () {
+      sendHeight(document.body.clientHeight || document.height);
+    }, 1000);
+  }
+</script> -->
