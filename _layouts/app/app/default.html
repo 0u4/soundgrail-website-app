@@ -1138,6 +1138,7 @@ body:
   <script type="text/javascript">
     window.SoundGrailAdsenseInarticle = "{{ soundgrail-adsense-module }}"
     window.SoundGrailAdsenseDisplay = "{{ soundgrail-adsense-sidebar }}"
+    window.userIsPremium = false;
 
     function handleCurrentUser() {
       var currentUser = Manager.storage().get('currentUser')
@@ -1145,8 +1146,10 @@ body:
 
       if (!currentUser || currentUser.plan.id === 'basic') {
         console.log('---USER IS BASIC');
+        window.userIsPremium = false;
       } else {
         console.log('---USER IS PREMIUM');
+        window.userIsPremium = true;
         Manager.dom().select('.adunit').setAttribute('hidden', true)
       }
       // if (true) {
