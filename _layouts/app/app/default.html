@@ -144,8 +144,7 @@ body:
               <!-- End Input Group -->
 
               <!-- Card Search Content -->
-              <div id="searchDropdownMenu" class="hs-form-search-menu-content card dropdown-menu dropdown-card overflow-hidden">
-                <!-- Body -->
+              <!-- <div id="searchDropdownMenu" class="hs-form-search-menu-content card dropdown-menu dropdown-card overflow-hidden">
                 <div class="card-body-height py-3">
                   <small class="dropdown-header mb-n2">Recent searches</small>
 
@@ -223,19 +222,14 @@ body:
                     </div>
                   </a>
                 </div>
-                <!-- End Body -->
 
-                <!-- Footer -->
                 <a class="card-footer text-center" href="./index.html">
                   See all results
                   <i class="tio-chevron-right"></i>
                 </a>
-                <!-- End Footer -->
-              </div>
-              <!-- End Card Search Content -->
+              </div> -->
             </form>
           </div>
-          <!-- End Search Form -->
         </div>
 
         <!-- Secondary Content -->
@@ -286,7 +280,7 @@ body:
                     <div class="dropdown-divider"></div>
 
                     <a class="dropdown-item" href="{{ site.url }}/account">
-                      <span class="text-truncate pr-2" title="Profile &amp; account">Profile &amp; account</span>
+                      <span class="pr-2" title="Profile &amp; account">Profile &amp; account</span>
                     </a>
 
                     <div class="dropdown-divider"></div>
@@ -306,22 +300,22 @@ body:
                     <div class="dropdown-divider"></div> -->
 
                     <!-- <a class="dropdown-item" href="#">
-                      <span class="text-truncate pr-2" title="Manage team">Manage team</span>
+                      <span class="pr-2" title="Manage team">Manage team</span>
                     </a>
 
                     <div class="dropdown-divider"></div> -->
 
                     <a class="dropdown-item auth-signout-all-btn" href="#">
-                      <span class="text-truncate auth-signout-all-btn pr-2" title="Sign out">Sign out</span>
+                      <span class="auth-signout-all-btn pr-2" title="Sign out">Sign out</span>
                     </a>
                   </div>
 
                   <div class="auth-signedin-false-element" hidden>
                     <a class="dropdown-item" href="{{ site.url }}/signup">
-                      <span class="text-truncate pr-2" title="Sign up &amp; account">Sign up</span>
+                      <span class="pr-2" title="Sign up &amp; account">Sign up</span>
                     </a>
                     <a class="dropdown-item" href="{{ site.url }}/signin">
-                      <span class="text-truncate pr-2" title="Sign in &amp; account">Sign in</span>
+                      <span class="pr-2" title="Sign in &amp; account">Sign in</span>
                     </a>
                   </div>
 
@@ -414,70 +408,70 @@ body:
               <li class="navbar-vertical-aside-has-menu {% if page.module-data.type == 'tool' %} show {% endif %}">
                 <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle {% if page.module-data.type == 'tool' %} active {% endif %}" href="javascript:;" title="Tools">
                   <i class="tio-layers-outlined nav-icon"></i>
-                  <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Tools</span>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements">Tools</span>
                 </a>
 
                 <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
                   <li class="nav-item">
                     <a class="nav-link {% if page.url == '/reverse-chord-finder/' %} active {% endif %}" href="{{ site.url }}/reverse-chord-finder" title="Reverse Chord Finder">
                       <span class="tio-circle nav-indicator-icon"></span>
-                      <span class="text-truncate">Chord & Interval Finder</span>
+                      <span class="text-wrap">Chord & Interval Finder</span>
                     </a>
                   </li>
 
                   <li class="nav-item">
                     <a class="nav-link {% if page.url == '/chord-progression-generator/' %} active {% endif %}" href="{{ site.url }}/chord-progression-generator" title="Chord Progression Generator">
                       <span class="tio-circle nav-indicator-icon"></span>
-                      <span class="text-truncate">Chord Progression Generator</span>
+                      <span class="text-wrap">Chord Progression Generator</span>
                     </a>
                   </li>
 
                   <li class="nav-item">
                     <a class="nav-link {% if page.url == '/metronome/' %} active {% endif %}" href="{{ site.url }}/metronome" title="Metronome">
                       <span class="tio-circle nav-indicator-icon"></span>
-                      <span class="text-truncate">Metronome</span>
+                      <span class="text-wrap">Metronome</span>
                     </a>
                   </li>
 
                   <li class="nav-item">
                     <a class="nav-link {% if page.url == '/guitar-tuner/' %} active {% endif %}" href="{{ site.url }}/guitar-tuner" title="Guitar Tuner">
                       <span class="tio-circle nav-indicator-icon"></span>
-                      <span class="text-truncate">Guitar Tuner</span>
+                      <span class="text-wrap">Guitar Tuner</span>
                     </a>
                   </li>
 
                   <li class="nav-item">
                     <a class="nav-link {% if page.url == '/arpeggio-generator/' %} active {% endif %}" href="{{ site.url }}/arpeggio-generator" title="Arpeggio Generator">
                       <span class="tio-circle nav-indicator-icon"></span>
-                      <span class="text-truncate">Arpeggio Generator</span>
+                      <span class="text-wrap">Arpeggio Generator</span>
                     </a>
                   </li>
 
                   <li class="nav-item">
                     <a class="nav-link {% if page.url == '/melody-generator/' %} active {% endif %}" href="{{ site.url }}/melody-generator" title="Melody Generator">
                       <span class="tio-circle nav-indicator-icon"></span>
-                      <span class="text-truncate">Melody Generator</span>
+                      <span class="text-wrap">Melody Generator</span>
                     </a>
                   </li>
 
                   <li class="nav-item">
                     <a class="nav-link {% if page.url == '/virtual-piano/' %} active {% endif %}" href="{{ site.url }}/virtual-piano" title="Virtual Piano">
                       <span class="tio-circle nav-indicator-icon"></span>
-                      <span class="text-truncate">Virtual Piano</span>
+                      <span class="text-wrap">Virtual Piano</span>
                     </a>
                   </li>
 
                   <li class="nav-item">
                     <a class="nav-link {% if page.url == '/audio-music-visualizer/' %} active {% endif %}" href="{{ site.url }}/audio-music-visualizer" title="Audio Visualizer">
                       <span class="tio-circle nav-indicator-icon"></span>
-                      <span class="text-truncate">Audio Visualizer</span>
+                      <span class="text-wrap">Audio Visualizer</span>
                     </a>
                   </li>
 
                   <li class="nav-item">
                     <a class="nav-link {% if page.url == '/delay-calculator/' %} active {% endif %}" href="{{ site.url }}/delay-calculator" title="Delay Time Calculator">
                       <span class="tio-circle nav-indicator-icon"></span>
-                      <span class="text-truncate">Delay Time Calculator</span>
+                      <span class="text-wrap">Delay Time Calculator</span>
                     </a>
                   </li>
 
@@ -487,21 +481,21 @@ body:
               <li class="navbar-vertical-aside-has-menu {% if page.module-data.type == 'reference' %} show {% endif %}">
                 <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle {% if page.module-data.type == 'reference' %} active {% endif %}" href="javascript:;" title="Reference">
                   <i class="tio-book nav-icon"></i>
-                  <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Reference</span>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements">Reference</span>
                 </a>
 
                 <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
                   <li class="nav-item">
                     <a class="nav-link {% if page.url == '/interactive-chord-chart/' %} active {% endif %}" href="{{ site.url }}/interactive-chord-chart" title="Chord Chart">
                       <span class="tio-circle nav-indicator-icon"></span>
-                      <span class="text-truncate">Chord Chart</span>
+                      <span class="text-wrap">Chord Chart</span>
                     </a>
                   </li>
 
                   <li class="nav-item">
                     <a class="nav-link {% if page.url == '/circle-of-fifths/' %} active {% endif %}" href="{{ site.url }}/circle-of-fifths" title="Circle of Fifths">
                       <span class="tio-circle nav-indicator-icon"></span>
-                      <span class="text-truncate">Circle of Fifths</span>
+                      <span class="text-wrap">Circle of Fifths</span>
                     </a>
                   </li>
 
@@ -520,7 +514,7 @@ body:
               <li class="nav-item ">
                 <a class="js-nav-tooltip-link nav-link {% if page.url == '/pricing/' %} active {% endif %}" href="{{ site.url }}/pricing" title="SoundGrail Premium" data-placement="left">
                   <i class="tio-star nav-icon"></i>
-                  <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Premium</span>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements">Premium</span>
                 </a>
               </li>
 
@@ -536,14 +530,14 @@ body:
               <li class="nav-item ">
                 <a class="js-nav-tooltip-link nav-link" href="https://music.soundgrail.com" title="Music Blog" data-placement="left">
                   <i class="tio-feed nav-icon"></i>
-                  <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Music Blog</span>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements">Music Blog</span>
                 </a>
               </li>
 
               <li class="nav-item ">
                 <a class="js-nav-tooltip-link nav-link" href="https://soundgrail.com" title="Main Site" data-placement="left">
                   <i class="tio-music nav-icon"></i>
-                  <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Main Site</span>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements">Main Site</span>
                 </a>
               </li>
 
