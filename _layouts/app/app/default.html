@@ -506,19 +506,19 @@ body:
                 <div class="nav-divider"></div>
               </li>
 
-              <li class="nav-item">
+              <li class="nav-item auth-user-premium-false" hidden>
                 <small class="nav-subtitle" title="Premium">Premium</small>
                 <!-- <small class="tio-more-horizontal nav-subtitle-replacer"></small> -->
               </li>
 
-              <li class="nav-item ">
+              <li class="nav-item auth-user-premium-false" hidden>
                 <a class="js-nav-tooltip-link nav-link {% if page.url == '/pricing/' %} active {% endif %}" href="{{ site.url }}/pricing" title="SoundGrail Premium" data-placement="left">
                   <i class="tio-star nav-icon"></i>
                   <span class="navbar-vertical-aside-mini-mode-hidden-elements">Premium</span>
                 </a>
               </li>
 
-              <li class="nav-item">
+              <li class="nav-item auth-user-premium-false" hidden>
                 <div class="nav-divider"></div>
               </li>
 
@@ -1139,14 +1139,14 @@ body:
     function handleCurrentUser() {
       var currentUser = Manager.storage().get('currentUser')
       console.log('---currentUser', currentUser);
-      // currentUser= false;
+      currentUser = false;
 
       if (!currentUser || currentUser.plan.id === 'basic') {
         console.log('---USER IS BASIC');
         window.userIsPremium = false;
+        Manager.dom().select('.auth-user-premium-false').removeAttribute('hidden')
         injectAdElement('soundgrail-ad-sidebar', window.SoundGrailAdsenseSidebar)
         injectAdElement('soundgrail-ad-module', window.SoundGrailAdsenseModule)
-
       } else {
         console.log('---USER IS PREMIUM');
         window.userIsPremium = true;
@@ -1160,8 +1160,11 @@ body:
 
       $(parent).append('<ins ' + code.match(/(?<=ins )(.*)(?=\>\<\/ins)/)[0] + '></ins>');
 
-      (adsbygoogle = window.adsbygoogle || []).push({});
+      try {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {
 
+      }
       // parent.appendChild(div);
     }
 
@@ -1171,10 +1174,10 @@ body:
     })
 
     Manager.auth().ready(function () {
-      console.log('---auth ready');
+      // console.log('---auth ready');
       Manager.account().import()
       .then(function (Account) {
-        console.log('---firebase user', firebase.auth().currentUser);
+        // console.log('---firebase user', firebase.auth().currentUser);
         if (firebase.auth().currentUser) {
           var account = new Account();
           account.resolve()
