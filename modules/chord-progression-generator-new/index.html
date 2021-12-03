@@ -1,0 +1,136 @@
+---
+layout: app/app/module-inner/module-custom
+
+### ALL PAGES ###
+sitemap:
+  include: false
+meta:
+  index: false
+---
+<link rel="stylesheet" type="text/css" href="css/examples.css">
+<style type="text/css">
+
+  img {
+    width: 80%;
+    max-width: 700px;
+    margin-left: auto;
+      margin-right: auto;
+      display: block;
+  }
+
+  #Keyboard {
+    margin: 3px!important;
+  }
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="d-flex justify-content-center">
+          <div id="Content">
+            <div id="Keyboard"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 mt-3">
+      <!-- Table -->
+      <div class="card">
+        <table class="table mb-0">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Note Value</th>
+              <th scope="col">Standard</th>
+              <th scope="col">Dotted</th>
+              <th scope="col">Triplet</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+          </tbody>
+        </table>
+      </div>
+      <!-- End Table -->
+    </div>
+  </div>
+</div>
+
+
+<script src="scripts/Tone.js"></script>
+<!-- <script src="scripts/jquery.min.js"></script> -->
+<script src="scripts/draggabilly.js"></script>
+<script src="scripts/StartAudioContext.js"></script>
+<script src="scripts/Interface.js"></script>
+<script src="https://tonejs.github.io/Logo/build/Logo.js"></script>
+<script src="scripts/Keyboard.js"></script>
+
+<script>
+
+  // console.log('@@@');
+  // console.log(Tone.Buffer);
+  // console.log(Tone.Buffer.loaded);
+  // Tone.Buffer.on(“load” / “progress” / “error”)
+
+
+  // Tone.Buffer.on('progress', function(){
+  //   console.log('@progress');
+  // })
+  //
+  // Tone.Buffer.on('error', function(){
+  //   console.log('@error');
+  // })
+
+  var GLOBAL_BUFFER_LOADED = false;
+  // var tempBuffer = new Tone;
+  function initModule_check() {
+    // console.log('check', Tone);
+    if ((typeof Tone !== 'undefined') && (Tone)) {
+      initModule_main();
+    } else {
+      setTimeout(function () {
+        initModule_check();
+      }, 200);
+    }
+  }
+  var piano;
+  var keyboard;
+  function initModule_main() {
+    Tone.Buffer.on('load', function(){
+      GLOBAL_BUFFER_LOADED = true;
+    })
+    Tone.Buffer.on('error', function(){
+      $('#modal-general-error').modal('show');
+    })
+
+
+    piano = new Tone.Sampler({
+      'A3' : 'A3.[mp3|ogg]',
+      'A4' : 'A4.[mp3|ogg]',
+      'A5' : 'A5.[mp3|ogg]'
+
+    }, {
+      'release' : 1,
+      'baseUrl' : 'audio/'
+    }).toMaster();
+
+    // GUI //
+
+    keyboard = Interface.Keyboard();
+
+    keyboard.keyDown = function (note) {
+        piano.triggerAttack(note);
+        // console.log(note);
+    };
+
+    keyboard.keyUp = function (note) {
+        piano.triggerRelease(note);
+    };
+
+    Interface.Loader();
+
+  }
+
+  initModule_check();
+
+</script>

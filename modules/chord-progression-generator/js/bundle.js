@@ -46,34 +46,49 @@ var global_midiFileName = '';
 var global_userPremium = false;
 var global_premiumChecked = false;
 
-var int_checkUserObject = setInterval(function () {
-  var temp_userObject = {};
-  var temp_userObjectDetermined = false;
 
+// console.log('---Manager', Manager);
+// console.log('---Manager.storage()', Manager.storage());
+setTimeout(function () {
   if (typeof(Storage) !== "undefined") {
-    temp_userObjectDetermined = localStorage.getItem("appvar_userObjectDetermined");
-    temp_userObject = JSON.parse(localStorage.getItem("appvar_userObject"));
-
-  } else {
-    global_userPremium = false;
-  }
-
-  if (temp_userObjectDetermined) {
-
-    if (global_premiumChecked == false) {
-      global_premiumChecked = true;
-      clearInterval(int_checkUserObject);
-
-      if (temp_userObject.settings_profile_premium) {
-        global_userPremium = true;
-      } else {
-        global_userPremium = false;
-      }
-
+    var store = JSON.parse(localStorage.getItem('_manager'));
+    // console.log('---store.currentUser', store.currentUser);
+    if (store.currentUser && store.currentUser.plan && store.currentUser.plan.id === 'premium') {
+      global_userPremium = true;
     }
-
   }
+  // console.log('---global_userPremium', global_userPremium);
 }, 200);
+// var int_checkUserObject = setInterval(function () {
+//   var temp_userObject = {};
+//   var temp_userObjectDetermined = false;
+//
+//   if (typeof(Storage) !== "undefined") {
+//     var store = JSON.parse(localStorage.getItem('_manager'));
+//     console.log('---store.currentUser', store.currentUser);
+//     temp_userObjectDetermined = !!store.currentUser;
+//     temp_userObject = store.currentUser;
+//
+//   } else {
+//     global_userPremium = false;
+//   }
+//
+//   if (temp_userObjectDetermined) {
+//
+//     if (global_premiumChecked == false) {
+//       global_premiumChecked = true;
+//       clearInterval(int_checkUserObject);
+//
+//       if (temp_userObject.settings_profile_premium) {
+//         global_userPremium = true;
+//       } else {
+//         global_userPremium = false;
+//       }
+//
+//     }
+//
+//   }
+// }, 200);
 
 // setInterval(function () {
 //   console.log(global_userPremium);
@@ -106,10 +121,17 @@ $('body').on('click', "#btn-start", function() {
 
 $('body').on('click', "#btn-download", function() {
   // cp_downloadMidi()
+  global_userPremium = false;
   if (global_userPremium) {
     cp_generateMidi();
   } else {
-    $('#modal-premium-general').modal('show');
+    // $('#modal-premium-general').modal('show');
+    window.parent.postMessage(JSON.stringify({
+      command: 'open-premium-modal',
+      payload: {
+        message: 'to export your chord progression as MIDI',
+      }
+    }), '*');
   }
 });
 
