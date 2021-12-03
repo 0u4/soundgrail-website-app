@@ -1168,22 +1168,24 @@ body:
 
     Manager.ready(function () {
       handleCurrentUser();
+    })
 
-      Manager.auth().ready(function () {
-        Manager.account().import()
-        .then(function (Account) {
-          if (firebase.auth().currentUser) {
-            var account = new Account();
-            account.resolve()
-            .then(function (user) {
-              Manager.storage().set('currentUser', user)
-              handleCurrentUser();
-            })
-          } else {
-            Manager.storage().set('currentUser', null)
+    Manager.auth().ready(function () {
+      console.log('---auth ready');
+      Manager.account().import()
+      .then(function (Account) {
+        console.log('---firebase user', firebase.auth().currentUser);
+        if (firebase.auth().currentUser) {
+          var account = new Account();
+          account.resolve()
+          .then(function (user) {
+            Manager.storage().set('currentUser', user)
             handleCurrentUser();
-          }
-        })
+          })
+        } else {
+          Manager.storage().set('currentUser', null)
+          handleCurrentUser();
+        }
       })
     })
 
