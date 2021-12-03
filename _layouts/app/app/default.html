@@ -1138,17 +1138,17 @@ body:
 
     function handleCurrentUser() {
       var currentUser = Manager.storage().get('currentUser')
-      console.log('---currentUser', currentUser);
-      currentUser = false;
+      // console.log('---currentUser', currentUser);
+      // currentUser = false;
 
       if (!currentUser || currentUser.plan.id === 'basic') {
-        console.log('---USER IS BASIC');
+        // console.log('---USER IS BASIC');
         window.userIsPremium = false;
         Manager.dom().select('.auth-user-premium-false').removeAttribute('hidden')
         injectAdElement('soundgrail-ad-sidebar', window.SoundGrailAdsenseSidebar)
         injectAdElement('soundgrail-ad-module', window.SoundGrailAdsenseModule)
       } else {
-        console.log('---USER IS PREMIUM');
+        // console.log('---USER IS PREMIUM');
         window.userIsPremium = true;
         // Manager.dom().select('.adunit').setAttribute('hidden', true)
       }
