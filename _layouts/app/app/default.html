@@ -579,7 +579,9 @@ body:
 
             </ul>
             <div id="soundgrail-ad-sidebar" class="adunit">
-              {% include /master/modules/adunits/adsense-in-article.html slot="2309097478" %}
+              {% comment %}
+                {% include /master/modules/adunits/adsense-in-article.html slot="2309097478" %}
+              {% endcomment %}
             </div>
           </div>
           <!-- End Content -->
@@ -1123,15 +1125,15 @@ body:
 
   </script>
 
-  {% capture soundgrail-adsense-module %}{% include /master/modules/adunits/adsense-display.html slot="2334241570" %}{% endcapture %}
+  {% capture soundgrail-adsense-module %}{% include /master/modules/adunits/adsense-display.html slot="2309097478" %}{% endcapture %}
   {% capture soundgrail-adsense-module %}{{ soundgrail-adsense-module | replace: "'", "\'" | replace: '"', '\"' | replace: 'script', 'scr" + "ipt' | strip_newlines }}{% endcapture %}
 
-  {% capture soundgrail-adsense-sidebar %}{% include /master/modules/adunits/adsense-display.html slot="3549337395" %}{% endcapture %}
+  {% capture soundgrail-adsense-sidebar %}{% include /master/modules/adunits/adsense-display.html slot="2309097478" %}{% endcapture %}
   {% capture soundgrail-adsense-sidebar %}{{ soundgrail-adsense-sidebar | replace: "'", "\'" | replace: '"', '\"' | replace: 'script', 'scr" + "ipt' | strip_newlines }}{% endcapture %}
 
   <script type="text/javascript">
-    window.SoundGrailAdsenseInarticle = "{{ soundgrail-adsense-module }}"
-    window.SoundGrailAdsenseDisplay = "{{ soundgrail-adsense-sidebar }}"
+    window.SoundGrailAdsenseModule = "{{ soundgrail-adsense-module }}"
+    window.SoundGrailAdsenseSidebar = "{{ soundgrail-adsense-sidebar }}"
     window.userIsPremium = false;
 
     function handleCurrentUser() {
@@ -1141,24 +1143,39 @@ body:
       if (!currentUser || currentUser.plan.id === 'basic') {
         console.log('---USER IS BASIC');
         window.userIsPremium = false;
+        injectAdElement('soundgrail-ad-sidebar', window.SoundGrailAdsenseSidebar)
+        injectAdElement('soundgrail-ad-module', window.SoundGrailAdsenseModule)
+
       } else {
         console.log('---USER IS PREMIUM');
         window.userIsPremium = true;
-        Manager.dom().select('.adunit').setAttribute('hidden', true)
+        // Manager.dom().select('.adunit').setAttribute('hidden', true)
       }
       // if (true) {
       //   var adModule = document.getElementById('soundgrail-ad-module');
       //   var adSidebar = document.getElementById('soundgrail-ad-sidebar');
       //   if (adModule) {
       //     adModule.removeAttribute('hidden')
-      //     // adModule.innerHTML = window.SoundGrailAdsenseInarticle;
+      //     // adModule.innerHTML = window.SoundGrailAdsenseModule;
       //   }
       //   if (adSidebar) {
       //     adSidebar.removeAttribute('hidden')
-      //     // adSidebar.innerHTML = window.SoundGrailAdsenseDisplay;
+      //     // adSidebar.innerHTML = window.SoundGrailAdsenseSidebar;
       //   }
       // }
     }
+
+    // document.getElementById('soundgrail-ad-sidebar').innerHTML = '';
+    function injectAdElement(el, code) {
+      var parent = document.getElementById(el);
+
+      $(parent).append('<ins ' + code.match(/(?<=ins )(.*)(?=\>\<\/ins)/)[0] + '></ins>');
+
+      (adsbygoogle = window.adsbygoogle || []).push({});
+
+      parent.appendChild(div);
+    }
+
 
     Manager.ready(function () {
       handleCurrentUser();
