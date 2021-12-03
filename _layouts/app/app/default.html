@@ -1125,10 +1125,10 @@ body:
 
   </script>
 
-  {% capture soundgrail-adsense-module %}{% include /master/modules/adunits/adsense-display.html slot="2309097478" %}{% endcapture %}
+  {% capture soundgrail-adsense-module %}{% include /master/modules/adunits/adsense-in-article.html slot="2309097478" %}{% endcapture %}
   {% capture soundgrail-adsense-module %}{{ soundgrail-adsense-module | replace: "'", "\'" | replace: '"', '\"' | replace: 'script', 'scr" + "ipt' | strip_newlines }}{% endcapture %}
 
-  {% capture soundgrail-adsense-sidebar %}{% include /master/modules/adunits/adsense-display.html slot="2309097478" %}{% endcapture %}
+  {% capture soundgrail-adsense-sidebar %}{% include /master/modules/adunits/adsense-in-article.html slot="2309097478" %}{% endcapture %}
   {% capture soundgrail-adsense-sidebar %}{{ soundgrail-adsense-sidebar | replace: "'", "\'" | replace: '"', '\"' | replace: 'script', 'scr" + "ipt' | strip_newlines }}{% endcapture %}
 
   <script type="text/javascript">
@@ -1152,18 +1152,6 @@ body:
         window.userIsPremium = true;
         // Manager.dom().select('.adunit').setAttribute('hidden', true)
       }
-      // if (true) {
-      //   var adModule = document.getElementById('soundgrail-ad-module');
-      //   var adSidebar = document.getElementById('soundgrail-ad-sidebar');
-      //   if (adModule) {
-      //     adModule.removeAttribute('hidden')
-      //     // adModule.innerHTML = window.SoundGrailAdsenseModule;
-      //   }
-      //   if (adSidebar) {
-      //     adSidebar.removeAttribute('hidden')
-      //     // adSidebar.innerHTML = window.SoundGrailAdsenseSidebar;
-      //   }
-      // }
     }
 
     // document.getElementById('soundgrail-ad-sidebar').innerHTML = '';
