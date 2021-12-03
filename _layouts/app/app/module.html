@@ -72,6 +72,19 @@ layout: app/app/default
     margin-bottom: 0;
   }
 
+  iframe.fullscreen {
+    width: 100vw !important;
+    height: 100vh !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  /* #prechat-btn {
+    z-index: 1001;
+  } */
+
 </style>
 <div class="card mb-5">
   <!-- Header -->
@@ -85,6 +98,7 @@ layout: app/app/default
         <a class="nav-link" id="nav-help-tab" data-toggle="pill" href="#nav-help" role="tab" aria-controls="nav-help" aria-selected="false"><i class="tio-help-outlined"></i> Help</a>
       </li>
     </ul>
+    <button type="button" class="btn btn-primary" id="module-fullscreen" disabled><i class="tio-fullscreen-1-1"></i> Fullscreen</button>
     <!-- End Nav -->
   </div>
   <!-- End Header -->
@@ -244,6 +258,49 @@ layout: app/app/default
       // if (event.target.matches('.btn-close-modal')) {
       //   $('.modal').modal('hide');
       // }
+      if (event.target.matches('#module-fullscreen')) {
+        makeFullScreen()
+      }
     })
+
+    document.addEventListener('fullscreenchange', exitHandler, false);
+    document.addEventListener('mozfullscreenchange', exitHandler, false);
+    document.addEventListener('MSFullscreenChange', exitHandler, false);
+    document.addEventListener('webkitfullscreenchange', exitHandler, false);
+
+    document.getElementById('module-fullscreen').removeAttribute('disabled')
   })
+
+
+  function requestFullScreen(element) {
+      // Supports most browsers and their versions.
+      var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullscreen;
+
+      if (requestMethod) { // Native full screen.
+          requestMethod.call(element);
+      } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+          var wscript = new ActiveXObject("WScript.Shell");
+          if (wscript !== null) {
+              wscript.SendKeys("{F11}");
+          }
+      }
+  }
+
+  function makeFullScreen() {
+      moduleFrame.classList.add('fullscreen');
+      var elem = document.body;
+      requestFullScreen(elem);
+  }
+
+  function exitHandler() {
+    // console.log('---exit', document.webkitIsFullScreen, document.mozFullScreen, !!document.msFullscreenElement);
+    if (document.webkitIsFullScreen || document.mozFullScreen || !!document.msFullscreenElement) {
+      // Run code on exit
+      // console.log('---is full screen');
+    } else {
+      // console.log('---is not full screen');
+      moduleFrame.classList.remove('fullscreen');
+    }
+  }
+
 </script>

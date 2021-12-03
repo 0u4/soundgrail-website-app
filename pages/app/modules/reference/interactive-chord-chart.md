@@ -19,7 +19,7 @@ module-data:
   styleOLD: 'width:100%; height: 800px;'
   iframe-class: 'iframe-scaled-height-xxxl'
   text-help: '
-    <div class="u-mb-medium">
+    <div class="mb-3">
     <p>Getting started with our free online chord chart is incredibly easy! Simple use the virtual piano to click on any key and you will instantly see almost every chord imaginable for that root note. You can also explore scales and degrees of each key as well! Here’s a quick breakdown of each tab:</p>
     <ul>
       <li><strong>Tonic</strong> Shows an overview all scales and chords relative to the selected root note! Click one to get more detail.</li>
@@ -30,9 +30,9 @@ module-data:
     </div>
   '
   text-content: '
-    <h2 class="u-text-large u-mb-medium">Select a note or key to see all chords, scales, chord progressions, and roman numerals.</h2>
+    <h2 class="u-text-large mb-3">Select a note or key to see all chords, scales, chord progressions, and roman numerals.</h2>
 
-    <div class="u-mb-medium">
+    <div class="mb-3">
     <h5 class="c-card__title">Most Popular Chords and Qualities</h5>
     <p>Select a note or key to see all related chords, scales, chord progressions, and roman numerals. Learn how to build major, minor, dimished, and augmented chords!</p>
 
@@ -47,7 +47,7 @@ module-data:
     </ol>
     </div>
 
-    <div class="u-mb-medium">
+    <div class="mb-3">
     <h5 class="c-card__title">Most Popular Scales</h5>
     <ol>
       <li>Major</li>
@@ -58,7 +58,7 @@ module-data:
     </ol>
     </div>
 
-    <div class="u-mb-medium">
+    <div class="mb-3">
     <h5 class="c-card__title">Benefits of Chord Charts</h5>
     <p>While this app explores more chords and scales than the average musician will ever use or need to know, it also serves as a reference to some absolutely crucial chords and scales that every musician and music producer should know. These beginner chords and scales exist in literally millions of songs. </p>
     <p>Because of the nature of music theory, these chords are not specific to any particular scale or key. Rather they are moveable and you can use them in any key once you learn the structure.</p>

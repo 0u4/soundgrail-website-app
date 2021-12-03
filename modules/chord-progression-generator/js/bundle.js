@@ -121,7 +121,7 @@ $('body').on('click', "#btn-start", function() {
 
 $('body').on('click', "#btn-download", function() {
   // cp_downloadMidi()
-  global_userPremium = false;
+  // global_userPremium = false;
   if (global_userPremium) {
     cp_generateMidi();
   } else {
