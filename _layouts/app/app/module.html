@@ -269,6 +269,14 @@ layout: app/app/default
     document.addEventListener('webkitfullscreenchange', exitHandler, false);
 
     document.getElementById('module-fullscreen').removeAttribute('disabled')
+
+    setTimeout(function () {
+      var currentUser = Manager.storage().get('currentUser');
+      // currentUser = false
+      if (!currentUser || (currentUser.plan && currentUser.plan.id === 'basic')) {
+        openPremiumModal()
+      }
+    }, 60000);
   })
 
 
