@@ -1139,6 +1139,7 @@ body:
     function handleCurrentUser() {
       var currentUser = Manager.storage().get('currentUser')
       console.log('---currentUser', currentUser);
+      currentUser= false;
 
       if (!currentUser || currentUser.plan.id === 'basic') {
         console.log('---USER IS BASIC');
@@ -1173,7 +1174,7 @@ body:
 
       (adsbygoogle = window.adsbygoogle || []).push({});
 
-      parent.appendChild(div);
+      // parent.appendChild(div);
     }
 
 
