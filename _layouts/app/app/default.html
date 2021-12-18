@@ -1136,6 +1136,8 @@ body:
     window.SoundGrailAdsenseSidebar = "{{ soundgrail-adsense-sidebar }}"
     window.userIsPremium = false;
 
+    var injectedAdUnits = {};
+
     function handleCurrentUser() {
       var currentUser = Manager.storage().get('currentUser')
       // console.log('---currentUser', currentUser);
@@ -1156,6 +1158,7 @@ body:
 
     // document.getElementById('soundgrail-ad-sidebar').innerHTML = '';
     function injectAdElement(el, code) {
+      if (injectedAdUnits[el]) {return}
       var parent = document.getElementById(el);
 
       $(parent).append('<ins ' + code.match(/(?<=ins )(.*)(?=\>\<\/ins)/)[0] + '></ins>');
@@ -1165,6 +1168,7 @@ body:
       } catch (e) {
 
       }
+      injectedAdUnits[el] = true;
       // parent.appendChild(div);
     }
 
