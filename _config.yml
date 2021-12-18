@@ -18,6 +18,9 @@
 url: "https://app.soundgrail.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 
+# Contact
+slapform-form-id: "Ya_-5_tY7"
+
 # Custom Configuration
 version: '1.0.0'
 app: 'soundgrail'
