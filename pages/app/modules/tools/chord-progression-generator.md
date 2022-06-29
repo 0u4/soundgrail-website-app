@@ -58,7 +58,7 @@ module-data:
       <h5 class="c-card__title">About the Chord Progression Generator</h5>
       <p>Discover random musical ideas and get inspiration for new songs and productions with this handy chord progression generator!</p>
 
-      <p>Once you find a chord progression you like, you can click the Save button to export the MIDI of the chord progression generator straight to your computer and into your DAW.
+      <p>Once you find a chord progression you like, you can click the Save button to export the MIDI of the chord progression generator straight to your computer and into your <a href="https://www.soundbrenner.com/blog/best-daws-for-producing-music/">DAW</a>.
     </div>
 
     <div class="mb-3">
