@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Metronome</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
+@import url(//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css);
+body {
+  /* background: #f9f8ec; */
+  font-family: 'Open Sans', sans-serif;
+  background: #2f2f2f;
+
+}
+
+input[type="range"] {
+  -webkit-appearance: none !important;
+  max-height: 3px;
+  position: relative;
+  top: -3px;
+  background: #DDD;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: -1px;
+  background: #222;
+}
+
+.container {
+  width: 100%;
+}
+
+header {
+  height: 65px;
+  background: #879BAD;
+  color: #2a353e;
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  padding: 5px;
+}
+
+.metronome-container {
+  /* width: 75%; */
+  width: 100%;
+  height: auto;
+  position: relative;
+  /* margin: 40px auto; */
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background: #2f2f2f;
+}
+.metronome-container .options-btn {
+  color: #FFF;
+  font-size: 22px;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  transform: rotateZ(0deg);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.metronome-container .options-btn:hover {
+  transform: rotateZ(60deg);
+}
+.metronome-container .options-active {
+  max-height: 1000px !important;
+  padding: 15px;
+  overflow: visible !important;
+}
+.metronome-container .options {
+  max-height: 0px;
+  background: #FFF;
+  color: #333;
+  overflow: hidden;
+  transition: all 0.25s;
+  position: absolute;
+  top: 50px;
+  right: 15px;
+}
+.metronome-container .options .up {
+  color: #FFF;
+  font-size: 22px;
+  position: absolute;
+  top: -14px;
+  right: 3px;
+  z-index: 500;
+  transform: rotateZ(180deg);
+}
+.metronome-container .options label {
+  display: block;
+  margin-top: 10px;
+}
+.metronome-container .counter {
+  width: 100%;
+  padding-bottom: 10px;
+  background: #404040;
+  text-align: center;
+}
+.metronome-container .counter .dot {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin: 25px 10px 10px 10px;
+  background: #FFF;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.metronome-container .counter .active {
+  background: #2083fe;
+}
+.metronome-container .controls {
+  color: #FFF;
+  padding: 20px;
+  /* padding-bottom: 38px; */
+  text-align: center;
+}
+.metronome-container .controls label {
+  display: block;
+  margin-bottom: 18px;
+}
+.metronome-container .controls label span {
+  background: #FFF;
+  color: #222;
+  padding: 5px;
+}
+.metronome-container .controls label span i {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.metronome-container .controls label span i:hover {
+  color: #FA6900;
+}
+.metronome-container .controls input {
+  width: 30px;
+  border: 0px solid;
+  color: #222;
+  text-align: center;
+  padding: 4px;
+}
+.metronome-container .controls select {
+  border: 0px;
+  color: #222;
+}
+.metronome-container .controls .play-btn {
+  width: 45%;
+  background: #2083FE;
+  border: 0px;
+  border-radius: 5px;
+  padding: 12px;
+  color: #FFFFFF;
+  transition: background 0.3s;
+}
+.metronome-container .controls .play-btn:hover {
+  background: #80b8fe;
+}
+.metronome-container .controls .tap-btn {
+  width: 45%;
+  background: #888;
+  border: 0px;
+  border-radius: 5px;
+  padding: 12px;
+  color: #fbfbfb;
+  transition: background 0.3s;
+}
+.metronome-container .controls .tap-btn:hover {
+  background: #959595;
+}
+
+footer {
+  width: 50%;
+  height: auto;
+  background: #FFF;
+  color: #444;
+  padding: 10px;
+  margin: 50px auto;
+}
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+  <!-- <header>Simple<b style="color: #FFF;">Metronome</b></header> -->
+
+  <section class="metronome-container">
+    <div class="counter"></div>
+
+    <i class="fa fa-cog options-btn"></i>
+
+    <div class="controls">
+      <label>BPM: <span>
+                    <i class="fa fa-minus bpm-minus"></i>
+                    <input type="text" value="128" class="bpm-input" />
+                    <i class="fa fa-plus bpm-plus"></i>
+                  </span>
+      </label>
+      <label>Beat: <input type="text" value="4" class="ts-top" /></label>
+
+      <button class="tap-btn">Tap</button>
+      <button class="play-btn">Play</button>
+      <br>
+      <br>
+      <label>You can also tap the space bar</label>
+
+    </div>
+
+    <div class="options">
+      <i class="fa fa-caret-down up"></i>
+      <label>Off Beat Pitch: <input type="range" min="0" max="500" value="200" class="beat-range" /></label>
+      <label>Accent Pitch: <input type="range" min="0" max="500" value="380" class="accent-range" /></label>
+    </div>
+  </section>
+</div>
+
+<!-- <footer>
+  <ul>
+    <li>Click circles to make an accent on that beat</li>
+    <li>Best viewed in <b>Google Chrome</b></li>
+    <li>Use options to change pitches of beats.</li>
+  </ul>
+</footer> -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.min.js'></script>
+
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

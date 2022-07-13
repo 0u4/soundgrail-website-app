@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><!-- Prefetch -->
+<link rel="dns-prefetch" href="https://fonts.gstatic.com/" >
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net/" >
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" >
+
+<!-- Meta -->
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, maximum-scale=5">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+
+<link rel="canonical" href="https://app.soundgrail.com/guitar-tuner/"><!-- Manifest.json -->
+<link rel="manifest" href="https://app.soundgrail.com/manifest.json">
+
+<!-- Title --><title>Online Guitar Tuner - Free Guitar Tuning App - SoundGrail</title>
+<meta name="twitter:title" content="Online Guitar Tuner - Free Guitar Tuning App - SoundGrail" />
+<meta property="og:title" content="Online Guitar Tuner - Free Guitar Tuning App - SoundGrail" />
+
+<!-- Description --><meta name="description" content="Free online guitar tuner with pitch detection. Tune your acoustic, electric or bass guitar with the best guitar tuner: SoundGrail.">
+<meta name="twitter:description" content="Free online guitar tuner with pitch detection. Tune your acoustic, electric or bass guitar with the best guitar tuner: SoundGrail." />
+<meta property="og:description" content="Free online guitar tuner with pitch detection. Tune your acoustic, electric or bass guitar with the best guitar tuner: SoundGrail." />
+
+<!-- Image --><meta name="twitter:image" content="https://cdn.itwcreativeworks.com/assets/soundgrail/images/logo/soundgrail-brandmark-black-3000x3000.png" />
+<meta property="og:image" content="https://cdn.itwcreativeworks.com/assets/soundgrail/images/logo/soundgrail-brandmark-black-3000x3000.png" />
+
+<!-- OG: Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="soundgrailmusic" />
+<meta name="twitter:widgets:theme" content="light">
+
+<!-- OG: Facebook / Open Graph -->
+<meta property="og:url" content="https://app.soundgrail.com/guitar-tuner/" />
+<meta property="og:type" content="article" />
+
+<!-- Main Feed -->
+<link href="https://app.soundgrail.com/feed.xml" type="application/atom+xml" rel="alternate" title="SoundGrail Feed">
+
+
+<!-- Configuration -->
+<script type="text/javascript">
+  
+
+  var Configuration = {
+    page: {
+      code: 'Guitar Tuner',
+      type: 'general',
+      breadcrumb: 'Guitar Tuner',
+      settings: {}
+    },
+    global: {
+      app: 'soundgrail',
+      version: '1.0.0',
+      url: 'https://app.soundgrail.com',
+      cacheBreaker: '1657714408',
+      settings:  { libraries: { firebase_app: { enabled: true, config: { apiKey: 'AIzaSyCeZVDmipvFDY1qutqEmjnfUlgtEXBArxA', authDomain: 'soundgrail-app.firebaseapp.com', databaseURL: 'https://soundgrail-app.firebaseio.com', projectId: 'soundgrail-app', storageBucket: 'soundgrail-app.appspot.com', messagingSenderId: '1032985509697', appId: '1:1032985509697:web:16f02ddd81668a40d6abc0', measurementId: '' } }, cookieconsent: { enabled: true, config: { palette: { popup: { _background: '#FA96BE', background: '#377dff', }, } } }, tawk: { enabled: true, config: { chatId: '619743a56bb0760a494352f5', widgetId: '1fkre0gd5', _prechatColor: '#FA96BE', prechatColor: '#377dff', } }, sentry: { enabled: true, config: { dsn: '', release: 'soundgrail-website-app' } } } } ,
+      brand: {
+        name: 'SoundGrail'
+      },
+      contact: {
+        emailSupport: 'support@soundgrail.com',
+        emailBusiness: 'support@soundgrail.com'
+      },
+      // tracking: {
+      //   googleAnalytics: 'UA-114924895-2',
+      //   facebookPixel: 'false',
+      //   tikTokPixel: 'false'
+      // }
+    }
+  };
+</script>
+
+<!-- Redirect --><!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://cdn.itwcreativeworks.com/assets/soundgrail/images/favicon/apple-touch-icon.png?cb=1657714408">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.itwcreativeworks.com/assets/soundgrail/images/favicon/favicon-32x32.png?cb=1657714408">
+<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.itwcreativeworks.com/assets/soundgrail/images/favicon/favicon-16x16.png?cb=1657714408">
+<link rel="mask-icon" href="https://cdn.itwcreativeworks.com/assets/soundgrail/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="https://cdn.itwcreativeworks.com/assets/soundgrail/images/favicon/favicon.ico?cb=1657714408">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="https://cdn.itwcreativeworks.com/assets/soundgrail/images/favicon/browserconfig.xml?cb=1657714408">
+<meta name="theme-color" content="#ffffff">
+
+<!-- CSS - Defaults-->
+<style type="text/css" media="screen">
+  
+  
+  /*! defaults.css v1.0.0 | MIT License | ITW Creative Works */
+@font-face {
+  font-display: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+  
+
+  .cc-window{opacity:1;transition:opacity 1s ease}.cc-window.cc-invisible{opacity:0}.cc-animate.cc-revoke{transition:transform 1s ease}.cc-animate.cc-revoke.cc-top{transform:translateY(-2em)}.cc-animate.cc-revoke.cc-bottom{transform:translateY(2em)}.cc-animate.cc-revoke.cc-active.cc-bottom,.cc-animate.cc-revoke.cc-active.cc-top,.cc-revoke:hover{transform:translateY(0)}.cc-grower{max-height:0;overflow:hidden;transition:max-height 1s}
+.cc-link,.cc-revoke:hover{text-decoration:underline}.cc-revoke,.cc-window{position:fixed;overflow:hidden;box-sizing:border-box;font-family:Helvetica,Calibri,Arial,sans-serif;font-size:16px;line-height:1.5em;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;z-index:9999}.cc-window.cc-static{position:static}.cc-window.cc-floating{padding:2em;max-width:24em;-ms-flex-direction:column;flex-direction:column}.cc-window.cc-banner{padding:1em 1.8em;width:100%;-ms-flex-direction:row;flex-direction:row}.cc-revoke{padding:.5em}.cc-header{font-size:18px;font-weight:700}.cc-btn,.cc-close,.cc-link,.cc-revoke{cursor:pointer}.cc-link{opacity:.8;display:inline-block;padding:.2em}.cc-link:hover{opacity:1}.cc-link:active,.cc-link:visited{color:initial}.cc-btn{display:block;padding:.4em .8em;font-size:.9em;font-weight:700;border-width:2px;border-style:solid;text-align:center;white-space:nowrap}.cc-highlight .cc-btn:first-child{background-color:transparent;border-color:transparent}.cc-highlight .cc-btn:first-child:focus,.cc-highlight .cc-btn:first-child:hover{background-color:transparent;text-decoration:underline}.cc-close{display:block;position:absolute;top:.5em;right:.5em;font-size:1.6em;opacity:.9;line-height:.75}.cc-close:focus,.cc-close:hover{opacity:1}
+.cc-revoke.cc-top{top:0;left:3em;border-bottom-left-radius:.5em;border-bottom-right-radius:.5em}.cc-revoke.cc-bottom{bottom:0;left:3em;border-top-left-radius:.5em;border-top-right-radius:.5em}.cc-revoke.cc-left{left:3em;right:unset}.cc-revoke.cc-right{right:3em;left:unset}.cc-top{top:1em}.cc-left{left:1em}.cc-right{right:1em}.cc-bottom{bottom:1em}.cc-floating>.cc-link{margin-bottom:1em}.cc-floating .cc-message{display:block;margin-bottom:1em}.cc-window.cc-floating .cc-compliance{-ms-flex:1 0 auto;flex:1 0 auto}.cc-window.cc-banner{-ms-flex-align:center;align-items:center}.cc-banner.cc-top{left:0;right:0;top:0}.cc-banner.cc-bottom{left:0;right:0;bottom:0}.cc-banner .cc-message{display:block;-ms-flex:1 1 auto;flex:1 1 auto;max-width:100%;margin-right:1em}.cc-compliance{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-line-pack:justify;align-content:space-between}.cc-floating .cc-compliance>.cc-btn{-ms-flex:1;flex:1}.cc-btn+.cc-btn{margin-left:.5em}
+@media print{.cc-revoke,.cc-window{display:none}}@media screen and (max-width:900px){.cc-btn{white-space:normal}}@media screen and (max-width:414px) and (orientation:portrait),screen and (max-width:736px) and (orientation:landscape){.cc-window.cc-top{top:0}.cc-window.cc-bottom{bottom:0}.cc-window.cc-banner,.cc-window.cc-floating,.cc-window.cc-left,.cc-window.cc-right{left:0;right:0}.cc-window.cc-banner{-ms-flex-direction:column;flex-direction:column}.cc-window.cc-banner .cc-compliance{-ms-flex:1 1 auto;flex:1 1 auto}.cc-window.cc-floating{max-width:none}.cc-window .cc-message{margin-bottom:1em}.cc-window.cc-banner{-ms-flex-align:unset;align-items:unset}.cc-window.cc-banner .cc-message{margin-right:0}}
+.cc-floating.cc-theme-classic{padding:1.2em;border-radius:5px}.cc-floating.cc-type-info.cc-theme-classic .cc-compliance{text-align:center;display:inline;-ms-flex:none;flex:none}.cc-theme-classic .cc-btn{border-radius:5px}.cc-theme-classic .cc-btn:last-child{min-width:140px}.cc-floating.cc-type-info.cc-theme-classic .cc-btn{display:inline-block}
+.cc-theme-edgeless.cc-window{padding:0}.cc-floating.cc-theme-edgeless .cc-message{margin:2em 2em 1.5em}.cc-banner.cc-theme-edgeless .cc-btn{margin:0;padding:.8em 1.8em;height:100%}.cc-banner.cc-theme-edgeless .cc-message{margin-left:1em}.cc-floating.cc-theme-edgeless .cc-btn+.cc-btn{margin-left:0}
+
+</style>
+
+<!-- CSS - Social Share Kit Style -->
+
+
+<!-- App - Head Content (pre-bundle) -->
+  <!-- App Head Content (pre-bundle) -->
+
+
+<!-- CSS - Bundle-->
+
+
+<!-- HTML5 Shiv -->
+  <!--[if lt IE 9]>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+
+
+<!-- Initialize Manager -->
+<script type="text/javascript">
+  // Performance
+  try {
+    window.performance.mark('manager_start');
+  } catch (e) {}
+
+  function Manager$() {
+    this.properties = {};
+  };
+
+  Manager$.prototype.ready = function(fn, options) {
+    options = options || {};
+
+    setTimeout(function () {
+      Manager.auth().ready(fn, options);
+    }, options.interval || 100);
+  }
+
+  Manager$.prototype.auth = function() {
+    return {
+      ready: function (fn, options) {
+        options = options || {};
+
+        setTimeout(function () {
+          Manager.auth().ready(fn, options);
+        }, options.interval || 100);
+
+      }
+    }
+  }
+
+  // Initialize globals
+  var Manager = new Manager$();
+  // var firebase;
+  var Libraries = {
+    // app: undefined,
+    // lazysizes: undefined,
+    // cookieconsent: undefined,
+  };
+
+</script>
+
+<!-- Master - Styles -->
+<style media="screen">
+  /* Alert box */
+  .master-alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    bottom:0;
+    left:0;
+    position:fixed;
+    z-index:9999;
+    width: 100%;
+  }
+
+  .master-alert a {
+    color: white;
+    text-decoration: underline;
+  }
+  .master-alert a:hover {
+    color: black;
+  }
+
+  .master-alert-close {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .master-alert-close:hover {
+    color: black;
+  }
+
+  .master-alert-outdated {
+    display: none;
+  }
+
+  /* Chat box opener */
+  #prechat-btn {
+    position: fixed;
+    background: #237AFC;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 1;
+    border-radius: 50%;
+    right: 20px;
+    bottom: 20px;
+    transition: background 0.5s;
+    z-index: 11;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 10px 0px;
+  }
+
+  #prechat-btn svg {
+    padding-top: 25%;
+    color: #fff;
+    width: 50%;
+    opacity: 1.0;
+    pointer-events: none;
+  }
+  #prechat-btn:hover {
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    #prechat-btn {
+      bottom: 15px;
+    }
+  }
+</style>
+
+<!-- Style - IE 8 and Below Only -->
+<!--[if lte IE 8]>
+<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie8.css?cb=1657714408">
+<![endif]-->
+
+
+<!-- App - Head Content -->
+
+
+<!-- Page - Injected head -->
+ <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/app/vendor/icon-set/style.css"> <link rel="stylesheet" href="/assets/app/vendor/select2/dist/css/select2.min.css"> <link rel="stylesheet" href="/assets/app/vendor/chart.js/dist/Chart.min.css"> <link rel="stylesheet" href="/assets/app/vendor/daterangepicker/daterangepicker.css">
+
+<!-- CSS Front Template --> <link rel="stylesheet" href="/assets/css/theme/app.css"> <style media="screen"> .short-table-data { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px; } .navbar-brand-logo { width: 100%; /* min-width: unset; max-width: unset; */ min-width: unset; max-width: 10rem; } #invisible_layer{ position: absolute; background-color:trasparent; /* width: 500px; height:300px; */ } </style> 
+
+</head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-lg footer-offset ">
+    
+
+    <!-- CONTENT START -->
+        <script src="/assets/app/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside-mini-cache.js"></script>
+
+
+  <!-- Search Form -->
+  <div id="searchDropdown" class="hs-unfold-content dropdown-unfold search-fullwidth d-md-none">
+    <form class="input-group input-group-merge input-group-borderless">
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+          <i class="tio-search"></i>
+        </div>
+      </div>
+
+      <input class="form-control rounded-0" type="search" placeholder="Search in front" aria-label="Search in front">
+
+      <div class="input-group-append">
+        <div class="input-group-text">
+          <div class="hs-unfold">
+            <a class="js-hs-unfold-invoker" href="javascript:;"
+               data-hs-unfold-options='{
+                 "target": "#searchDropdown",
+                 "type": "css-animation",
+                 "animationIn": "fadeIn",
+                 "hasOverlay": "rgba(46, 52, 81, 0.1)",
+                 "closeBreakpoint": "md"
+               }'>
+              <i class="tio-clear tio-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- End Search Form -->
+
+  <!-- ========== HEADER ========== -->
+
+    <header id="header" class="navbar navbar-expand-lg navbar-fixed navbar-height navbar-flush navbar-container navbar-bordered">
+      <div class="navbar-nav-wrap">
+        <div class="navbar-brand-wrapper">
+          <!-- Logo -->
+          <a class="navbar-brand" href="https://app.soundgrail.com" aria-label="SoundGrail">
+            <img class="navbar-brand-logo" src="https://cdn.itwcreativeworks.com/assets/soundgrail/images/logo/soundgrail-combomark-black-x.svg" alt="SoundGrail Logo">
+            <img class="navbar-brand-logo-mini" src="https://cdn.itwcreativeworks.com/assets/soundgrail/images/logo/soundgrail-brandmark-black-x.svg" alt="SoundGrail Logo">
+          </a>
+          <!-- End Logo -->
+        </div>
+
+        <div class="navbar-nav-wrap-content-left">
+          <!-- Navbar Vertical Toggle -->
+          <button type="button" class="js-navbar-vertical-aside-toggle-invoker close mr-3">
+            <i class="tio-first-page navbar-vertical-aside-toggle-short-align" data-toggle="tooltip" data-placement="right" title="Collapse"></i>
+            <i class="tio-last-page navbar-vertical-aside-toggle-full-align" data-template='<div class="tooltip d-none d-sm-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' data-toggle="tooltip" data-placement="right" title="Expand"></i>
+          </button>
+          <!-- End Navbar Vertical Toggle -->
+
+          <!-- Search Form -->
+          <!-- <div class="d-none d-md-block"> -->
+          <div class="" hidden>
+            <form class="position-relative">
+              <!-- Input Group -->
+              <div class="input-group input-group-merge input-group-borderless input-group-hover-light navbar-input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="tio-search"></i>
+                  </div>
+                </div>
+                <input type="search" class="js-form-search form-control" placeholder="Search in front" aria-label="Search in front"
+                       data-hs-form-search-options='{
+                         "clearIcon": "#clearSearchResultsIcon",
+                         "dropMenuElement": "#searchDropdownMenu",
+                         "dropMenuOffset": 20,
+                         "toggleIconOnFocus": true,
+                         "activeClass": "focus"
+                       }'>
+                <a class="input-group-append" href="javascript:;">
+                  <span class="input-group-text">
+                    <i id="clearSearchResultsIcon" class="tio-clear" style="display: none;"></i>
+                  </span>
+                </a>
+              </div>
+              <!-- End Input Group -->
+
+              <!-- Card Search Content -->
+              <!-- <div id="searchDropdownMenu" class="hs-form-search-menu-content card dropdown-menu dropdown-card overflow-hidden">
+                <div class="card-body-height py-3">
+                  <small class="dropdown-header mb-n2">Recent searches</small>
+
+                  <div class="dropdown-item bg-transparent text-wrap my-2">
+                    <span class="h4 mr-1">
+                      <a class="btn btn-xs btn-soft-dark btn-pill" href="./index.html">
+                        Gulp <i class="tio-search ml-1"></i>
+                      </a>
+                    </span>
+                    <span class="h4">
+                      <a class="btn btn-xs btn-soft-dark btn-pill" href="./index.html">
+                        Notification panel <i class="tio-search ml-1"></i>
+                      </a>
+                    </span>
+                  </div>
+
+                  <div class="dropdown-divider my-3"></div>
+
+                  <small class="dropdown-header mb-n2">Tutorials</small>
+
+                  <a class="dropdown-item my-2" href="./index.html">
+                    <div class="media align-items-center">
+                      <span class="icon icon-xs icon-soft-dark icon-circle mr-2">
+                        <i class="tio-tune"></i>
+                      </span>
+
+                      <div class="media-body text-truncate">
+                        <span>How to set up Gulp?</span>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a class="dropdown-item my-2" href="./index.html">
+                    <div class="media align-items-center">
+                      <span class="icon icon-xs icon-soft-dark icon-circle mr-2">
+                        <i class="tio-paint-bucket"></i>
+                      </span>
+
+                      <div class="media-body text-truncate">
+                        <span>How to change theme color?</span>
+                      </div>
+                    </div>
+                  </a>
+
+                  <div class="dropdown-divider my-3"></div>
+
+                  <small class="dropdown-header mb-n2">Members</small>
+
+                  <a class="dropdown-item my-2" href="./index.html">
+                    <div class="media align-items-center">
+                      <img class="avatar avatar-xs avatar-circle mr-2" src="/assets/img/160x160/img10.jpg" alt="Image Description">
+                      <div class="media-body text-truncate">
+                        <span>Amanda Harvey <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a class="dropdown-item my-2" href="./index.html">
+                    <div class="media align-items-center">
+                      <img class="avatar avatar-xs avatar-circle mr-2" src="/assets/img/160x160/img3.jpg" alt="Image Description">
+                      <div class="media-body text-truncate">
+                        <span>David Harrison</span>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a class="dropdown-item my-2" href="./index.html">
+                    <div class="media align-items-center">
+                      <div class="avatar avatar-xs avatar-soft-info avatar-circle mr-2">
+                        <span class="avatar-initials">A</span>
+                      </div>
+                      <div class="media-body text-truncate">
+                        <span>Anne Richard</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <a class="card-footer text-center" href="./index.html">
+                  See all results
+                  <i class="tio-chevron-right"></i>
+                </a>
+              </div> -->
+            </form>
+          </div>
+        </div>
+
+        <!-- Secondary Content -->
+        <div class="navbar-nav-wrap-content-right">
+          <!-- Navbar -->
+          <ul class="navbar-nav align-items-center flex-row">
+
+
+
+            <!-- ========== NAVBAR CONTENTS ========== -->
+            <li class="nav-item">
+              <!-- Account -->
+              <div class="hs-unfold">
+                <!-- <a class="js-hs-unfold-invoker navbar-dropdown-account-wrapper" href="javascript:;"
+                   data-hs-unfold-options='{
+                     "target": "#accountNavbarDropdown",
+                     "type": "css-animation"
+                   }'>
+                  <div class="avatar avatar-sm avatar-circle">
+                    <img class="avatar-img" src="/assets/img/160x160/img6.jpg" alt="Image Description">
+                    <span class="avatar-status avatar-sm-status avatar-status-success"></span>
+                  </div>
+                </a> -->
+                <a class="js-hs-unfold-invoker btn btn-icon btn-ghost-secondary rounded-circle" href="javascript:;"
+                   data-hs-unfold-options='{
+                     "target": "#accountNavbarDropdown",
+                     "type": "css-animation"
+                   }'>
+                   <i class="tio-user"></i>
+                </a>
+
+                <div id="accountNavbarDropdown" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right navbar-dropdown-menu navbar-dropdown-account" style="width: 16rem;">
+
+                  <div class="auth-signedin-true-element" hidden>
+                    <div class="dropdown-item-text">
+                      <div class="media align-items-center">
+                        <div class="avatar avatar-sm avatar-circle mr-2">
+                          <!-- <img class="avatar-img" src="/assets/img/160x160/img6.jpg" alt="Image Description"> -->
+                          <i class="tio-user"></i>
+                        </div>
+                        <div class="media-body">
+                          <span class="card-title h5">Welcome,</span>
+                          <span class="card-text auth-email-element">loading...</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="dropdown-divider"></div>
+
+                    <a class="dropdown-item" href="https://app.soundgrail.com/account">
+                      <span class="pr-2" title="Profile &amp; account">Profile &amp; account</span>
+                    </a>
+
+                    <div class="dropdown-divider"></div>
+
+                    <!-- <a class="dropdown-item" href="#">
+                      <div class="media align-items-center">
+                        <div class="avatar avatar-sm avatar-dark avatar-circle mr-2">
+                          <span class="avatar-initials">HS</span>
+                        </div>
+                        <div class="media-body">
+                          <span class="card-title h5">Htmlstream <span class="badge badge-primary badge-pill text-uppercase ml-1">PRO</span></span>
+                          <span class="card-text">hs.example.com</span>
+                        </div>
+                      </div>
+                    </a>
+
+                    <div class="dropdown-divider"></div> -->
+
+                    <!-- <a class="dropdown-item" href="#">
+                      <span class="pr-2" title="Manage team">Manage team</span>
+                    </a>
+
+                    <div class="dropdown-divider"></div> -->
+
+                    <a class="dropdown-item auth-signout-all-btn" href="#">
+                      <span class="auth-signout-all-btn pr-2" title="Sign out">Sign out</span>
+                    </a>
+                  </div>
+
+                  <div class="auth-signedin-false-element" hidden>
+                    <a class="dropdown-item" href="https://app.soundgrail.com/signup">
+                      <span class="pr-2" title="Sign up &amp; account">Sign up</span>
+                    </a>
+                    <a class="dropdown-item" href="https://app.soundgrail.com/signin">
+                      <span class="pr-2" title="Sign in &amp; account">Sign in</span>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+              <!-- End Account -->
+            </li>
+            <!-- ========== END NAVBAR CONTENTS ========== -->
+          </ul>
+          <!-- End Navbar -->
+        </div>
+        <!-- End Secondary Content -->
+      </div>
+    </header>
+
+
+
+
+
+  <!-- ========== END HEADER ========== -->
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <!-- Navbar Vertical -->
+
+    <aside class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-lg navbar-bordered  ">
+      <div class="navbar-vertical-container">
+        <div class="navbar-vertical-footer-offset">
+          <div class="navbar-brand-wrapper justify-content-between">
+            <!-- Logo -->
+
+
+              <a class="navbar-brand" href="https://app.soundgrail.com" aria-label="SoundGrail">
+                <img class="navbar-brand-logo" src="https://cdn.itwcreativeworks.com/assets/soundgrail/images/logo/soundgrail-combomark-black-x.svg" alt="SoundGrail Logo">
+                <img class="navbar-brand-logo-mini" src="https://cdn.itwcreativeworks.com/assets/soundgrail/images/logo/soundgrail-brandmark-black-x.svg" alt="SoundGrail Logo">
+              </a>
+
+            <!-- End Logo -->
+
+            <!-- Navbar Vertical Toggle -->
+            <button type="button" class="js-navbar-vertical-aside-toggle-invoker navbar-vertical-aside-toggle btn btn-icon btn-xs btn-ghost-dark">
+              <i class="tio-clear tio-lg"></i>
+            </button>
+            <!-- End Navbar Vertical Toggle -->
+          </div>
+
+          <!-- Content -->
+          <div class="navbar-vertical-content">
+            <ul class="navbar-nav navbar-nav-lg nav-tabs">
+
+              <!-- <li class="nav-item">
+                <small class="nav-subtitle" title="Layouts">Layouts</small>
+                <small class="tio-more-horizontal nav-subtitle-replacer"></small>
+              </li> -->
+
+              <!-- <li class="nav-item ">
+                <a class="js-nav-tooltip-link nav-link " href="https://app.soundgrail.com/" title="Home" data-placement="left">
+                  <i class="tio-home-vs-1-outlined nav-icon"></i>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Home</span>
+                </a>
+              </li> -->
+
+              <!-- Dashboards -->
+              <!-- <li class="navbar-vertical-aside-has-menu show">
+                <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle active" href="javascript:;" title="Dashboards">
+                  <i class="tio-home-vs-1-outlined nav-icon"></i>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Dashboards</span>
+                </a>
+
+                <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="./index.html" title="Default">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-truncate">Default</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="./dashboard-alternative.html" title="Alternative">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-truncate">Alternative</span>
+                    </a>
+                  </li>
+                </ul>
+              </li> -->
+              <!-- End Dashboards -->
+
+              <!-- <li class="nav-item">
+                <small class="nav-subtitle" title="Explore">Explore</small>
+              </li> -->
+
+              <li class="navbar-vertical-aside-has-menu  show ">
+                <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle  active " href="javascript:;" title="Tools">
+                  <i class="tio-layers-outlined nav-icon"></i>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements">Tools</span>
+                </a>
+
+                <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
+                  <li class="nav-item">
+                    <a class="nav-link " href="https://app.soundgrail.com/reverse-chord-finder" title="Reverse Chord Finder">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-wrap">Chord & Interval Finder</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link " href="https://app.soundgrail.com/chord-progression-generator" title="Chord Progression Generator">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-wrap">Chord Progression Generator</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link " href="https://app.soundgrail.com/metronome" title="Metronome">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-wrap">Metronome</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link  active " href="https://app.soundgrail.com/guitar-tuner" title="Guitar Tuner">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-wrap">Guitar Tuner</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link " href="https://app.soundgrail.com/arpeggio-generator" title="Arpeggio Generator">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-wrap">Arpeggio Generator</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link " href="https://app.soundgrail.com/melody-generator" title="Melody Generator">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-wrap">Melody Generator</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link " href="https://app.soundgrail.com/virtual-piano" title="Virtual Piano">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-wrap">Virtual Piano</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link " href="https://app.soundgrail.com/audio-music-visualizer" title="Audio Visualizer">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-wrap">Audio Visualizer</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link " href="https://app.soundgrail.com/delay-calculator" title="Delay Time Calculator">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-wrap">Delay Time Calculator</span>
+                    </a>
+                  </li>
+
+                </ul>
+              </li>
+
+              <li class="navbar-vertical-aside-has-menu ">
+                <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle " href="javascript:;" title="Reference">
+                  <i class="tio-book nav-icon"></i>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements">Reference</span>
+                </a>
+
+                <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
+                  <li class="nav-item">
+                    <a class="nav-link " href="https://app.soundgrail.com/interactive-chord-chart" title="Chord Chart">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-wrap">Chord Chart</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link " href="https://app.soundgrail.com/circle-of-fifths" title="Circle of Fifths">
+                      <span class="tio-circle nav-indicator-icon"></span>
+                      <span class="text-wrap">Circle of Fifths</span>
+                    </a>
+                  </li>
+
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <div class="nav-divider"></div>
+              </li>
+
+              <li class="nav-item auth-user-premium-false" hidden>
+                <small class="nav-subtitle" title="Premium">Premium</small>
+                <!-- <small class="tio-more-horizontal nav-subtitle-replacer"></small> -->
+              </li>
+
+              <li class="nav-item auth-user-premium-false" hidden>
+                <a class="js-nav-tooltip-link nav-link " href="https://app.soundgrail.com/pricing" title="SoundGrail Premium" data-placement="left">
+                  <i class="tio-star nav-icon"></i>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements">Premium</span>
+                </a>
+              </li>
+
+              <li class="nav-item auth-user-premium-false" hidden>
+                <div class="nav-divider"></div>
+              </li>
+
+              <li class="nav-item">
+                <small class="nav-subtitle" title="Explore">Explore</small>
+                <!-- <small class="tio-more-horizontal nav-subtitle-replacer"></small> -->
+              </li>
+
+              <li class="nav-item ">
+                <a class="js-nav-tooltip-link nav-link" href="https://music.soundgrail.com" title="Music Blog" data-placement="left">
+                  <i class="tio-feed nav-icon"></i>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements">Music Blog</span>
+                </a>
+              </li>
+
+              <li class="nav-item ">
+                <a class="js-nav-tooltip-link nav-link" href="https://soundgrail.com" title="Main Site" data-placement="left">
+                  <i class="tio-music nav-icon"></i>
+                  <span class="navbar-vertical-aside-mini-mode-hidden-elements">Main Site</span>
+                </a>
+              </li>
+
+              <!-- <li class="nav-item">
+                <small class="tio-more-horizontal nav-subtitle-replacer"></small>
+              </li> -->
+
+              <!-- Front Builder -->
+              <!-- <li class="nav-item nav-footer-item ">
+                <a class="d-none d-md-flex js-hs-unfold-invoker nav-link nav-link-toggle" href="javascript:;"
+                   data-hs-unfold-options='{
+                     "target": "#styleSwitcherDropdown",
+                     "type": "css-animation",
+                     "animationIn": "fadeInRight",
+                     "animationOut": "fadeOutRight",
+                     "hasOverlay": true,
+                     "smartPositionOff": true
+                   }'>
+                  <i class="tio-tune nav-icon"></i>
+                </a>
+                <a class="d-flex d-md-none nav-link nav-link-toggle" href="javascript:;">
+                  <i class="tio-tune nav-icon"></i>
+                </a>
+              </li> -->
+              <li class="nav-item nav-footer-item">
+                <a class="nav-link nav-link-toggle" href="https://app.soundgrail.com/account">
+                  <i class="tio-tune nav-icon"></i>
+                </a>
+              </li>
+              <!-- End Front Builder -->
+
+              <!-- Help -->
+              <!-- <li class="nav-item nav-footer-item">
+                <a class="nav-link nav-link-toggle" href="https://app.soundgrail.com/contact">
+                  <i class="tio-support nav-icon"></i>
+                </a>
+              </li> -->
+              <!-- End Help -->
+
+            </ul>
+            <div id="soundgrail-ad-sidebar" class="adunit">
+              
+            </div>
+          </div>
+          <!-- End Content -->
+
+          <!-- Footer -->
+          <div class="navbar-vertical-footer">
+            <ul class="navbar-vertical-footer-list">
+              <!-- <li class="navbar-vertical-footer-list-item">
+                <div class="hs-unfold">
+                  <a class="js-hs-unfold-invoker btn btn-icon btn-ghost-secondary rounded-circle" href="javascript:;"
+                     data-hs-unfold-options='{
+                      "target": "#styleSwitcherDropdown",
+                      "type": "css-animation",
+                      "animationIn": "fadeInRight",
+                      "animationOut": "fadeOutRight",
+                      "hasOverlay": true,
+                      "smartPositionOff": true
+                     }'>
+                    <i class="tio-tune"></i>
+                  </a>
+                </div>
+              </li> -->
+
+              <li class="navbar-vertical-footer-list-item">
+                <a class="btn btn-icon btn-ghost-secondary rounded-circle" href="https://app.soundgrail.com/account">
+                  <i class="tio-tune"></i>
+                </a>
+              </li>
+
+              <li class="navbar-vertical-footer-list-item">
+                <a class="btn btn-icon btn-ghost-secondary rounded-circle" href="https://app.soundgrail.com/pricing">
+                  <i class="tio-star"></i>
+                </a>
+              </li>
+
+              <li class="navbar-vertical-footer-list-item">
+                <a class="btn btn-icon btn-ghost-secondary rounded-circle" href="https://soundgrail.com">
+                  <i class="tio-music"></i>
+                </a>
+              </li>
+              <!-- <li class="navbar-vertical-footer-list-item">
+                <a class="btn btn-icon btn-ghost-secondary rounded-circle" href="https://app.soundgrail.com/discord">
+                  <i class="tio-comment-outlined"></i>
+                </a>
+              </li>
+
+              <li class="navbar-vertical-footer-list-item">
+                <a class="btn btn-icon btn-ghost-secondary rounded-circle" href="https://app.soundgrail.com/docs">
+                  <i class="tio-book-opened"></i>
+                </a>
+              </li> -->
+
+            </ul>
+          </div>
+          <!-- End Footer -->
+        </div>
+      </div>
+    </aside>
+
+
+
+  <!-- End Navbar Vertical -->
+
+  <main id="content" role="main" class="main pointer-event">
+
+    <!-- Content -->
+    <div class="content container-fluid">
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="row align-items-center">
+          <div class="col-auto mb-2 mb-sm-0">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-no-gutter">
+                
+                
+
+                
+                  
+                    
+              </ol>
+            </nav>
+            <h1 class="page-header-title" id="main-page-header-title">Online Guitar Tuner</h1>
+          </div>
+
+          <div class="col-auto ml-auto">
+            
+          </div>
+        </div>
+      </div>
+      <!-- End Page Header -->
+
+      <style media="screen">
+  /* IFRAME DESKTOP */
+  @media (min-width: 769px) {
+    .iframe-scaled-height-sm {
+      height: 300px;
+    }
+    .iframe-scaled-height-md {
+      height: 400px;
+    }
+    .iframe-scaled-height-lg {
+      height: 500px;
+    }
+    .iframe-scaled-height-xl {
+      height: 600px;
+    }
+    .iframe-scaled-height-xxl {
+      height: 700px;
+    }
+    .iframe-scaled-height-xxxl {
+      height: 800px;
+    }
+  }
+
+  /* IFRAME PHONE */
+  @media (max-width: 768px) {
+    .iframe-scaled-height-sm {
+      height: 300px;
+    }
+    .iframe-scaled-height-md {
+      height: 400px;
+    }
+    .iframe-scaled-height-lg {
+      height: 500px;
+    }
+    .iframe-scaled-height-xl {
+      height: 600px;
+    }
+    .iframe-scaled-height-xxl {
+      height: 600px;
+    }
+    .iframe-scaled-height-xxxl {
+      height: 600px;
+    }
+
+    .iframe-scaled-height {
+      height: 600px;
+    }
+  }
+
+  .soundgrail-custom-tab {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    overflow: hidden;
+  }
+
+  .iframe-scaled-height {
+    width: 100%;
+    margin-bottom: -7px;
+    border-radius: 0 0 0.6875rem 0.6875rem;
+  }
+
+  #nav-help p:last-child, #nav-discover p:last-child {
+    margin-bottom: 0;
+  }
+
+  iframe.fullscreen {
+    width: 100vw !important;
+    height: 100vh !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  /* #prechat-btn {
+    z-index: 1001;
+  } */
+
+</style>
+<div class="card mb-5">
+  <!-- Header -->
+  <div class="card-header">
+    <!-- Nav -->
+    <ul class="nav nav-segment" id="navTab1" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="nav-module-tab" data-toggle="pill" href="#nav-module" role="tab" aria-controls="nav-module" aria-selected="true"><i class="tio-flash"></i> Start</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="nav-help-tab" data-toggle="pill" href="#nav-help" role="tab" aria-controls="nav-help" aria-selected="false"><i class="tio-help-outlined"></i> Help</a>
+      </li>
+    </ul>
+    <button type="button" class="btn btn-primary" id="module-fullscreen" disabled><i class="tio-fullscreen-1-1"></i> Fullscreen</button>
+    <!-- End Nav -->
+  </div>
+  <!-- End Header -->
+
+  <!-- Tab Content -->
+  <div class="tab-content" id="navTabContent1">
+    <div class="tab-pane fade p-0 show active" id="nav-module" role="tabpanel" aria-labelledby="nav-module-tab">
+      <!-- <iframe id="module-iframe" class="custom-widget iframe-scaled-height iframe-scaled-height-lg" src="https://app.soundgrail.com/modules/guitar-tuner/?v=1657714408" style="" frameborder="0"></iframe> -->
+      <iframe id="module-iframe" class="custom-widget iframe-scaled-height" src="https://app.soundgrail.com/modules/guitar-tuner/?v=1657714408" style="height: 500px; " frameborder="0"></iframe>
+    </div>
+
+    <div class="tab-pane fade p-4" id="nav-help" role="tabpanel" aria-labelledby="nav-help-tab">
+       <div class="mb-3"> <p>Using our free online guitar tuner is super easy! Just <strong>enable your microphone</strong> when you are prompted and then play one string at a time! The needle will tell you what note and frequency you are playing and you can adjust the <strong>tuning peg</strong> on your guitar as needed.</p> </div> 
+    </div>
+  </div>
+  <!-- End Tab Content -->
+</div>
+
+<div id="soundgrail-ad-module" class="adunit">
+  
+</div>
+
+<h2>Discover more</h2>
+<div class="card">
+  <!-- Header -->
+  <div class="card-header">
+    <!-- Nav -->
+    <ul class="nav nav-segment" id="navTab2" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="nav-discover-tab" data-toggle="pill" href="#nav-discover" role="tab" aria-controls="nav-discover" aria-selected="true"><i class="tio-info"></i> Learn more</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-help" role="tab" aria-controls="nav-help" aria-selected="false"><i class="tio-help-outlined"></i> Help</a>
+      </li> -->
+    </ul>
+    <!-- End Nav -->
+  </div>
+  <!-- End Header -->
+
+  <!-- Tab Content -->
+  <div class="tab-content" id="navTabContent1">
+    <div class="tab-pane fade p-4 show active" id="nav-discover" role="tabpanel" aria-labelledby="nav-discover-tab">
+       <h2 class="u-text-large mb-3">Free online guitar tuner with pitch detection.</h2>
+<div class="mb-3"> <h5 class="c-card__title">Tuning an Electric Guitar or Acoustic Guitar</h5> <p>This simple, yet effective guitar tuner is perfect for all of your musical needs.</p> </div>
+<div class="mb-3"> <p>The standard tuning of a 6 string acoustic guitar or electric guitar is fairly straightforward. In standard position, the strings are named, in order, like so: </p> <p><strong>E A D G B E</strong></p> <p>Simply play each string, usually in the order listed previously, while also looking at our online guitar tuner. Turn the <strong>tuning peg</strong> on your guitar that corresponds to each string until each string is as close as possible to the target note and frequency. </p> <p>Our app will show you what frequency and note the string is actually generating. Correcting a slightly flat or sharp string is incredibly easy and is crucial to sounding good when playing by yourself or with others in a group.</p> </div>
+
+<div class="mb-3"> <h5 class="c-card__title">Perks of Using an Online Guitar Tuner</h5> <p>While a physical guitar tuner such as a TC Electronic PolyTune Clip will undoubtedly give you more accurate results, its just one more thing you have to keep on your person at all times. If neither you nor anyone else around you has a physical tuner, the only option you have is to play out of tune. Or, of course, you could use an online guitar tuner like ours and save yourself the embarrassment of playing guitar out of tune. With the power of modern technology, you can save yourself a few dozen to a hundred bucks and use a free online guitar tuner like ours. What’s even more awesome is that our tuner works both on acoustic guitars and electric guitars. It even works on bass guitars! You no longer have to lug around a guitar tuner or worry about forgetting the one you have.</p> </div> 
+    </div>
+  </div>
+  <!-- End Tab Content -->
+</div>
+
+<!-- Modal -->
+<div id="modal-premium" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-premiumTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <!-- Header -->
+      <div class="modal-top-cover bg-dark text-center">
+        <figure class="position-absolute right-0 bottom-0 left-0" style="margin-bottom: -1px;">
+          <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
+            <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"/>
+          </svg>
+        </figure>
+
+        <div class="modal-close">
+          <button type="button" class="btn btn-icon btn-sm btn-ghost-light" data-dismiss="modal" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- End Header -->
+
+      <div class="modal-top-cover-icon">
+        <span class="icon icon-lg icon-light icon-circle icon-centered shadow-soft">
+          <i class="tio-star"></i>
+        </span>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-body-dynamic"></p>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-white" data-dismiss="modal">Close</button> -->
+        <a href="https://app.soundgrail.com/pricing" target="_blank" class="btn btn-primary btn-close-modal"><i class="tio-star"></i> Get SoundGrail Premium</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Modal -->
+
+
+<script type="text/javascript">
+  var moduleFrame = document.getElementById('module-iframe');
+  var heightSetterTimeout = 100;
+  var heightSetterTimeoutMax = 1000;
+
+  window.addEventListener('message', (event) => {
+    try {
+      var data = JSON.parse(event.data || '{}');
+      data.command = data.command || '';
+      data.payload = data.payload || {};
+
+      if (data.command === 'module-height-change') {
+        setIframeHeight(data.payload.height)
+      } else if (data.command === 'open-premium-modal') {
+        openPremiumModal(data.payload.message)
+      }
+    } catch (e) {
+
+    }
+  }, false);
+
+  try {
+    if (moduleFrame.contentWindow.document.readyState === 'complete') {
+      callHeightSetter();
+    } else {
+      moduleFrame.contentWindow.document.addEventListener('DOMContentLoaded', function (event) {
+        callHeightSetter();
+      })
+    }
+  } catch (e) {
+    console.error('Error', e);
+  }
+
+  function callHeightSetter() {
+    // console.log('---heightSetterTimeout', heightSetterTimeout);
+    setTimeout(function () {
+      if (moduleFrame.contentWindow && moduleFrame.contentWindow.document && moduleFrame.contentWindow.document.body) {
+        setIframeHeight(moduleFrame.contentWindow.document.body.clientHeight)
+      }
+      callHeightSetter();
+    }, heightSetterTimeout);
+    heightSetterTimeout = heightSetterTimeout < heightSetterTimeoutMax ? heightSetterTimeout + 100 : heightSetterTimeout;
+  }
+
+  function setIframeHeight(height) {
+    height = height || 0;
+    if (height > 0) {
+      // console.log('Setting iframe height', height);
+      moduleFrame.style.height = height + 'px';
+    }
+  }
+
+  function openPremiumModal(message) {
+    var modalBody = document.querySelector('#modal-premium .modal-body-dynamic')
+    if (message) {
+      modalBody.innerHTML = 'You need a <strong><a href="https://app.soundgrail.com/pricing" class="btn-close-modal" target="_blank">SoundGrail Premium account</a></strong> ' + message + '.';
+    } else {
+      modalBody.innerHTML = 'Want to get access to advanced features and remove ads? Get a <strong><a href="https://app.soundgrail.com/pricing" class="btn-close-modal" target="_blank">SoundGrail Premium account</a></strong>.';
+    }
+    $('.modal').modal('hide');
+    $('#modal-premium').modal('show')
+  }
+
+  Manager.ready(function () {
+    $('#module-iframe').focus();
+
+    document.addEventListener('click', function (event) {
+      // if (event.target.matches('.btn-close-modal')) {
+      //   $('.modal').modal('hide');
+      // }
+      if (event.target.matches('#module-fullscreen')) {
+        makeFullScreen()
+      }
+    })
+
+    document.addEventListener('fullscreenchange', exitHandler, false);
+    document.addEventListener('mozfullscreenchange', exitHandler, false);
+    document.addEventListener('MSFullscreenChange', exitHandler, false);
+    document.addEventListener('webkitfullscreenchange', exitHandler, false);
+
+    document.getElementById('module-fullscreen').removeAttribute('disabled')
+
+    setTimeout(function () {
+      var currentUser = Manager.storage().get('currentUser');
+      // currentUser = false
+      if (!currentUser || (currentUser.plan && currentUser.plan.id === 'basic')) {
+        openPremiumModal()
+      }
+    }, 60000);
+  })
+
+
+  function requestFullScreen(element) {
+      // Supports most browsers and their versions.
+      var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullscreen;
+
+      if (requestMethod) { // Native full screen.
+          requestMethod.call(element);
+      } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+          var wscript = new ActiveXObject("WScript.Shell");
+          if (wscript !== null) {
+              wscript.SendKeys("{F11}");
+          }
+      }
+  }
+
+  function makeFullScreen() {
+      moduleFrame.classList.add('fullscreen');
+      var elem = document.body;
+      requestFullScreen(elem);
+  }
+
+  function exitHandler() {
+    // console.log('---exit', document.webkitIsFullScreen, document.mozFullScreen, !!document.msFullscreenElement);
+    if (document.webkitIsFullScreen || document.mozFullScreen || !!document.msFullscreenElement) {
+      // Run code on exit
+      // console.log('---is full screen');
+    } else {
+      // console.log('---is not full screen');
+      moduleFrame.classList.remove('fullscreen');
+    }
+  }
+
+</script>
+
+    </div>
+
+    <!-- Footer -->
+
+      <div class="footer">
+        <div class="row justify-content-between align-items-center">
+          <div class="col">
+            <p class="font-size-sm mb-0">&copy; SoundGrail. <span class="d-none d-sm-inline-block">2022 ITW Creative Works. All rights reserved.</span></p>
+          </div>
+          <div class="col-auto">
+            <div class="d-flex justify-content-end">
+              <!-- List Dot -->
+              <ul class="list-inline list-separator">
+                <li class="list-inline-item">
+                  <a class="list-separator-link" href="https://app.soundgrail.com/pricing">FAQ</a>
+                </li>
+
+                <li class="list-inline-item">
+                  <a class="list-separator-link" href="https://app.soundgrail.com/terms">Terms of Service</a>
+                </li>
+
+                <!-- <li class="list-inline-item">
+                  <div class="hs-unfold">
+                    <a class="js-hs-unfold-invoker btn btn-icon btn-ghost-secondary rounded-circle" href="javascript:;"
+                       data-hs-unfold-options='{
+                            "target": "#keyboardShortcutsSidebar",
+                            "type": "css-animation",
+                            "animationIn": "fadeInRight",
+                            "animationOut": "fadeOutRight",
+                            "hasOverlay": true,
+                            "smartPositionOff": true
+                           }'>
+                      <i class="tio-command-key"></i>
+                    </a>
+                  </div>
+                </li> -->
+              </ul>
+              <!-- End List Dot -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    <!-- End Footer -->
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+  <!-- ========== SECONDARY CONTENTS ========== -->
+
+  <!-- ========== END SECONDARY CONTENTS ========== -->
+
+  <!-- JS Global Compulsory  -->
+  <script src="/assets/app/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="/assets/app/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+  <script src="/assets/app/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="/assets/app/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+  <script src="/assets/app/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+  <script src="/assets/app/vendor/hs-form-search/dist/hs-form-search.min.js"></script>
+  <script src="/assets/app/vendor/select2/dist/js/select2.full.min.js"></script>
+  <script src="/assets/app/vendor/chart.js/dist/Chart.min.js"></script>
+  <script src="/assets/app/vendor/chart.js.extensions/chartjs-extensions.js"></script>
+  <script src="/assets/app/vendor/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
+  <script src="/assets/app/vendor/daterangepicker/moment.min.js"></script>
+  <script src="/assets/app/vendor/daterangepicker/daterangepicker.js"></script>
+  <script src="/assets/app/vendor/datatables/media/js/jquery.dataTables.min.js"></script>
+  <script src="/assets/app/vendor/datatables.net.extensions/select/select.min.js"></script>
+  <script src="/assets/app/vendor/clipboard/dist/clipboard.min.js"></script>
+
+
+  <!-- JS Front -->
+  <script src="/assets/js/theme/app.min.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+      // =======================================================
+
+
+      // BUILDER TOGGLE INVOKER
+      // =======================================================
+      $('.js-navbar-vertical-aside-toggle-invoker').click(function () {
+        $('.js-navbar-vertical-aside-toggle-invoker i').tooltip('hide');
+      });
+
+
+
+
+      // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+      // =======================================================
+      var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+      // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+      // =======================================================
+      $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+      $(".js-nav-tooltip-link").on("show.bs.tooltip", function(e) {
+        if (!$("body").hasClass("navbar-vertical-aside-mini-mode")) {
+          return false;
+        }
+      });
+
+
+      // INITIALIZATION OF UNFOLD
+      // =======================================================
+      $('.js-hs-unfold-invoker').each(function () {
+        var unfold = new HSUnfold($(this)).init();
+      });
+
+
+      // INITIALIZATION OF FORM SEARCH
+      // =======================================================
+      $('.js-form-search').each(function () {
+        new HSFormSearch($(this)).init()
+      });
+
+
+      // INITIALIZATION OF SELECT2
+      // =======================================================
+      $('.js-select2-custom').each(function () {
+        var select2 = $.HSCore.components.HSSelect2.init($(this));
+      });
+
+
+      // INITIALIZATION OF CHARTJS
+      // =======================================================
+      Chart.plugins.unregister(ChartDataLabels);
+
+      $('.js-chart').each(function () {
+        $.HSCore.components.HSChartJS.init($(this));
+      });
+
+      var updatingChart = $.HSCore.components.HSChartJS.init($('#updatingData'));
+
+      // CALL WHEN TAB IS CLICKED
+      // =======================================================
+      $('[data-toggle="chart-bar"]').click(function(e) {
+        let keyDataset = $(e.currentTarget).attr('data-datasets')
+
+       if (keyDataset === 'lastWeek') {
+         updatingChart.data.labels = ["Apr 22", "Apr 23", "Apr 24", "Apr 25", "Apr 26", "Apr 27", "Apr 28", "Apr 29", "Apr 30", "Apr 31"];
+         updatingChart.data.datasets = [
+           {
+             "data": [120, 250, 300, 200, 300, 290, 350, 100, 125, 320],
+             "backgroundColor": "#377dff",
+             "hoverBackgroundColor": "#377dff",
+             "borderColor": "#377dff"
+           },
+           {
+             "data": [250, 130, 322, 144, 129, 300, 260, 120, 260, 245, 110],
+             "backgroundColor": "#e7eaf3",
+             "borderColor": "#e7eaf3"
+           }
+         ];
+         updatingChart.update();
+       } else {
+         updatingChart.data.labels = ["May 1", "May 2", "May 3", "May 4", "May 5", "May 6", "May 7", "May 8", "May 9", "May 10"];
+         updatingChart.data.datasets = [
+           {
+             "data": [200, 300, 290, 350, 150, 350, 300, 100, 125, 220],
+             "backgroundColor": "#377dff",
+             "hoverBackgroundColor": "#377dff",
+             "borderColor": "#377dff"
+           },
+           {
+             "data": [150, 230, 382, 204, 169, 290, 300, 100, 300, 225, 120],
+             "backgroundColor": "#e7eaf3",
+             "borderColor": "#e7eaf3"
+           }
+         ]
+         updatingChart.update();
+       }
+      })
+
+
+      // INITIALIZATION OF BUBBLE CHARTJS WITH DATALABELS PLUGIN
+      // =======================================================
+      $('.js-chart-datalabels').each(function () {
+        $.HSCore.components.HSChartJS.init($(this), {
+          plugins: [ChartDataLabels],
+          options: {
+            plugins: {
+              datalabels: {
+                anchor: function(context) {
+                  var value = context.dataset.data[context.dataIndex];
+                  return value.r < 20 ? 'end' : 'center';
+                },
+                align: function(context) {
+                  var value = context.dataset.data[context.dataIndex];
+                  return value.r < 20 ? 'end' : 'center';
+                },
+                color: function(context) {
+                  var value = context.dataset.data[context.dataIndex];
+                  return value.r < 20 ? context.dataset.backgroundColor : context.dataset.color;
+                },
+                font: function(context) {
+                  var value = context.dataset.data[context.dataIndex],
+                    fontSize = 25;
+
+                  if (value.r > 50) {
+                    fontSize = 35;
+                  }
+
+                  if (value.r > 70) {
+                    fontSize = 55;
+                  }
+
+                  return {
+                    weight: 'lighter',
+                    size: fontSize
+                  };
+                },
+                offset: 2,
+                padding: 0
+              }
+            }
+          },
+        });
+      });
+
+
+      // INITIALIZATION OF DATERANGEPICKER
+      // =======================================================
+      $('.js-daterangepicker').daterangepicker();
+
+      $('.js-daterangepicker-times').daterangepicker({
+        timePicker: true,
+        startDate: moment().startOf('hour'),
+        endDate: moment().startOf('hour').add(32, 'hour'),
+        locale: {
+          format: 'M/DD hh:mm A'
+        }
+      });
+
+      var start = moment();
+      var end = moment();
+
+      function cb(start, end) {
+        $('#js-daterangepicker-predefined .js-daterangepicker-predefined-preview').html(start.format('MMM D') + ' - ' + end.format('MMM D, YYYY'));
+      }
+
+      $('#js-daterangepicker-predefined').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+      }, cb);
+
+      cb(start, end);
+
+
+      // INITIALIZATION OF DATATABLES
+      // =======================================================
+      // var datatable = $.HSCore.components.HSDatatables.init($('#datatable'), {
+      //   select: {
+      //     style: 'multi',
+      //     selector: 'td:first-child input[type="checkbox"]',
+      //     classMap: {
+      //       checkAll: '#datatableCheckAll',
+      //       counter: '#datatableCounter',
+      //       counterInfo: '#datatableCounterInfo'
+      //     }
+      //   },
+      //   language: {
+      //     zeroRecords: '<div class="text-center p-4">' +
+      //         '<img class="mb-3" src="/assets/svg/illustrations/sorry.svg" alt="Image Description" style="width: 7rem;">' +
+      //         '<p class="mb-0">No data to show</p>' +
+      //         '</div>'
+      //   }
+      // });
+      //
+      // $('.js-datatable-filter').on('change', function() {
+      //   var $this = $(this),
+      //     elVal = $this.val(),
+      //     targetColumnIndex = $this.data('target-column-index');
+      //
+      //   datatable.column(targetColumnIndex).search(elVal).draw();
+      // });
+      //
+      // $('#datatableSearch').on('mouseup', function (e) {
+      //   var $input = $(this),
+      //     oldValue = $input.val();
+      //
+      //   if (oldValue == "") return;
+      //
+      //   setTimeout(function(){
+      //     var newValue = $input.val();
+      //
+      //     if (newValue == ""){
+      //       // Gotcha
+      //       datatable.search('').draw();
+      //     }
+      //   }, 1);
+      // });
+
+
+      // INITIALIZATION OF CLIPBOARD
+      // =======================================================
+      $('.js-clipboard').each(function() {
+        var clipboard = $.HSCore.components.HSClipboard.init(this);
+      });
+    });
+  </script>
+
+  <!-- IE Support -->
+  <!-- <script>
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+  </script> -->
+
+  <script type="text/javascript" src="/assets/js/master.js?cb=1657714408" async defer></script>
+
+  <script type="text/javascript">
+    var allowLeave = true;
+
+    window.onbeforeunload = function(event) {
+      if (allowLeave) {
+        event.preventDefault();
+      } else {
+        event.returnValue = 'Blocked';
+      }
+    };
+    function displayGlobalResult(input, message, button) {
+      var resultEl = Manager.dom().select('.global-result');
+      var buttonEl = Manager.dom().select(button);
+      resultEl.removeClass('alert-soft-danger').removeClass('alert-soft-success').removeClass('alert-soft-primary')
+      buttonEl.addClass('disabled').setAttribute('disabled', true);
+
+      Manager.log('displayGlobalResult', input, message, button)
+
+      if (input) {
+        resultEl.removeAttribute('hidden')
+      } else {
+        resultEl.setAttribute('hidden', true)
+      }
+
+      if (input instanceof Error) {
+        resultEl.setInnerHTML((input && input.message ? input.message : input) || 'Unknown error');
+        resultEl.addClass('alert-soft-danger');
+        buttonEl.removeClass('disabled').removeAttribute('disabled');
+      } else if (input === 'waiting' || input === 'loading') {
+        resultEl.setInnerHTML('Loading... <div class="spinner-border text-primary" role="status"> </div>')
+        resultEl.addClass('alert-soft-primary');
+      } else if (input === 'success') {
+        resultEl.setInnerHTML('Success!' || message)
+        resultEl.addClass('alert-soft-success');
+        buttonEl.removeClass('disabled').removeAttribute('disabled');
+      }
+    }
+
+    function fetchJSON(url, options) {
+      options = options || {};
+      return new Promise(function(resolve, reject) {
+        fetch(url, {
+          method: options.method || 'get',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(options.body),
+        })
+        .then(function (res) { // This function runs only on success
+          if (res.status >= 200 && res.status < 300) {
+            res.json()
+            .then(function (data) {
+              // console.log('Success', data);
+              return resolve(data);
+            })
+          } else {
+            return res.text()
+            .then(function (data) {
+              throw new Error(data || res.statusText || 'Unknown error.')
+            })
+          }
+        })
+        .catch(function (e) { // This function runs only on error
+          return reject(e);
+        })
+      });
+    }
+
+    function initializeDataTables(options) {
+      options = options || {};
+      options.el = options.el || null
+      options.noDataMessage = options.noDataMessage || null
+
+      var datatable = $.HSCore.components.HSDatatables.init($('#datatable'), {
+        select: {
+          style: 'multi',
+          selector: 'td:first-child input[type="checkbox"]',
+          classMap: {
+            checkAll: '#datatableCheckAll',
+            counter: '#datatableCounter',
+            counterInfo: '#datatableCounterInfo'
+          }
+        },
+        language: {
+          zeroRecords: '<div class="text-center p-4">' +
+              // '<img class="mb-3" src="/assets/svg/illustrations/sorry.svg" alt="Image Description" style="width: 7rem;">' +
+              '<p class="mb-0">No data to show</p>' +
+              (options.noDataMessage ? options.noDataMessage : '') +
+              '</div>'
+        }
+      });
+
+      $('.js-datatable-filter').on('change', function() {
+        var $this = $(this),
+          elVal = $this.val(),
+          targetColumnIndex = $this.data('target-column-index');
+
+        datatable.column(targetColumnIndex).search(elVal).draw();
+      });
+
+      $('#datatableSearch').on('mouseup', function (e) {
+        var $input = $(this),
+          oldValue = $input.val();
+
+        if (oldValue == "") return;
+
+        setTimeout(function(){
+          var newValue = $input.val();
+
+          if (newValue == ""){
+            // Gotcha
+            datatable.search('').draw();
+          }
+        }, 1);
+      });
+    }
+
+  </script>
+
+  
+  
+
+  
+  
+
+  <script type="text/javascript">
+    window.SoundGrailAdsenseModule = "<!-- Adunit - Adsense In-article Ad--><ins class=\"adsbygoogle\"     style=\"display:block; text-align:center; \"     data-ad-layout=\"in-article\"     data-ad-format=\"fluid\"     data-ad-client=\"ca-pub-7372939085773564\"     data-ad-slot=\"2309097478\"></ins><scr" + "ipt>     (adsbygoogle = window.adsbygoogle || []).push({});</scr" + "ipt>"
+    window.SoundGrailAdsenseSidebar = "<!-- Adunit - Adsense In-article Ad--><ins class=\"adsbygoogle\"     style=\"display:block; text-align:center; \"     data-ad-layout=\"in-article\"     data-ad-format=\"fluid\"     data-ad-client=\"ca-pub-7372939085773564\"     data-ad-slot=\"2309097478\"></ins><scr" + "ipt>     (adsbygoogle = window.adsbygoogle || []).push({});</scr" + "ipt>"
+    window.userIsPremium = false;
+
+    var injectedAdUnits = {};
+
+    function handleCurrentUser() {
+      var currentUser = Manager.storage().get('currentUser')
+      // console.log('---currentUser', currentUser);
+      // currentUser = false;
+
+      if (!currentUser || currentUser.plan.id === 'basic') {
+        // console.log('---USER IS BASIC');
+        window.userIsPremium = false;
+        Manager.dom().select('.auth-user-premium-false').removeAttribute('hidden')
+        injectAdElement('soundgrail-ad-sidebar', window.SoundGrailAdsenseSidebar)
+        injectAdElement('soundgrail-ad-module', window.SoundGrailAdsenseModule)
+      } else {
+        // console.log('---USER IS PREMIUM');
+        window.userIsPremium = true;
+        // Manager.dom().select('.adunit').setAttribute('hidden', true)
+      }
+    }
+
+    // document.getElementById('soundgrail-ad-sidebar').innerHTML = '';
+    function injectAdElement(el, code) {
+      if (injectedAdUnits[el]) {return}
+      var parent = document.getElementById(el);
+
+      $(parent).append('<ins ' + code.match(/(?<=ins )(.*)(?=\>\<\/ins)/)[0] + '></ins>');
+
+      try {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {
+
+      }
+      injectedAdUnits[el] = true;
+      // parent.appendChild(div);
+    }
+
+
+    Manager.ready(function () {
+      handleCurrentUser();
+    })
+
+    Manager.auth().ready(function () {
+      // console.log('---auth ready');
+      Manager.account().import()
+      .then(function (Account) {
+        // console.log('---firebase user', firebase.auth().currentUser);
+        if (firebase.auth().currentUser) {
+          var account = new Account();
+          account.resolve()
+          .then(function (user) {
+            Manager.storage().set('currentUser', user)
+            handleCurrentUser();
+          })
+        } else {
+          Manager.storage().set('currentUser', null)
+          handleCurrentUser();
+        }
+      })
+    })
+
+  </script>
+
+    <!-- CONTENT END -->
+    <!-- Master - Alert Box -->
+<div class="master-alert master-alert-outdated">
+  <span class="master-alert-close" onclick="this.parentElement.style.display='none';">&times;</span>
+  You are using an outdated browser that our site <strong>DOES NOT</strong> support. Please <a href="https://www.google.com/chrome/" rel="nofollow" target="_blank">click here</a> to update your browser.
+</div>
+
+<!-- Master - Chat Opener -->
+<a href="#" onclick="return false;" id="prechat-btn" style="display: none;">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path fill="#ffffff" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 7.1 5.8 12 12 12 2.4 0 4.9-.7 7.1-2.4L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm16 352c0 8.8-7.2 16-16 16H288l-12.8 9.6L208 428v-60H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h384c8.8 0 16 7.2 16 16v288z"/>
+  </svg>
+</a>
+
+<!-- Performance -->
+<script type="text/javascript">
+  try {
+    window.performance.mark('manager_preBundle');
+  } catch (e) {}
+</script>
+
+<!-- App - Foot Content (pre-bundle) -->
+  <!-- App Foot Content (pre-bundle) -->
+
+
+<!-- Script - Bundle -->
+
+
+
+
+<!-- TODO: FIX THIS -->
+
+
+<!-- Script - Google Analytics Tracking Script -->
+  <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-114924895-2" async></script>
+  <script type="text/javascript" async>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114924895-2');
+  </script>
+
+
+<!-- Script - Facebook Pixel Tracking Script -->
+
+
+<!-- Script - TikTok Pixel Tracking Script -->
+
+
+<!-- Script - Social Share Kit Script -->
+
+
+<!-- Script - Google Adsense -->
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7372939085773564" crossorigin="anonymous"></script>
+
+
+<!-- Schema - Breadcrumbs -->
+  
+
+  <script id="uj-breadcrumbs-json" type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://app.soundgrail.com"
+        }
+                  
+                  
+                  ,{
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Guitar Tuner"
+                    
+                  }]
+    }
+  </script>
+
+
+<!-- Schema - Brand -->
+  <script id="uj-brand-json" type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Corporation",
+    "name": "SoundGrail",
+    "description": "SoundGrail is a free music theory app for pianists, guitarists and DJs. Learn chords, scales, key signatures, and more. Play guitar, piano and DJ like a pro!.",
+    "logo": "https://cdn.itwcreativeworks.com/assets/soundgrail/images/logo/soundgrail-brandmark-black-3000x3000.png",
+    "url": "https://app.soundgrail.com",
+    "sameAs": ["https://www.linkedin.com/company/","https://www.youtube.com/channel/","https://twitter.com/soundgrailmusic","https://www.instagram.com/soundgrail/","https://.tumblr.com/","https://www.facebook.com/soundgrail/",""
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Los Angeles",
+      "addressCountry": "United States"
+    }
+  }
+  </script>
+
+
+<!-- Schema - Sitelinks -->
+  <script id="uj-sitelinks-json" type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://app.soundgrail.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://app.soundgrail.com/search/cse?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+
+
+<!-- App - Foot Content -->
+
+
+<!-- Page - Injected head -->
+
+
+</body>
+</html>

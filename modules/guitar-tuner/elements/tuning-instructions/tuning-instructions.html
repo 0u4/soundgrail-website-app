@@ -1,0 +1,34 @@
+<!--
+
+Copyright 2015 Google Inc. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+--><html><head><meta charset="UTF-8"></head><body><div hidden by-vulcanize=""><link rel="import" href="../../third_party/polymer.html"></div><dom-module id="tuning-instructions">
+  <style>:host{width:140px;height:100px}:host(.resolved) #indicator{width:56px;height:56px;background:#FFF;border-radius:50%;margin:0 auto}:host(.resolved) #indicator::after{content:'';display:block;background:red}#message{width:100%;font-family:Roboto;font-weight:400;font-size:14px;line-height:1;margin:10px 0 0;text-align:center;color:#888}#indicator{position:relative}#down,#tick,#up{opacity:0}:host(.resolved) #down,:host(.resolved) #up{position:absolute;top:0;left:0;width:56px;height:56px;opacity:0;will-change:transform;transition:opacity 133ms cubic-bezier(0,0,.21,1) 50ms,transform 133ms cubic-bezier(0,0,.21,1) 50ms;background:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAxNyAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+UmVjdGFuZ2xlIDY8L3RpdGxlPjxwYXRoIGQ9Ik03IDE1LjU4NkwxLjQxNCAxMCAwIDExLjQxNGw2LjY0MyA2LjY0NC0uMDAzLjAwMyAxLjQxNCAxLjQxNS4wMDQtLjAwMy4wMDMuMDAzIDEuNDE1LTEuNDE0LS4wMDMtLjAwMiA2LjY0My02LjY0NEwxNC43IDEwIDkgMTUuN1YwSDd2MTUuNTg2eiIgZmlsbD0iI0YzOTczMSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+Cg==) center center no-repeat}:host(.resolved) #down{transform:rotate(180deg)}:host(.resolved) #tick{position:absolute;top:0;left:0;width:56px;height:56px;opacity:0;will-change:transform;transition:opacity 133ms cubic-bezier(0,0,.21,1) 50ms,transform 133ms cubic-bezier(0,0,.21,1) 50ms;background:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyNiAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC42IDE1LjQ1N0wyLjcyNyA5LjU4NWwtMiAxLjk4NUw4LjYgMTkuNDQzbDE2LjktMTYuOUwyMy41MTQuNTU3IDguNiAxNS40NTd6IiBmaWxsPSIjN0VEMzIxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4K) center center no-repeat;transform:rotate(180deg)}#frequency,#stringfrequency{width:100px;text-align:center}#indicator.tune-down #down{opacity:1;transform:rotate(0)}#indicator.tune-up #up{opacity:1;transform:rotate(180deg)}#indicator.in-tune #tick{opacity:1;transform:rotate(0)}:host(.resolved) #message{display:block}#frequency{color:#F39731}#divider{width:20px}</style>
+  <template>
+    <div id="indicator">
+      <div id="up"></div>
+      <div id="down"></div>
+      <div id="tick"></div>
+    </div>
+    <div id="message">
+      <span id="frequency">-</span>
+      <span id="divider">/</span>
+      <span id="stringfrequency">-</span>
+    </div>
+  </template>
+</dom-module>
+
+<script>!function e(t,i,n){function r(o,a){if(!i[o]){if(!t[o]){var u="function"==typeof require&&require;if(!a&&u)return u(o,!0);if(s)return s(o,!0);var c=new Error("Cannot find module '"+o+"'");throw c.code="MODULE_NOT_FOUND",c}var d=i[o]={exports:{}};t[o][0].call(d.exports,function(e){var i=t[o][1][e];return r(i||e)},d,d.exports,e,t,i,n)}return i[o].exports}for(var s="function"==typeof require&&require,o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,i){"use strict";function n(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var r=function(){function e(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,i,n){return i&&e(t.prototype,i),n&&e(t,n),t}}();new(function(){function e(){n(this,e),Polymer(e.prototype)}return r(e,[{key:"created",value:function(){this.audioProcessor=document.querySelector("audio-processor"),this.requestedAnimationFrame=!1,this.tolerance=.006,this.frequencyToRender=-1,this.frequencies={e2:82.4069,a2:110,d3:146.832,g3:195.998,b3:246.942,e4:329.628},this.linearizedFrequencies={e2:Math.log2(this.frequencies.e2/440),a2:Math.log2(this.frequencies.a2/440),d3:Math.log2(this.frequencies.d3/440),g3:Math.log2(this.frequencies.g3/440),b3:Math.log2(this.frequencies.b3/440),e4:Math.log2(this.frequencies.e4/440)},this.onAudioData=this.onAudioData.bind(this)}},{key:"attached",value:function(){var e=this;this.frequencyMessage=this.$.frequency,this.stringFrequencyMessage=this.$.stringfrequency,this.indicator=this.$.indicator,this.audioProcessor.addEventListener("audio-data",this.onAudioData),this.async(function(){e.classList.add("resolved")},100)}},{key:"detached",value:function(){this.audioProcessor.removeEventListener("audio-data",this.onAudioData)}},{key:"onAudioData",value:function(e){for(var t=e.detail.frequency,i=Math.log2(t/440),n={e2:i-this.linearizedFrequencies.e2,a2:i-this.linearizedFrequencies.a2,d3:i-this.linearizedFrequencies.d3,g3:i-this.linearizedFrequencies.g3,b3:i-this.linearizedFrequencies.b3,e4:i-this.linearizedFrequencies.e4},r=Object.keys(n),s=Number.MAX_VALUE,o="",a=0;a<r.length;a++){var u=r[a];Math.abs(n[u])<s&&(s=n[u],o=u)}this.indicator.classList.remove("tune-up"),this.indicator.classList.remove("tune-down"),this.indicator.classList.remove("in-tune"),s<-this.tolerance?this.indicator.classList.add("tune-up"):s>this.tolerance?this.indicator.classList.add("tune-down"):this.indicator.classList.add("in-tune"),-1===this.frequencyToRender&&(this.frequencyToRender=t),this.frequencyToRender+=.15*(t-this.frequencyToRender),this.frequencyMessage.textContent=this.frequencyToRender.toFixed(2)+"Hz",this.stringFrequencyMessage.textContent=this.frequencies[o].toFixed(2)+"Hz"}},{key:"is",get:function(){return"tuning-instructions"}}]),e}())},{}]},{},[1]);</script>
+</body></html>

@@ -1,0 +1,49 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+canvas:first-of-type {
+  background: #111;
+}
+canvas:last-of-type {
+  pointer-events: none;
+}
+
+.alert {
+  position: fixed;
+  color: white;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 95%;
+  max-width: 95%;
+}
+.alert p {
+  text-align: center;
+}
+.alert a {
+  color: white;
+  background: #444;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 3px;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+.alert a:hover {
+  background: #666;
+}

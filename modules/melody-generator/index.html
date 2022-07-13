@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>scraggo's music tools - random generators (JavaScript)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+      <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+
+<!--div restricted to 960px-->
+  <div class="all-content-box">
+  <!--full width group: hgroup, header-aside-->
+  <header class="mob-full-width">
+    <div class="head-block mob-full-width">
+    <hgroup class="mob-full-width">
+    <h1 class="mob-hfont">scraggo's music tools
+    </h1>
+      <h4 class="mob-hfont">Learn - Practice - Create
+      </h4>
+      </hgroup>
+      <div class="top-link mob-full-width">
+      <a href="http://songmindstudios.com" target="_blank">about scraggo / more music tools</a></div>
+    </div>
+
+<hr>
+
+    <div class="tool-title">
+      <h2 class="mob-hfont title-accent">RANDOM MUSIC GENERATORS</h2>
+    </div>
+    </header>
+
+    <div class="tab">
+    <button id="defaultOpen" class="tablinks" onclick="openTool(event, 'random-chord')">Chord Progression</button>
+    <button class="tablinks" onclick="openTool(event, 'random-melody')">Melody</button>
+    <button class="tablinks" onclick="openTool(event, 'random-rhythm')">Rhythm</button>
+    <button class="tablinks" onclick="openTool(event, 'random-mode-meter')">Mode & Meter</button>
+    </div>
+
+<!--TAB 1-->
+    <div id="random-chord" class="tabcontent">
+    <section class="mob-full-width">
+      <p class="tool-info">
+    Generate a random set of major, minor, diminished, and augmented chords.
+      </p>
+      <div class="centerDiv">
+  <form>
+    <label for="noChords">Number of chords in a measure: </label>
+    <input type="number" value="8" min="1" step="1" id="noChords"><br>
+    <label for="noProgressions">Number of chord progressions: </label>
+    <input type="number" value="20" min="1" step="1" id="noProgressions"><br>
+    <label></label><input type="button" value="Generate" id="generateRandomCP">
+  </form>
+  <h2 id="titleRandomCP"></h2>
+  <p id="functionRandomCP" class="tool-output-text"></p>
+      </div>
+  </section>
+
+    <!--trinket frame is full width-->
+  </div>
+
+
+<!--TAB 2-->
+    <div id="random-melody" class="tabcontent">
+      <section class="mob-full-width">
+        <p class="tool-info">
+          Generate random diatonic and chromatic melodies.
+        </p>
+        <div class="centerDiv">
+          <form>
+            <label for="noNotesMelody">Number of melody notes:</label>
+            <input type="number" value="8" min="1" id="noNotesMelody">
+            <br>
+            <label for="noMelodies">Number of melodies:</label>
+            <input type="number" value="10" min="1" id="noMelodies">
+            <br>
+            <label></label>
+            <input type="button" value="Generate" id="generateRandomMelody">
+          </form>
+          <h2 id="titleDiatonicMelody"></h2>
+          <p id="functionDiatonicMelody" class="tool-output-text"></p>
+          <p><br></p>
+          <h2 id="titleChromaticMelody"></h2>
+          <p id="functionChromaticMelody" class="tool-output-text"></p>
+        </div>
+      </section>
+    </div>
+
+
+<!--TAB 3-->
+<div id="random-rhythm" class="tabcontent">
+  <section class="mob-full-width">
+    <p class="tool-info">
+      Generate 200 random measures of rhythms.
+    </p>
+    <div class="centerDiv">
+      <form>
+        <label for="timeSig">Choose Time Signature: </label>
+        <select id="timeSig">
+          <option value="1">3/4</option>
+          <option value="2">4/4</option>
+          <option value="3">5/4</option>
+          <option value="4">6/4</option>
+          <option value="5" selected>7/4</option>
+          <option value="6">9/4</option>
+          <option value="7">11/4</option>
+          <option value="8">12/4</option>
+          <option value="9">13/4</option>
+          <option value="10">15/4</option>
+        </select>
+        <br>
+        <label for="rhythmTypes">Choose Rhythm Types: </label>
+        <select id="rhythmTypes">
+          <option value="1">8ths</option>
+          <option value="2">16ths</option>
+          <option value="3" selected>8th Triplets</option>
+          <option value="4">16th Triplets</option>
+          <option value="5">Mixed</option>
+        </select>
+        <br>
+        <label></label>
+        <input type="button" value="Generate" id="generateRandomRhythms">
+      </form>
+      <h2 id="titleRhythm"></h2>
+      <p id="rhythmInfo1" class="tool-info"></p>
+      <p id="rhythmInfo2" class="tool-output-text"></p>
+      <p id="functionRhythm" class="tool-output-text"></p>
+    </div>
+  </section>
+    </div>
+
+<!--TAB 4-->
+    <div id="random-mode-meter" class="tabcontent">
+    <section class="mob-full-width">
+      <p class="tool-info">
+    Generate a random set of modes, meters, tempos, and feels. A full compositional palette.
+      </p>
+
+      <div class="centerDiv">
+      <form><label></label><input type="button" value="Generate" id="generateRandomMM">
+      </form>
+      <p id="functionRandomMM" class="tool-output-text"></p>
+      <p id="outTipRandomMM" class="tool-output-text tool-info"></p>
+      </div>
+    </section>
+
+  </div>
+
+
+
+
+
+</div>
+
+
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    
+      <url>
+        <loc>https://app.soundgrail.com/blog/example-post-7/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+    
+      <url>
+        <loc>https://app.soundgrail.com/blog/example-post-6/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+    
+      <url>
+        <loc>https://app.soundgrail.com/blog/example-post-5/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+    
+      <url>
+        <loc>https://app.soundgrail.com/blog/example-post-4/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+    
+      <url>
+        <loc>https://app.soundgrail.com/blog/example-post-3/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+    
+      <url>
+        <loc>https://app.soundgrail.com/blog/example-post-2/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+    
+      <url>
+        <loc>https://app.soundgrail.com/blog/example-post-1/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+    
+    <url>
+        <loc>https://app.soundgrail.com/assets/app/vendor/jszip/CHANGES/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/about/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/ads.txt</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/arpeggio-generator/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/audio-music-visualizer/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/camelot-wheel/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/chord-progression-generator/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/circle-of-fifths/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/delay-calculator/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/guitar-tuner/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/interactive-chord-chart/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/melody-generator/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/metronome/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/piano-chord-chart/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/piano-chord-finder/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/feeds/posts.xml</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/pricing/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/reverse-chord-finder/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url><url>
+        <loc>https://app.soundgrail.com/signin/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/signup/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/promotion/soundcloud-repost/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/promotion/spotify-playlist/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/support/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+        <loc>https://app.soundgrail.com/virtual-piano/</loc><lastmod>2022-07-13T12:13:28+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  </urlset>
